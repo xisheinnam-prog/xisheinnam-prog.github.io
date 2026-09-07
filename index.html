@@ -9,6 +9,10 @@
 
 <style>
 
+/* =========================
+   GLOBAL
+========================= */
+
 *{
   box-sizing:border-box;
   margin:0;
@@ -21,7 +25,7 @@ html{
 
 body{
   background:#080808;
-  color:white;
+  color:#fff;
   font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
 }
 
@@ -59,6 +63,7 @@ body{
 }
 
 @keyframes heroReveal{
+
   from{
     opacity:0;
     transform:scale(1.08);
@@ -68,6 +73,7 @@ body{
     opacity:1;
     transform:scale(1);
   }
+
 }
 
 .hero-content{
@@ -89,6 +95,7 @@ body{
   letter-spacing:3px;
   color:rgba(255,255,255,.65);
   text-transform:uppercase;
+  line-height:1.8;
 }
 
 .scroll{
@@ -106,7 +113,7 @@ body{
 .profile{
   max-width:520px;
   margin:auto;
-  padding:90px 24px;
+  padding:90px 24px 65px;
 }
 
 .eyebrow{
@@ -127,7 +134,63 @@ body{
   color:#888;
   font-size:15px;
   line-height:1.8;
-  margin-bottom:50px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+  max-width:520px;
+  margin:auto;
+  padding:30px 24px 90px;
+}
+
+.about-label{
+  font-size:9px;
+  letter-spacing:5px;
+  color:#666;
+  margin-bottom:22px;
+}
+
+.about-title{
+  font-size:36px;
+  line-height:1.15;
+  font-weight:400;
+  margin-bottom:28px;
+}
+
+.about-text{
+  color:#888;
+  font-size:15px;
+  line-height:1.8;
+  margin-bottom:18px;
+}
+
+.about-line{
+  width:45px;
+  height:1px;
+  background:#333;
+  margin-top:40px;
+}
+
+
+/* =========================
+   SOCIALS
+========================= */
+
+.socials{
+  max-width:520px;
+  margin:auto;
+  padding:0 24px 100px;
+}
+
+.section-label{
+  font-size:9px;
+  letter-spacing:5px;
+  color:#666;
+  margin-bottom:25px;
 }
 
 
@@ -143,7 +206,7 @@ body{
 
 .link{
   text-decoration:none;
-  color:white;
+  color:#fff;
 
   padding:20px 22px;
 
@@ -165,6 +228,10 @@ body{
   border-color:#444;
 }
 
+.link:active{
+  transform:scale(.98);
+}
+
 .link-name{
   font-size:12px;
   letter-spacing:2.5px;
@@ -177,20 +244,13 @@ body{
 
 
 /* =========================
-   CONTACT SECTION
+   CONTACT
 ========================= */
 
 .contact{
   max-width:520px;
   margin:auto;
-  padding:20px 24px 100px;
-}
-
-.contact-title{
-  font-size:9px;
-  letter-spacing:5px;
-  color:#666;
-  margin-bottom:25px;
+  padding:0 24px 110px;
 }
 
 .contact-info{
@@ -199,15 +259,20 @@ body{
 
 .contact-info a{
   display:block;
+  width:max-content;
+  max-width:100%;
+
   text-decoration:none;
-  color:#aaa;
+  color:#999;
+
   font-size:14px;
-  margin-bottom:10px;
+  margin-bottom:12px;
+
   transition:.2s ease;
 }
 
 .contact-info a:hover{
-  color:white;
+  color:#fff;
 }
 
 
@@ -228,20 +293,25 @@ body{
 
 .quote span{
   display:block;
+
   margin-top:25px;
+
   color:#555;
+
   font-size:9px;
   letter-spacing:5px;
 }
 
 
 /* =========================
-   TAP SHEINNEMA BRANDING
+   TAP SHEINNEMA
 ========================= */
 
 .powered{
   text-align:center;
-  padding:80px 20px;
+
+  padding:90px 20px 75px;
+
   border-top:1px solid #161616;
 }
 
@@ -249,19 +319,21 @@ body{
   font-size:8px;
   letter-spacing:4px;
   color:#444;
-  margin-bottom:12px;
+  margin-bottom:14px;
 }
 
 .tap-brand{
-  font-size:15px;
+  font-size:16px;
   letter-spacing:5px;
   font-weight:500;
 }
 
 .tap-tagline{
-  margin-top:12px;
-  font-size:10px;
-  letter-spacing:2px;
+  margin-top:13px;
+
+  font-size:11px;
+  letter-spacing:1.5px;
+
   color:#666;
 }
 
@@ -271,16 +343,39 @@ body{
 ========================= */
 
 footer{
-  padding:20px 20px 50px;
+  padding:0 20px 50px;
   text-align:center;
 }
 
 .copyright{
   font-size:9px;
+  letter-spacing:1px;
   color:#333;
 }
 
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:480px){
+
+  .brand{
+    letter-spacing:5px;
+  }
+
+  .statement{
+    font-size:38px;
+  }
+
+  .about-title{
+    font-size:32px;
+  }
+
+}
+
 </style>
+
 </head>
 
 
@@ -316,7 +411,7 @@ footer{
 
 
 <!-- =========================
-     PROFILE
+     INTRO
 ========================= -->
 
 <section class="profile">
@@ -337,6 +432,51 @@ footer{
     and moments worth remembering.
   </p>
 
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="about">
+
+  <p class="about-label">
+    ABOUT
+  </p>
+
+  <h2 class="about-title">
+    More than just<br>
+    what you see.
+  </h2>
+
+  <p class="about-text">
+    Sheinnema is a visual storytelling identity built around
+    capturing moments from perspectives that feel different,
+    intentional, and cinematic.
+  </p>
+
+  <p class="about-text">
+    From the ground to the skies, every frame is created
+    to turn moments into stories worth remembering.
+  </p>
+
+  <div class="about-line"></div>
+
+</section>
+
+
+
+<!-- =========================
+     SOCIALS
+========================= -->
+
+<section class="socials">
+
+  <p class="section-label">
+    FIND ME
+  </p>
 
   <div class="links">
 
@@ -347,47 +487,56 @@ footer{
       class="link"
       href="https://www.instagram.com/sheinnema/"
       target="_blank"
+      rel="noopener noreferrer"
     >
 
       <span class="link-name">
         INSTAGRAM
       </span>
 
-      <span class="arrow">↗</span>
+      <span class="arrow">
+        ↗
+      </span>
 
     </a>
 
 
-    <!-- FACEBOOK -->
+    <!-- FACEBOOK PROFILE -->
 
     <a
       class="link"
       href="https://www.facebook.com/Xisheinn/"
       target="_blank"
+      rel="noopener noreferrer"
     >
 
       <span class="link-name">
         FACEBOOK
       </span>
 
-      <span class="arrow">↗</span>
+      <span class="arrow">
+        ↗
+      </span>
 
     </a>
 
 
-    <!-- SHEINNEMA FACEBOOK PAGE -->
+    <!-- FACEBOOK PAGE -->
 
     <a
       class="link"
       href="https://www.facebook.com/profile.php?id=61570786376664"
       target="_blank"
+      rel="noopener noreferrer"
     >
 
       <span class="link-name">
         SHEINNEMA PAGE
       </span>
 
-      <span class="arrow">↗</span>
+      <span class="arrow">
+        ↗
+      </span>
 
     </a>
 
@@ -398,13 +547,16 @@ footer{
       class="link"
       href="https://www.tiktok.com/@xi_magination"
       target="_blank"
+      rel="noopener noreferrer"
     >
 
       <span class="link-name">
         TIKTOK
       </span>
 
-      <span class="arrow">↗</span>
+      <span class="arrow">
+        ↗
+      </span>
 
     </a>
 
@@ -421,7 +573,7 @@ footer{
 
 <section class="contact">
 
-  <p class="contact-title">
+  <p class="section-label">
     LET'S CONNECT
   </p>
 
@@ -429,7 +581,7 @@ footer{
   <div class="contact-info">
 
     <a href="tel:+639505174579">
-      +63 950 517 4579
+      0950 517 4579
     </a>
 
     <a href="mailto:xisheinn.am@gmail.com">
@@ -485,7 +637,7 @@ footer{
 
 
 <!-- =========================
-     BRAND STATEMENT
+     CINEMATIC STATEMENT
 ========================= -->
 
 <section class="quote">
@@ -504,7 +656,7 @@ footer{
 
 
 <!-- =========================
-     POWERED BY TAP SHEINNEMA
+     POWERED BY
 ========================= -->
 
 <section class="powered">
@@ -539,5 +691,4 @@ footer{
 
 
 </body>
-
 </html>
