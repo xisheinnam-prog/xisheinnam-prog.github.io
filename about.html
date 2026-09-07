@@ -109,40 +109,102 @@ body{
 }
 
 
-/* FLOATING CARD */
+/* FLOATING CARD AREA */
 
 .card-stage{
   position:relative;
 
   display:flex;
+  flex-direction:column;
   justify-content:center;
   align-items:center;
 
   padding:50px 0 110px;
 
-  perspective:1000px;
+  perspective:1200px;
 }
 
 .card-glow{
   position:absolute;
 
-  width:260px;
+  width:280px;
   height:90px;
 
-  bottom:70px;
+  bottom:85px;
 
   background:rgba(255,255,255,.04);
 
   border-radius:50%;
 
-  filter:blur(30px);
+  filter:blur(32px);
+
+  pointer-events:none;
 }
 
-.tap-card{
+.card-float{
   width:min(340px,88vw);
+
+  animation:floatCard 5s ease-in-out infinite;
+
+  transform-style:preserve-3d;
+}
+
+@keyframes floatCard{
+
+  0%{
+    transform:
+      translateY(0)
+      rotateX(4deg)
+      rotateY(-5deg)
+      rotateZ(-1deg);
+  }
+
+  50%{
+    transform:
+      translateY(-18px)
+      rotateX(1deg)
+      rotateY(5deg)
+      rotateZ(1deg);
+  }
+
+  100%{
+    transform:
+      translateY(0)
+      rotateX(4deg)
+      rotateY(-5deg)
+      rotateZ(-1deg);
+  }
+
+}
+
+
+/* FLIP CARD */
+
+.card-flip{
+  width:100%;
   aspect-ratio:1.586 / 1;
 
   position:relative;
+
+  cursor:pointer;
+
+  transform-style:preserve-3d;
+
+  transition:transform .85s cubic-bezier(.2,.7,.2,1);
+
+  outline:none;
+}
+
+.card-flip.flipped{
+  transform:rotateY(180deg);
+}
+
+.card-face{
+  position:absolute;
+  inset:0;
+
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
 
   border-radius:22px;
 
@@ -162,47 +224,47 @@ body{
 
   padding:26px;
 
+  overflow:hidden;
+}
+
+.card-face::after{
+  content:"";
+
+  position:absolute;
+
+  top:-40%;
+  left:-50%;
+
+  width:80%;
+  height:180%;
+
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      rgba(255,255,255,.025),
+      transparent
+    );
+
+  transform:rotate(18deg);
+
+  pointer-events:none;
+}
+
+
+/* CARD FRONT */
+
+.card-front{
   display:flex;
   flex-direction:column;
   justify-content:space-between;
-
-  animation:floatCard 5s ease-in-out infinite;
-
-  transform-style:preserve-3d;
-}
-
-@keyframes floatCard{
-
-  0%{
-    transform:
-      translateY(0)
-      rotateX(5deg)
-      rotateY(-7deg)
-      rotateZ(-1deg);
-  }
-
-  50%{
-    transform:
-      translateY(-18px)
-      rotateX(2deg)
-      rotateY(7deg)
-      rotateZ(1deg);
-  }
-
-  100%{
-    transform:
-      translateY(0)
-      rotateX(5deg)
-      rotateY(-7deg)
-      rotateZ(-1deg);
-  }
-
 }
 
 .card-top{
   display:flex;
   justify-content:space-between;
   align-items:flex-start;
+  gap:20px;
 }
 
 .card-brand{
@@ -213,8 +275,13 @@ body{
 
 .nfc-symbol{
   font-size:19px;
+  line-height:1;
+
   color:#777;
-  transform:rotate(90deg);
+
+  letter-spacing:-2px;
+
+  white-space:nowrap;
 }
 
 .card-bottom{
@@ -239,6 +306,71 @@ body{
   letter-spacing:2.2px;
 
   color:#444;
+}
+
+
+/* CARD BACK */
+
+.card-back{
+  transform:rotateY(180deg);
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+}
+
+.back-content{
+  position:relative;
+  z-index:2;
+}
+
+.back-small{
+  font-size:8px;
+
+  letter-spacing:5px;
+
+  color:#555;
+
+  margin-bottom:16px;
+}
+
+.back-brand{
+  font-size:22px;
+
+  letter-spacing:4px;
+
+  font-weight:500;
+
+  line-height:1.3;
+}
+
+.back-tagline{
+  margin-top:18px;
+
+  font-size:10px;
+
+  letter-spacing:1.4px;
+
+  color:#666;
+}
+
+
+/* TAP HINT */
+
+.tap-hint{
+  margin-top:28px;
+
+  font-size:8px;
+
+  letter-spacing:4px;
+
+  color:#444;
+
+  text-align:center;
+
+  user-select:none;
 }
 
 
@@ -450,12 +582,17 @@ footer{
     font-size:18px;
   }
 
-  .tap-card{
+  .card-face{
     padding:22px;
   }
 
   .card-brand{
     font-size:15px;
+    letter-spacing:3px;
+  }
+
+  .back-brand{
+    font-size:19px;
     letter-spacing:3px;
   }
 
@@ -466,8 +603,12 @@ footer{
 
 @media(prefers-reduced-motion:reduce){
 
-  .tap-card{
+  .card-float{
     animation:none;
+  }
+
+  .card-flip{
+    transition:none;
   }
 
 }
@@ -513,38 +654,86 @@ footer{
 </section>
 
 
-<!-- FLOATING CARD -->
+<!-- FLOATING FLIP CARD -->
 
 <section class="card-stage">
 
   <div class="card-glow"></div>
 
-  <div class="tap-card">
+  <div class="card-float">
 
-    <div class="card-top">
+    <div
+      class="card-flip"
+      id="tapCard"
+      role="button"
+      tabindex="0"
+      aria-label="Flip TAP SHEINNEMA card"
+      aria-pressed="false"
+    >
 
-      <div class="card-brand">
-        TAP SHEINNEMA.
+
+      <!-- FRONT -->
+
+      <div class="card-face card-front">
+
+        <div class="card-top">
+
+          <div class="card-brand">
+            TAP SHEINNEMA.
+          </div>
+
+          <div class="nfc-symbol">
+            )))
+          </div>
+
+        </div>
+
+
+        <div class="card-bottom">
+
+          <div class="card-tagline">
+            One tap. Everything.
+          </div>
+
+          <div class="card-small">
+            DIGITAL IDENTITY
+          </div>
+
+        </div>
+
       </div>
 
-      <div class="nfc-symbol">
-        )))
+
+      <!-- BACK -->
+
+      <div class="card-face card-back">
+
+        <div class="back-content">
+
+          <div class="back-small">
+            POWERED BY
+          </div>
+
+          <div class="back-brand">
+            TAP SHEINNEMA.
+          </div>
+
+          <div class="back-tagline">
+            One tap. Everything.
+          </div>
+
+        </div>
+
       </div>
+
 
     </div>
 
-    <div class="card-bottom">
+  </div>
 
-      <div class="card-tagline">
-        One tap. Everything.
-      </div>
 
-      <div class="card-small">
-        DIGITAL IDENTITY
-      </div>
-
-    </div>
-
+  <div class="tap-hint">
+    TAP CARD TO FLIP
   </div>
 
 </section>
@@ -677,6 +866,52 @@ footer{
   </div>
 
 </footer>
+
+
+<!-- FLIP CARD SCRIPT -->
+
+<script>
+
+const tapCard = document.getElementById("tapCard");
+
+function flipCard(){
+
+  tapCard.classList.toggle("flipped");
+
+  const isFlipped =
+    tapCard.classList.contains("flipped");
+
+  tapCard.setAttribute(
+    "aria-pressed",
+    isFlipped ? "true" : "false"
+  );
+
+}
+
+tapCard.addEventListener(
+  "click",
+  flipCard
+);
+
+tapCard.addEventListener(
+  "keydown",
+  function(event){
+
+    if(
+      event.key === "Enter" ||
+      event.key === " "
+    ){
+
+      event.preventDefault();
+
+      flipCard();
+
+    }
+
+  }
+);
+
+</script>
 
 
 </body>
