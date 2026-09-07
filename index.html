@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +25,10 @@ body{
   font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
 }
 
-/* HERO */
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
   height:100svh;
@@ -59,6 +63,7 @@ body{
     opacity:0;
     transform:scale(1.08);
   }
+
   to{
     opacity:1;
     transform:scale(1);
@@ -94,7 +99,9 @@ body{
 }
 
 
-/* CONTENT */
+/* =========================
+   PROFILE
+========================= */
 
 .profile{
   max-width:520px;
@@ -124,7 +131,9 @@ body{
 }
 
 
-/* LINKS */
+/* =========================
+   BUTTONS
+========================= */
 
 .links{
   display:flex;
@@ -167,7 +176,44 @@ body{
 }
 
 
-/* QUOTE */
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact{
+  max-width:520px;
+  margin:auto;
+  padding:20px 24px 100px;
+}
+
+.contact-title{
+  font-size:9px;
+  letter-spacing:5px;
+  color:#666;
+  margin-bottom:25px;
+}
+
+.contact-info{
+  margin-bottom:30px;
+}
+
+.contact-info a{
+  display:block;
+  text-decoration:none;
+  color:#aaa;
+  font-size:14px;
+  margin-bottom:10px;
+  transition:.2s ease;
+}
+
+.contact-info a:hover{
+  color:white;
+}
+
+
+/* =========================
+   QUOTE
+========================= */
 
 .quote{
   padding:120px 25px;
@@ -189,28 +235,47 @@ body{
 }
 
 
-/* FOOTER */
+/* =========================
+   TAP SHEINNEMA BRANDING
+========================= */
 
-footer{
-  padding:80px 20px 50px;
+.powered{
   text-align:center;
+  padding:80px 20px;
   border-top:1px solid #161616;
 }
 
-.footer-brand{
-  font-size:17px;
-  letter-spacing:5px;
+.powered-small{
+  font-size:8px;
+  letter-spacing:4px;
+  color:#444;
+  margin-bottom:12px;
 }
 
-.tagline{
-  margin-top:15px;
-  font-size:9px;
-  letter-spacing:4px;
-  color:#555;
+.tap-brand{
+  font-size:15px;
+  letter-spacing:5px;
+  font-weight:500;
+}
+
+.tap-tagline{
+  margin-top:12px;
+  font-size:10px;
+  letter-spacing:2px;
+  color:#666;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  padding:20px 20px 50px;
+  text-align:center;
 }
 
 .copyright{
-  margin-top:45px;
   font-size:9px;
   color:#333;
 }
@@ -222,7 +287,9 @@ footer{
 <body>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
@@ -248,7 +315,9 @@ footer{
 
 
 
-<!-- PROFILE -->
+<!-- =========================
+     PROFILE
+========================= -->
 
 <section class="profile">
 
@@ -274,9 +343,11 @@ footer{
 
     <!-- INSTAGRAM -->
 
-    <a class="link"
-       href="https://www.instagram.com/sheinnema/"
-       target="_blank">
+    <a
+      class="link"
+      href="https://www.instagram.com/sheinnema/"
+      target="_blank"
+    >
 
       <span class="link-name">
         INSTAGRAM
@@ -287,11 +358,13 @@ footer{
     </a>
 
 
-    <!-- FACEBOOK PROFILE -->
+    <!-- FACEBOOK -->
 
-    <a class="link"
-       href="https://www.facebook.com/Xisheinn/"
-       target="_blank">
+    <a
+      class="link"
+      href="https://www.facebook.com/Xisheinn/"
+      target="_blank"
+    >
 
       <span class="link-name">
         FACEBOOK
@@ -302,11 +375,13 @@ footer{
     </a>
 
 
-    <!-- FACEBOOK PAGE -->
+    <!-- SHEINNEMA FACEBOOK PAGE -->
 
-    <a class="link"
-       href="https://www.facebook.com/profile.php?id=61570786376664"
-       target="_blank">
+    <a
+      class="link"
+      href="https://www.facebook.com/profile.php?id=61570786376664"
+      target="_blank"
+    >
 
       <span class="link-name">
         SHEINNEMA PAGE
@@ -319,9 +394,11 @@ footer{
 
     <!-- TIKTOK -->
 
-    <a class="link"
-       href="https://www.tiktok.com/@xi_magination"
-       target="_blank">
+    <a
+      class="link"
+      href="https://www.tiktok.com/@xi_magination"
+      target="_blank"
+    >
 
       <span class="link-name">
         TIKTOK
@@ -338,7 +415,78 @@ footer{
 
 
 
-<!-- QUOTE -->
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="contact">
+
+  <p class="contact-title">
+    LET'S CONNECT
+  </p>
+
+
+  <div class="contact-info">
+
+    <a href="tel:+639505174579">
+      0950 517 4579
+    </a>
+
+    <a href="mailto:xisheinn.am@gmail.com">
+      xisheinn.am@gmail.com
+    </a>
+
+  </div>
+
+
+  <div class="links">
+
+
+    <!-- CALL -->
+
+    <a
+      class="link"
+      href="tel:+639505174579"
+    >
+
+      <span class="link-name">
+        CALL ME
+      </span>
+
+      <span class="arrow">
+        ↗
+      </span>
+
+    </a>
+
+
+    <!-- EMAIL -->
+
+    <a
+      class="link"
+      href="mailto:xisheinn.am@gmail.com"
+    >
+
+      <span class="link-name">
+        EMAIL ME
+      </span>
+
+      <span class="arrow">
+        ↗
+      </span>
+
+    </a>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     BRAND STATEMENT
+========================= -->
 
 <section class="quote">
 
@@ -355,17 +503,33 @@ footer{
 
 
 
-<!-- FOOTER -->
+<!-- =========================
+     POWERED BY TAP SHEINNEMA
+========================= -->
+
+<section class="powered">
+
+  <div class="powered-small">
+    POWERED BY
+  </div>
+
+  <div class="tap-brand">
+    TAP SHEINNEMA.
+  </div>
+
+  <div class="tap-tagline">
+    One tap. Everything.
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
-
-  <div class="footer-brand">
-    SHEINNEMA.
-  </div>
-
-  <div class="tagline">
-    TAP. CONNECT. SHEINNEMA.
-  </div>
 
   <div class="copyright">
     © 2026 SHEINNEMA
@@ -375,4 +539,5 @@ footer{
 
 
 </body>
+
 </html>
