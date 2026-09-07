@@ -149,7 +149,7 @@ body{
 
 
 /* =========================
-   INTRO
+   PROFILE
 ========================= */
 
 .profile{
@@ -157,7 +157,7 @@ body{
 
   margin:auto;
 
-  padding:90px 24px 100px;
+  padding:90px 24px 110px;
 }
 
 .statement{
@@ -243,13 +243,11 @@ body{
 
 .link-name{
   font-size:12px;
-
   letter-spacing:2.5px;
 }
 
 .arrow{
   opacity:.4;
-
   font-size:18px;
 }
 
@@ -306,7 +304,6 @@ body{
 
 .save-contact .arrow{
   color:#080808;
-
   opacity:.5;
 }
 
@@ -349,7 +346,7 @@ body{
 
 
 /* =========================
-   ABOUT TAP BUTTON
+   TAP SHEINNEMA BUTTON
 ========================= */
 
 .tap-section{
@@ -357,109 +354,7 @@ body{
 
   margin:auto;
 
-  padding:20px 24px 100px;
-}
-
-.tap-about-button{
-  border-color:#292929;
-}
-
-
-/* =========================
-   ABOUT TAP CONTENT
-========================= */
-
-.tap-about{
-  max-height:0;
-
-  opacity:0;
-
-  overflow:hidden;
-
-  transition:
-    max-height .7s ease,
-    opacity .5s ease,
-    margin-top .7s ease;
-
-  margin-top:0;
-}
-
-.tap-about.open{
-  max-height:900px;
-
-  opacity:1;
-
-  margin-top:55px;
-}
-
-.tap-about-inner{
-  padding-top:45px;
-
-  border-top:1px solid #222;
-}
-
-.tap-about-label{
-  font-size:9px;
-
-  letter-spacing:5px;
-
-  color:#666;
-
-  margin-bottom:25px;
-}
-
-.tap-about-title{
-  font-size:38px;
-
-  line-height:1.15;
-
-  font-weight:400;
-
-  margin-bottom:30px;
-}
-
-.tap-about-text{
-  color:#888;
-
-  font-size:15px;
-
-  line-height:1.85;
-
-  margin-bottom:20px;
-}
-
-.tap-promise{
-  margin-top:40px;
-
-  padding-top:30px;
-
-  border-top:1px solid #222;
-
-  font-size:20px;
-
-  line-height:1.5;
-
-  color:#fff;
-}
-
-.tap-mini-brand{
-  margin-top:55px;
-}
-
-.tap-mini-name{
-  font-size:14px;
-
-  letter-spacing:4px;
-}
-
-.tap-mini-tagline{
-  margin-top:10px;
-
-  color:#666;
-
-  font-size:10px;
-
-  letter-spacing:1.5px;
+  padding:20px 24px 110px;
 }
 
 
@@ -535,10 +430,6 @@ footer{
 
   .statement{
     font-size:38px;
-  }
-
-  .tap-about-title{
-    font-size:34px;
   }
 
 }
@@ -620,8 +511,6 @@ footer{
   <div class="links">
 
 
-    <!-- INSTAGRAM -->
-
     <a
       class="link"
       href="https://www.instagram.com/sheinnema/"
@@ -640,8 +529,6 @@ footer{
     </a>
 
 
-
-    <!-- FACEBOOK -->
 
     <a
       class="link"
@@ -662,8 +549,6 @@ footer{
 
 
 
-    <!-- SHEINNEMA FACEBOOK PAGE -->
-
     <a
       class="link"
       href="https://www.facebook.com/profile.php?id=61570786376664"
@@ -682,8 +567,6 @@ footer{
     </a>
 
 
-
-    <!-- TIKTOK -->
 
     <a
       class="link"
@@ -819,95 +702,27 @@ footer{
 
 
 <!-- =========================
-     ABOUT TAP SHEINNEMA
+     ABOUT TAP SHEINNEMA BUTTON
 ========================= -->
 
 <section class="tap-section">
 
   <div class="links">
 
-    <button
-      class="link tap-about-button"
-      onclick="toggleTapAbout()"
-      type="button"
+    <a
+      class="link"
+      href="about.html"
     >
 
       <span class="link-name">
         ABOUT TAP SHEINNEMA
       </span>
 
-      <span
-        class="arrow"
-        id="tapArrow"
-      >
-        ↓
+      <span class="arrow">
+        ↗
       </span>
 
-    </button>
-
-  </div>
-
-
-  <!-- HIDDEN UNTIL BUTTON IS TAPPED -->
-
-  <div
-    class="tap-about"
-    id="tapAbout"
-  >
-
-    <div class="tap-about-inner">
-
-      <p class="tap-about-label">
-        ABOUT TAP SHEINNEMA
-      </p>
-
-
-      <h2 class="tap-about-title">
-
-        Your identity.<br>
-        One tap away.
-
-      </h2>
-
-
-      <p class="tap-about-text">
-
-        TAP SHEINNEMA transforms the traditional
-        business card into a smarter way to connect.
-
-      </p>
-
-
-      <p class="tap-about-text">
-
-        One tap brings your socials, portfolio,
-        contact information, and digital presence
-        together — all in one place.
-
-      </p>
-
-
-      <div class="tap-promise">
-
-        Your information changes.<br>
-        Your card doesn't.
-
-      </div>
-
-
-      <div class="tap-mini-brand">
-
-        <div class="tap-mini-name">
-          TAP SHEINNEMA.
-        </div>
-
-        <div class="tap-mini-tagline">
-          One tap. Everything.
-        </div>
-
-      </div>
-
-    </div>
+    </a>
 
   </div>
 
@@ -952,15 +767,10 @@ footer{
 
 
 <!-- =========================
-     JAVASCRIPT
+     SAVE CONTACT SCRIPT
 ========================= -->
 
 <script>
-
-
-/* =========================
-   SAVE CONTACT
-========================= */
 
 function saveContact(){
 
@@ -976,7 +786,6 @@ URL:https://tap.sheinnema.com
 NOTE:Filmmaker | Visual Storyteller | Drone / FPV Pilot
 END:VCARD`;
 
-
   const blob = new Blob(
     [vCard],
     {
@@ -984,27 +793,22 @@ END:VCARD`;
     }
   );
 
-
   const url =
     URL.createObjectURL(blob);
 
-
   const link =
     document.createElement("a");
-
 
   link.href = url;
 
   link.download =
     "Shein-Bryan-Mati-ong.vcf";
 
-
   document.body.appendChild(link);
 
   link.click();
 
   document.body.removeChild(link);
-
 
   setTimeout(function(){
 
@@ -1013,37 +817,6 @@ END:VCARD`;
   },1000);
 
 }
-
-
-
-/* =========================
-   ABOUT TAP SHEINNEMA
-========================= */
-
-function toggleTapAbout(){
-
-  const about =
-    document.getElementById("tapAbout");
-
-  const arrow =
-    document.getElementById("tapArrow");
-
-
-  about.classList.toggle("open");
-
-
-  if(about.classList.contains("open")){
-
-    arrow.textContent = "↑";
-
-  }else{
-
-    arrow.textContent = "↓";
-
-  }
-
-}
-
 
 </script>
 
