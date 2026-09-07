@@ -1,0 +1,1426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<meta name="theme-color" content="#080808">
+
+<title>Get Yours | TAP SHEINNEMA.</title>
+
+<style>
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#080808;
+  color:#ffffff;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  overflow-x:hidden;
+}
+
+button,
+input,
+textarea,
+select{
+  font:inherit;
+}
+
+
+/* PAGE */
+
+.page{
+  max-width:520px;
+  margin:auto;
+  padding:40px 24px 100px;
+}
+
+
+/* TOP */
+
+.top{
+  margin-bottom:110px;
+}
+
+.back{
+  text-decoration:none;
+
+  color:#555;
+
+  font-size:9px;
+  letter-spacing:3px;
+
+  transition:color .2s ease;
+}
+
+.back:hover{
+  color:#fff;
+}
+
+
+/* HERO */
+
+.hero{
+  margin-bottom:80px;
+}
+
+.label{
+  color:#666;
+
+  font-size:9px;
+  letter-spacing:5px;
+
+  margin-bottom:28px;
+}
+
+.title{
+  font-size:clamp(40px,11vw,58px);
+
+  line-height:1.05;
+
+  font-weight:400;
+
+  letter-spacing:-1px;
+
+  margin-bottom:26px;
+}
+
+.intro{
+  max-width:420px;
+
+  color:#888;
+
+  font-size:15px;
+  line-height:1.8;
+}
+
+
+/* FORM */
+
+.form{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.form-section{
+  color:#555;
+
+  font-size:9px;
+  letter-spacing:4px;
+
+  margin-top:20px;
+  margin-bottom:5px;
+}
+
+.divider{
+  height:1px;
+  background:#181818;
+  margin:24px 0;
+}
+
+.field{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.field label,
+.group-label{
+  color:#666;
+
+  font-size:8px;
+  letter-spacing:3px;
+}
+
+.field input,
+.field textarea,
+.field select{
+  width:100%;
+
+  border:1px solid #222;
+
+  border-radius:16px;
+
+  background:#0d0d0d;
+
+  color:#fff;
+
+  padding:18px;
+
+  font-size:14px;
+
+  outline:none;
+
+  transition:
+    border-color .2s ease,
+    background .2s ease;
+}
+
+.field input::placeholder,
+.field textarea::placeholder{
+  color:#414141;
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus{
+  border-color:#555;
+  background:#111;
+}
+
+.field textarea{
+  min-height:135px;
+  resize:vertical;
+}
+
+.field select{
+  appearance:none;
+  -webkit-appearance:none;
+}
+
+.row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+
+/* OPTIONS */
+
+.options{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.option{
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  padding:15px 16px;
+
+  border:1px solid #222;
+  border-radius:14px;
+
+  background:#0d0d0d;
+
+  color:#888;
+
+  font-size:11px;
+
+  cursor:pointer;
+}
+
+.option input{
+  accent-color:#fff;
+}
+
+
+/* PHOTO NOTE */
+
+.photo-note{
+  border:1px solid #1d1d1d;
+
+  border-radius:16px;
+
+  padding:18px;
+
+  background:#0b0b0b;
+
+  color:#666;
+
+  font-size:11px;
+  line-height:1.8;
+}
+
+
+/* HONEYPOT */
+
+.honeypot{
+  position:absolute;
+  left:-9999px;
+  opacity:0;
+  pointer-events:none;
+}
+
+
+/* BUTTONS */
+
+.actions{
+  display:flex;
+  flex-direction:column;
+
+  gap:12px;
+
+  margin-top:35px;
+}
+
+.submit{
+  width:100%;
+
+  min-height:60px;
+
+  border:none;
+
+  border-radius:18px;
+
+  background:#ffffff;
+  color:#080808;
+
+  padding:20px 22px;
+
+  font-size:11px;
+  letter-spacing:2.5px;
+
+  font-weight:600;
+
+  cursor:pointer;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  transition:
+    transform .2s ease,
+    opacity .2s ease;
+}
+
+.submit:hover{
+  transform:translateY(-2px);
+}
+
+.submit:disabled{
+  opacity:.6;
+  cursor:default;
+  transform:none;
+}
+
+.return{
+  width:100%;
+
+  text-decoration:none;
+
+  color:#fff;
+
+  border:1px solid #222;
+
+  border-radius:18px;
+
+  background:#0d0d0d;
+
+  padding:20px 22px;
+
+  font-size:11px;
+  letter-spacing:2.5px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  transition:
+    background .2s ease,
+    border-color .2s ease,
+    transform .2s ease;
+}
+
+.return:hover{
+  background:#151515;
+  border-color:#444;
+  transform:translateY(-2px);
+}
+
+.arrow{
+  font-size:18px;
+}
+
+
+/* NOTE */
+
+.privacy{
+  color:#3f3f3f;
+
+  font-size:9px;
+  line-height:1.7;
+
+  text-align:center;
+
+  margin-top:18px;
+}
+
+
+/* ERROR */
+
+.error{
+  display:none;
+
+  border:1px solid #402323;
+
+  background:#130c0c;
+
+  color:#aa7777;
+
+  border-radius:14px;
+
+  padding:15px;
+
+  font-size:11px;
+  line-height:1.6;
+
+  text-align:center;
+
+  margin-top:15px;
+}
+
+.error.show{
+  display:block;
+}
+
+
+/* SUCCESS */
+
+.success{
+  display:none;
+
+  min-height:70vh;
+
+  flex-direction:column;
+
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+
+  opacity:0;
+  transform:translateY(20px);
+}
+
+.success.show{
+  display:flex;
+
+  animation:
+    successIn .8s cubic-bezier(.2,.7,.2,1)
+    forwards;
+}
+
+@keyframes successIn{
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+.success-icon{
+  width:72px;
+  height:72px;
+
+  border:1px solid #333;
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:25px;
+
+  margin-bottom:42px;
+}
+
+.success-label{
+  color:#555;
+
+  font-size:9px;
+  letter-spacing:5px;
+
+  margin-bottom:25px;
+}
+
+.success-title{
+  font-size:clamp(38px,10vw,54px);
+
+  line-height:1.05;
+
+  font-weight:400;
+
+  margin-bottom:25px;
+}
+
+.success-copy{
+  color:#888;
+
+  font-size:14px;
+  line-height:1.8;
+
+  max-width:390px;
+
+  margin-bottom:45px;
+}
+
+.success-brand{
+  font-size:11px;
+  letter-spacing:4px;
+}
+
+.success-tagline{
+  margin-top:10px;
+
+  color:#444;
+
+  font-size:10px;
+}
+
+
+/* FOOTER */
+
+.footer{
+  border-top:1px solid #161616;
+
+  text-align:center;
+
+  padding:80px 24px 50px;
+}
+
+.footer-brand{
+  font-size:14px;
+  letter-spacing:5px;
+}
+
+.footer-tagline{
+  color:#555;
+
+  font-size:10px;
+
+  margin-top:12px;
+}
+
+.copyright{
+  color:#333;
+
+  font-size:9px;
+
+  margin-top:50px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:480px){
+
+  .row{
+    grid-template-columns:1fr;
+  }
+
+  .options{
+    grid-template-columns:1fr;
+  }
+
+  .top{
+    margin-bottom:90px;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<main class="page">
+
+
+<!-- TOP -->
+
+<div class="top">
+
+  <a
+    class="back"
+    href="about.html"
+  >
+    ← ABOUT TAP SHEINNEMA
+  </a>
+
+</div>
+
+
+<!-- FORM CONTENT -->
+
+<div id="formContent">
+
+
+<section class="hero">
+
+  <p class="label">
+    GET YOURS
+  </p>
+
+  <h1 class="title">
+    Your identity<br>
+    starts here.
+  </h1>
+
+  <p class="intro">
+    Tell us about you, your brand, and how you
+    want people to connect with you. We'll use
+    these details to begin creating your
+    TAP SHEINNEMA digital profile.
+  </p>
+
+</section>
+
+
+<form
+  class="form"
+  id="clientForm"
+  action="https://formspree.io/f/xqpkyyre"
+  method="POST"
+>
+
+
+<!-- ABOUT -->
+
+<p class="form-section">
+  ABOUT YOU
+</p>
+
+
+<div class="field">
+
+  <label for="fullName">
+    FULL NAME
+  </label>
+
+  <input
+    id="fullName"
+    type="text"
+    name="Full Name"
+    placeholder="Your full name"
+    autocomplete="name"
+    required
+  >
+
+</div>
+
+
+<div class="field">
+
+  <label for="brand">
+    BRAND / BUSINESS NAME
+  </label>
+
+  <input
+    id="brand"
+    type="text"
+    name="Brand / Business"
+    placeholder="Your brand or business"
+  >
+
+</div>
+
+
+<div class="field">
+
+  <label for="role">
+    TITLE / ROLE
+  </label>
+
+  <input
+    id="role"
+    type="text"
+    name="Title / Role"
+    placeholder="Filmmaker, photographer, business owner..."
+  >
+
+</div>
+
+
+<div class="row">
+
+
+<div class="field">
+
+  <label for="email">
+    EMAIL
+  </label>
+
+  <input
+    id="email"
+    type="email"
+    name="Email"
+    placeholder="your@email.com"
+    autocomplete="email"
+    required
+  >
+
+</div>
+
+
+<div class="field">
+
+  <label for="phone">
+    PHONE
+  </label>
+
+  <input
+    id="phone"
+    type="tel"
+    name="Phone"
+    placeholder="+63..."
+    autocomplete="tel"
+  >
+
+</div>
+
+
+</div>
+
+
+<div class="divider"></div>
+
+
+<!-- SOCIALS -->
+
+<p class="form-section">
+  SOCIALS
+</p>
+
+
+<div class="field">
+
+  <label for="instagram">
+    INSTAGRAM
+  </label>
+
+  <input
+    id="instagram"
+    type="text"
+    name="Instagram"
+    placeholder="@username or profile link"
+  >
+
+</div>
+
+
+<div class="field">
+
+  <label for="facebook">
+    FACEBOOK
+  </label>
+
+  <input
+    id="facebook"
+    type="text"
+    name="Facebook"
+    placeholder="Profile link"
+  >
+
+</div>
+
+
+<div class="field">
+
+  <label for="facebookPage">
+    FACEBOOK PAGE
+  </label>
+
+  <input
+    id="facebookPage"
+    type="text"
+    name="Facebook Page"
+    placeholder="Page link"
+  >
+
+</div>
+
+
+<div class="field">
+
+  <label for="tiktok">
+    TIKTOK
+  </label>
+
+  <input
+    id="tiktok"
+    type="text"
+    name="TikTok"
+    placeholder="@username or profile link"
+  >
+
+</div>
+
+
+<div class="field">
+
+  <label for="youtube">
+    YOUTUBE
+  </label>
+
+  <input
+    id="youtube"
+    type="text"
+    name="YouTube"
+    placeholder="Channel link"
+  >
+
+</div>
+
+
+<div class="field">
+
+  <label for="website">
+    WEBSITE / PORTFOLIO
+  </label>
+
+  <input
+    id="website"
+    type="text"
+    name="Website / Portfolio"
+    placeholder="Website or portfolio link"
+  >
+
+</div>
+
+
+<div class="field">
+
+  <label for="other">
+    OTHER LINK
+  </label>
+
+  <input
+    id="other"
+    type="text"
+    name="Other Link"
+    placeholder="Any other link you'd like included"
+  >
+
+</div>
+
+
+<div class="divider"></div>
+
+
+<!-- PROFILE -->
+
+<p class="form-section">
+  YOUR PROFILE
+</p>
+
+
+<div class="field">
+
+  <label for="displayName">
+    MAIN DISPLAY NAME
+  </label>
+
+  <input
+    id="displayName"
+    type="text"
+    name="Main Display Name"
+    placeholder="The name you want people to see"
+  >
+
+</div>
+
+
+<div class="field">
+
+  <label for="headline">
+    MAIN HEADLINE
+  </label>
+
+  <input
+    id="headline"
+    type="text"
+    name="Main Headline"
+    placeholder="Your main profile headline"
+  >
+
+</div>
+
+
+<div class="field">
+
+  <label for="bio">
+    SHORT BIO
+  </label>
+
+  <textarea
+    id="bio"
+    name="Short Bio"
+    placeholder="Tell us about yourself, your work, or your brand."
+  ></textarea>
+
+</div>
+
+
+<div class="field">
+
+  <label for="tagline">
+    TAGLINE
+  </label>
+
+  <input
+    id="tagline"
+    type="text"
+    name="Tagline"
+    placeholder="Optional tagline"
+  >
+
+</div>
+
+
+<div class="field">
+
+  <label for="quote">
+    QUOTE / PERSONAL LINE
+  </label>
+
+  <input
+    id="quote"
+    type="text"
+    name="Quote / Personal Line"
+    placeholder="Optional quote or personal line"
+  >
+
+</div>
+
+
+<div class="divider"></div>
+
+
+<!-- CONTACT -->
+
+<p class="form-section">
+  CONTACT OPTIONS
+</p>
+
+
+<div class="field">
+
+<span class="group-label">
+  WHAT SHOULD APPEAR ON YOUR PROFILE?
+</span>
+
+
+<div class="options">
+
+
+<label class="option">
+
+<input
+  type="checkbox"
+  name="Contact Options"
+  value="Call Me"
+>
+
+CALL ME
+
+</label>
+
+
+<label class="option">
+
+<input
+  type="checkbox"
+  name="Contact Options"
+  value="Email Me"
+>
+
+EMAIL ME
+
+</label>
+
+
+<label class="option">
+
+<input
+  type="checkbox"
+  name="Contact Options"
+  value="Save Contact"
+>
+
+SAVE CONTACT
+
+</label>
+
+
+</div>
+
+</div>
+
+
+<div class="field">
+
+  <label for="saveName">
+    NAME TO SAVE
+  </label>
+
+  <input
+    id="saveName"
+    type="text"
+    name="Save Contact Name"
+    placeholder="Name for saved contact"
+  >
+
+</div>
+
+
+<div class="row">
+
+
+<div class="field">
+
+  <label for="savePhone">
+    PHONE TO SAVE
+  </label>
+
+  <input
+    id="savePhone"
+    type="tel"
+    name="Save Contact Phone"
+    placeholder="+63..."
+  >
+
+</div>
+
+
+<div class="field">
+
+  <label for="saveEmail">
+    EMAIL TO SAVE
+  </label>
+
+  <input
+    id="saveEmail"
+    type="email"
+    name="Save Contact Email"
+    placeholder="your@email.com"
+  >
+
+</div>
+
+
+</div>
+
+
+<div class="divider"></div>
+
+
+<!-- STYLE -->
+
+<p class="form-section">
+  YOUR STYLE
+</p>
+
+
+<div class="field">
+
+  <label for="style">
+    PREFERRED LOOK
+  </label>
+
+  <select
+    id="style"
+    name="Preferred Style"
+  >
+
+    <option value="">
+      Choose a style
+    </option>
+
+    <option>
+      Minimal
+    </option>
+
+    <option>
+      Cinematic
+    </option>
+
+    <option>
+      Corporate
+    </option>
+
+    <option>
+      Luxury
+    </option>
+
+    <option>
+      Creative
+    </option>
+
+    <option>
+      Surprise me
+    </option>
+
+  </select>
+
+</div>
+
+
+<div class="field">
+
+  <label for="background">
+    PREFERRED BACKGROUND
+  </label>
+
+  <select
+    id="background"
+    name="Preferred Background"
+  >
+
+    <option value="">
+      Choose a background
+    </option>
+
+    <option>
+      Black
+    </option>
+
+    <option>
+      White
+    </option>
+
+    <option>
+      Dark Gray
+    </option>
+
+    <option>
+      Designer's choice
+    </option>
+
+  </select>
+
+</div>
+
+
+<div class="field">
+
+  <label for="requests">
+    ADDITIONAL REQUESTS
+  </label>
+
+  <textarea
+    id="requests"
+    name="Additional Requests"
+    placeholder="Anything else you'd like us to know?"
+  ></textarea>
+
+</div>
+
+
+<div class="field">
+
+<span class="group-label">
+  HERO PHOTO / LOGO
+</span>
+
+<div class="photo-note">
+  After submitting your request, you can send
+  your hero photo and logo separately when
+  we contact you.
+</div>
+
+</div>
+
+
+<!-- SETTINGS -->
+
+<input
+  type="hidden"
+  name="_subject"
+  value="New TAP SHEINNEMA Profile Request"
+>
+
+
+<div class="honeypot">
+
+  <input
+    type="text"
+    name="_gotcha"
+    tabindex="-1"
+    autocomplete="off"
+  >
+
+</div>
+
+
+<!-- BUTTONS -->
+
+<div class="actions">
+
+
+<button
+  class="submit"
+  id="submitButton"
+  type="submit"
+>
+
+<span id="submitText">
+  SUBMIT PROFILE REQUEST
+</span>
+
+<span class="arrow">
+  →
+</span>
+
+</button>
+
+
+<a
+  class="return"
+  href="index.html"
+>
+
+<span>
+  RETURN TO PROFILE
+</span>
+
+<span class="arrow">
+  ↗
+</span>
+
+</a>
+
+
+</div>
+
+
+<div
+  class="error"
+  id="formError"
+>
+  Something went wrong while sending your request.
+  Please try again.
+</div>
+
+
+<p class="privacy">
+  By submitting this form, you confirm that the
+  information provided is correct and may be used
+  to create your TAP SHEINNEMA digital profile.
+</p>
+
+
+</form>
+
+
+</div>
+
+
+<!-- SUCCESS -->
+
+<div
+  class="success"
+  id="successScreen"
+>
+
+  <div class="success-icon">
+    ✓
+  </div>
+
+  <p class="success-label">
+    REQUEST RECEIVED
+  </p>
+
+  <h2 class="success-title">
+    Welcome to<br>
+    TAP SHEINNEMA.
+  </h2>
+
+  <p class="success-copy">
+    Your profile request has been received.
+    We'll review your details and get in touch
+    with you soon.
+  </p>
+
+  <div class="success-brand">
+    TAP SHEINNEMA.
+  </div>
+
+  <div class="success-tagline">
+    One tap. Everything.
+  </div>
+
+
+  <div
+    class="actions"
+    style="width:100%; margin-top:55px;"
+  >
+
+    <a
+      class="return"
+      href="index.html"
+    >
+
+      <span>
+        RETURN TO PROFILE
+      </span>
+
+      <span class="arrow">
+        ↗
+      </span>
+
+    </a>
+
+  </div>
+
+
+</div>
+
+
+</main>
+
+
+<!-- FOOTER -->
+
+<section class="footer">
+
+  <div class="footer-brand">
+    TAP SHEINNEMA.
+  </div>
+
+  <div class="footer-tagline">
+    One tap. Everything.
+  </div>
+
+  <div class="copyright">
+    © 2026 SHEINNEMA
+  </div>
+
+</section>
+
+
+<script>
+
+/* FORM */
+
+const clientForm =
+  document.getElementById("clientForm");
+
+const submitButton =
+  document.getElementById("submitButton");
+
+const submitText =
+  document.getElementById("submitText");
+
+const formContent =
+  document.getElementById("formContent");
+
+const successScreen =
+  document.getElementById("successScreen");
+
+const formError =
+  document.getElementById("formError");
+
+
+clientForm.addEventListener(
+  "submit",
+  async function(event){
+
+    event.preventDefault();
+
+    formError.classList.remove("show");
+
+    submitButton.disabled = true;
+
+    submitText.textContent =
+      "SENDING REQUEST...";
+
+
+    const formData =
+      new FormData(clientForm);
+
+
+    try{
+
+      const response =
+        await fetch(
+          clientForm.action,
+          {
+            method:"POST",
+
+            body:formData,
+
+            headers:{
+              "Accept":"application/json"
+            }
+          }
+        );
+
+
+      if(!response.ok){
+
+        throw new Error(
+          "Submission failed"
+        );
+
+      }
+
+
+      clientForm.reset();
+
+
+      formContent.style.display =
+        "none";
+
+
+      successScreen.classList.add(
+        "show"
+      );
+
+
+      window.scrollTo({
+        top:0,
+        behavior:"smooth"
+      });
+
+
+    }
+
+    catch(error){
+
+      formError.classList.add("show");
+
+      submitButton.disabled = false;
+
+      submitText.textContent =
+        "SUBMIT PROFILE REQUEST";
+
+    }
+
+  }
+);
+
+</script>
+
+
+</body>
+
+</html>
