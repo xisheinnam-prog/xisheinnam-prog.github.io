@@ -1,11 +1,363 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Sheinnema</title>
-    <meta http-equiv="refresh" content="0; url=https://www.facebook.com/Xisheinn/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sheinnema.</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #080808;
+      color: #ffffff;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-image {
+      position: absolute;
+      inset: 0;
+
+      background-image:
+        linear-gradient(
+          to bottom,
+          rgba(0,0,0,0.05) 20%,
+          rgba(0,0,0,0.25) 55%,
+          #080808 100%
+        ),
+        url("hero.jpg");
+
+      background-size: cover;
+      background-position: center;
+
+      animation: reveal 1.5s ease;
+    }
+
+    @keyframes reveal {
+      from {
+        opacity: 0;
+        transform: scale(1.05);
+      }
+
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 40px 25px 70px;
+    }
+
+    .brand {
+      font-size: clamp(42px, 12vw, 72px);
+      letter-spacing: 8px;
+      font-weight: 500;
+    }
+
+    .role {
+      margin-top: 12px;
+      color: rgba(255,255,255,.65);
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .scroll {
+      margin-top: 35px;
+      font-size: 10px;
+      letter-spacing: 4px;
+      color: rgba(255,255,255,.45);
+    }
+
+
+    /* PROFILE */
+
+    .profile {
+      max-width: 520px;
+      margin: auto;
+      padding: 80px 24px;
+    }
+
+    .eyebrow {
+      font-size: 10px;
+      letter-spacing: 5px;
+      color: #777;
+      margin-bottom: 18px;
+    }
+
+    .statement {
+      font-size: 34px;
+      line-height: 1.15;
+      font-weight: 400;
+      margin-bottom: 18px;
+    }
+
+    .bio {
+      color: #888;
+      line-height: 1.7;
+      font-size: 15px;
+      margin-bottom: 50px;
+    }
+
+
+    /* LINKS */
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .link {
+      text-decoration: none;
+      color: white;
+
+      border: 1px solid #242424;
+      border-radius: 18px;
+
+      padding: 20px 22px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      transition: .25s ease;
+
+      background: #0d0d0d;
+    }
+
+    .link:hover {
+      background: #161616;
+      transform: translateY(-2px);
+      border-color: #444;
+    }
+
+    .link-name {
+      font-size: 14px;
+      letter-spacing: 2px;
+    }
+
+    .arrow {
+      opacity: .4;
+      font-size: 18px;
+    }
+
+
+    /* QUOTE */
+
+    .quote {
+      padding: 120px 25px;
+      text-align: center;
+    }
+
+    .quote p {
+      font-size: clamp(28px, 8vw, 48px);
+      line-height: 1.25;
+      font-weight: 300;
+    }
+
+    .quote span {
+      display: block;
+      margin-top: 20px;
+
+      color: #555;
+
+      font-size: 10px;
+      letter-spacing: 5px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+      padding: 80px 20px 50px;
+      text-align: center;
+      border-top: 1px solid #161616;
+    }
+
+    .footer-brand {
+      font-size: 16px;
+      letter-spacing: 5px;
+    }
+
+    .tagline {
+      margin-top: 15px;
+
+      font-size: 9px;
+      letter-spacing: 4px;
+
+      color: #555;
+    }
+
+    .copyright {
+      margin-top: 45px;
+      font-size: 9px;
+      color: #333;
+    }
+
+  </style>
 </head>
+
+
 <body>
-    <p>Opening Sheinnema...</p>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-image"></div>
+
+    <div class="hero-content">
+
+      <h1 class="brand">
+        SHEINNEMA.
+      </h1>
+
+      <p class="role">
+        Visual Storyteller · Filmmaker · Drone / FPV Pilot
+      </p>
+
+      <p class="scroll">
+        SCROLL TO CONNECT ↓
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROFILE -->
+
+  <section class="profile">
+
+    <p class="eyebrow">
+      THROUGH MY LENS
+    </p>
+
+    <h2 class="statement">
+      Above.<br>
+      Beyond.<br>
+      Sheinnema.
+    </h2>
+
+    <p class="bio">
+      Stories from the ground to the skies.
+      Cinematic filmmaking, aerial perspectives,
+      and moments worth remembering.
+    </p>
+
+
+    <div class="links">
+
+      <a class="link"
+         href="https://instagram.com/sheinnema"
+         target="_blank">
+
+        <span class="link-name">INSTAGRAM</span>
+        <span class="arrow">↗</span>
+
+      </a>
+
+
+      <a class="link"
+         href="https://www.facebook.com/Xisheinn/"
+         target="_blank">
+
+        <span class="link-name">FACEBOOK</span>
+        <span class="arrow">↗</span>
+
+      </a>
+
+
+      <a class="link"
+         href="#"
+         target="_blank">
+
+        <span class="link-name">TIKTOK</span>
+        <span class="arrow">↗</span>
+
+      </a>
+
+
+      <a class="link"
+         href="#">
+
+        <span class="link-name">VIEW MY WORK</span>
+        <span class="arrow">↗</span>
+
+      </a>
+
+
+      <a class="link"
+         href="mailto:YOUR-EMAIL-HERE">
+
+        <span class="link-name">CONTACT</span>
+        <span class="arrow">↗</span>
+
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- BRAND STATEMENT -->
+
+  <section class="quote">
+
+    <p>
+      Stories don't just<br>
+      happen on the ground.
+    </p>
+
+    <span>
+      LOOK ABOVE
+    </span>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-brand">
+      SHEINNEMA.
+    </div>
+
+    <div class="tagline">
+      TAP. CONNECT. BEYOND.
+    </div>
+
+    <div class="copyright">
+      © 2026 SHEINNEMA
+    </div>
+
+  </footer>
+
 </body>
 </html>
