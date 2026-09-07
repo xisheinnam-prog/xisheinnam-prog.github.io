@@ -2,10 +2,21 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+  name="theme-color"
+  content="#080808"
+>
 
 <title>Sheinnema.</title>
+
 
 <style>
 
@@ -25,8 +36,16 @@ html{
 
 body{
   background:#080808;
-  color:#fff;
-  font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  color:#ffffff;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  overflow-x:hidden;
 }
 
 
@@ -37,9 +56,11 @@ body{
 .hero{
   height:100svh;
   position:relative;
+
   display:flex;
   align-items:flex-end;
   justify-content:center;
+
   overflow:hidden;
 }
 
@@ -79,60 +100,99 @@ body{
 .hero-content{
   position:relative;
   z-index:2;
+
+  width:100%;
+
   text-align:center;
+
   padding:40px 20px 70px;
 }
 
 .brand{
   font-size:clamp(42px,12vw,76px);
+
   letter-spacing:7px;
+
   font-weight:500;
 }
 
 .role{
   margin-top:12px;
+
   font-size:10px;
+
   letter-spacing:3px;
-  color:rgba(255,255,255,.65);
-  text-transform:uppercase;
+
   line-height:1.8;
+
+  color:rgba(255,255,255,.65);
+
+  text-transform:uppercase;
 }
 
 .scroll{
   margin-top:35px;
+
   font-size:9px;
+
   letter-spacing:4px;
+
   color:rgba(255,255,255,.4);
 }
 
 
 /* =========================
-   PROFILE
+   COMMON
+========================= */
+
+.eyebrow,
+.section-label{
+  font-size:9px;
+
+  letter-spacing:5px;
+
+  color:#666;
+
+  margin-bottom:22px;
+}
+
+.divider{
+  width:45px;
+  height:1px;
+
+  background:#333;
+
+  margin-top:40px;
+}
+
+
+/* =========================
+   INTRO
 ========================= */
 
 .profile{
   max-width:520px;
-  margin:auto;
-  padding:90px 24px 65px;
-}
 
-.eyebrow{
-  font-size:9px;
-  letter-spacing:5px;
-  color:#666;
-  margin-bottom:22px;
+  margin:auto;
+
+  padding:90px 24px 70px;
 }
 
 .statement{
   font-size:40px;
+
   line-height:1.1;
+
   font-weight:400;
+
   margin-bottom:25px;
 }
 
 .bio{
   color:#888;
+
   font-size:15px;
+
   line-height:1.8;
 }
 
@@ -143,36 +203,30 @@ body{
 
 .about{
   max-width:520px;
-  margin:auto;
-  padding:30px 24px 90px;
-}
 
-.about-label{
-  font-size:9px;
-  letter-spacing:5px;
-  color:#666;
-  margin-bottom:22px;
+  margin:auto;
+
+  padding:30px 24px 100px;
 }
 
 .about-title{
   font-size:36px;
+
   line-height:1.15;
+
   font-weight:400;
+
   margin-bottom:28px;
 }
 
 .about-text{
   color:#888;
-  font-size:15px;
-  line-height:1.8;
-  margin-bottom:18px;
-}
 
-.about-line{
-  width:45px;
-  height:1px;
-  background:#333;
-  margin-top:40px;
+  font-size:15px;
+
+  line-height:1.8;
+
+  margin-bottom:18px;
 }
 
 
@@ -182,15 +236,10 @@ body{
 
 .socials{
   max-width:520px;
-  margin:auto;
-  padding:0 24px 100px;
-}
 
-.section-label{
-  font-size:9px;
-  letter-spacing:5px;
-  color:#666;
-  margin-bottom:25px;
+  margin:auto;
+
+  padding:0 24px 110px;
 }
 
 
@@ -200,31 +249,47 @@ body{
 
 .links{
   display:flex;
+
   flex-direction:column;
+
   gap:12px;
 }
 
 .link{
+  width:100%;
+
   text-decoration:none;
+
   color:#fff;
 
   padding:20px 22px;
 
   border:1px solid #222;
+
   border-radius:18px;
 
   background:#0d0d0d;
 
   display:flex;
+
   justify-content:space-between;
   align-items:center;
 
-  transition:.25s ease;
+  cursor:pointer;
+
+  font-family:inherit;
+
+  transition:
+    transform .25s ease,
+    background .25s ease,
+    border-color .25s ease;
 }
 
 .link:hover{
   transform:translateY(-2px);
+
   background:#151515;
+
   border-color:#444;
 }
 
@@ -234,11 +299,13 @@ body{
 
 .link-name{
   font-size:12px;
+
   letter-spacing:2.5px;
 }
 
 .arrow{
   opacity:.4;
+
   font-size:18px;
 }
 
@@ -249,8 +316,10 @@ body{
 
 .contact{
   max-width:520px;
+
   margin:auto;
-  padding:0 24px 110px;
+
+  padding:0 24px 120px;
 }
 
 .contact-info{
@@ -259,13 +328,16 @@ body{
 
 .contact-info a{
   display:block;
+
   width:max-content;
   max-width:100%;
 
   text-decoration:none;
+
   color:#999;
 
   font-size:14px;
+
   margin-bottom:12px;
 
   transition:.2s ease;
@@ -277,17 +349,45 @@ body{
 
 
 /* =========================
-   QUOTE
+   SAVE CONTACT
+========================= */
+
+.save-contact{
+  border-color:#3a3a3a;
+
+  background:#ffffff;
+
+  color:#080808;
+}
+
+.save-contact .arrow{
+  color:#080808;
+
+  opacity:.5;
+}
+
+.save-contact:hover{
+  background:#eaeaea;
+
+  border-color:#ffffff;
+}
+
+
+/* =========================
+   CINEMATIC QUOTE
 ========================= */
 
 .quote{
-  padding:120px 25px;
+  padding:130px 25px;
+
   text-align:center;
 }
 
 .quote p{
   font-size:clamp(28px,8vw,48px);
+
   line-height:1.25;
+
   font-weight:300;
 }
 
@@ -299,32 +399,87 @@ body{
   color:#555;
 
   font-size:9px;
+
   letter-spacing:5px;
 }
 
 
 /* =========================
-   TAP SHEINNEMA
+   TAP SHEINNEMA ABOUT US
+========================= */
+
+.tap-about{
+  max-width:520px;
+
+  margin:auto;
+
+  padding:110px 24px;
+}
+
+.tap-about-title{
+  font-size:38px;
+
+  line-height:1.15;
+
+  font-weight:400;
+
+  margin-bottom:30px;
+}
+
+.tap-about-text{
+  color:#888;
+
+  font-size:15px;
+
+  line-height:1.85;
+
+  margin-bottom:20px;
+}
+
+.tap-promise{
+  margin-top:45px;
+
+  padding-top:30px;
+
+  border-top:1px solid #222;
+
+  font-size:20px;
+
+  line-height:1.5;
+
+  font-weight:400;
+
+  color:#fff;
+}
+
+
+/* =========================
+   POWERED BY
 ========================= */
 
 .powered{
   text-align:center;
 
-  padding:90px 20px 75px;
+  padding:100px 20px 80px;
 
   border-top:1px solid #161616;
 }
 
 .powered-small{
   font-size:8px;
+
   letter-spacing:4px;
+
   color:#444;
+
   margin-bottom:14px;
 }
 
 .tap-brand{
   font-size:16px;
+
   letter-spacing:5px;
+
   font-weight:500;
 }
 
@@ -332,6 +487,7 @@ body{
   margin-top:13px;
 
   font-size:11px;
+
   letter-spacing:1.5px;
 
   color:#666;
@@ -344,12 +500,15 @@ body{
 
 footer{
   padding:0 20px 50px;
+
   text-align:center;
 }
 
 .copyright{
   font-size:9px;
+
   letter-spacing:1px;
+
   color:#333;
 }
 
@@ -370,6 +529,10 @@ footer{
 
   .about-title{
     font-size:32px;
+  }
+
+  .tap-about-title{
+    font-size:34px;
   }
 
 }
@@ -427,9 +590,11 @@ footer{
   </h2>
 
   <p class="bio">
+
     Stories from the ground to the skies.
     Cinematic filmmaking, aerial perspectives,
     and moments worth remembering.
+
   </p>
 
 </section>
@@ -437,12 +602,12 @@ footer{
 
 
 <!-- =========================
-     ABOUT
+     ABOUT SHEINNEMA
 ========================= -->
 
 <section class="about">
 
-  <p class="about-label">
+  <p class="eyebrow">
     ABOUT
   </p>
 
@@ -452,17 +617,21 @@ footer{
   </h2>
 
   <p class="about-text">
+
     Sheinnema is a visual storytelling identity built around
     capturing moments from perspectives that feel different,
     intentional, and cinematic.
+
   </p>
 
   <p class="about-text">
+
     From the ground to the skies, every frame is created
     to turn moments into stories worth remembering.
+
   </p>
 
-  <div class="about-line"></div>
+  <div class="divider"></div>
 
 </section>
 
@@ -501,7 +670,8 @@ footer{
     </a>
 
 
-    <!-- FACEBOOK PROFILE -->
+
+    <!-- FACEBOOK -->
 
     <a
       class="link"
@@ -519,6 +689,7 @@ footer{
       </span>
 
     </a>
+
 
 
     <!-- FACEBOOK PAGE -->
@@ -539,6 +710,7 @@ footer{
       </span>
 
     </a>
+
 
 
     <!-- TIKTOK -->
@@ -581,7 +753,7 @@ footer{
   <div class="contact-info">
 
     <a href="tel:+639505174579">
-      0950 517 4579
+      +63 950 517 4579
     </a>
 
     <a href="mailto:xisheinn.am@gmail.com">
@@ -592,6 +764,26 @@ footer{
 
 
   <div class="links">
+
+
+    <!-- SAVE CONTACT -->
+
+    <button
+      class="link save-contact"
+      onclick="saveContact()"
+      type="button"
+    >
+
+      <span class="link-name">
+        SAVE CONTACT
+      </span>
+
+      <span class="arrow">
+        ↓
+      </span>
+
+    </button>
+
 
 
     <!-- CALL -->
@@ -610,6 +802,7 @@ footer{
       </span>
 
     </a>
+
 
 
     <!-- EMAIL -->
@@ -643,13 +836,59 @@ footer{
 <section class="quote">
 
   <p>
+
     Stories don't just<br>
     happen on the ground.
+
   </p>
 
   <span>
     LOOK ABOVE
   </span>
+
+</section>
+
+
+
+<!-- =========================
+     TAP SHEINNEMA ABOUT US
+========================= -->
+
+<section class="tap-about">
+
+  <p class="section-label">
+    ABOUT US
+  </p>
+
+  <h2 class="tap-about-title">
+
+    Your identity.<br>
+    One tap away.
+
+  </h2>
+
+  <p class="tap-about-text">
+
+    TAP SHEINNEMA transforms the traditional business card
+    into a smarter way to connect.
+
+  </p>
+
+  <p class="tap-about-text">
+
+    One tap gives people access to your socials, portfolio,
+    contact information, and everything that represents you —
+    all in one place.
+
+  </p>
+
+
+  <div class="tap-promise">
+
+    Your information changes.<br>
+    Your card doesn't.
+
+  </div>
 
 </section>
 
@@ -688,6 +927,63 @@ footer{
   </div>
 
 </footer>
+
+
+
+<!-- =========================
+     SAVE CONTACT SCRIPT
+========================= -->
+
+<script>
+
+function saveContact(){
+
+  const vCard = `BEGIN:VCARD
+VERSION:3.0
+N:Mati-ong;Shein Bryan;;;
+FN:Shein Bryan Mati-ong
+ORG:SHEINNEMA
+TITLE:Visual Storyteller
+TEL;TYPE=CELL:+639505174579
+EMAIL;TYPE=INTERNET:xisheinn.am@gmail.com
+URL:https://tap.sheinnema.com
+NOTE:Filmmaker | Visual Storyteller | Drone / FPV Pilot
+END:VCARD`;
+
+  const blob = new Blob(
+    [vCard],
+    {
+      type:"text/vcard;charset=utf-8"
+    }
+  );
+
+  const url =
+    URL.createObjectURL(blob);
+
+  const link =
+    document.createElement("a");
+
+  link.href = url;
+
+  link.download =
+    "Shein-Bryan-Mati-ong.vcf";
+
+  document.body.appendChild(link);
+
+  link.click();
+
+  document.body.removeChild(link);
+
+
+  setTimeout(function(){
+
+    URL.revokeObjectURL(url);
+
+  },1000);
+
+}
+
+</script>
 
 
 </body>
