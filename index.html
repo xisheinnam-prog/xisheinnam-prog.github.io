@@ -295,22 +295,19 @@ body{
 ========================= */
 
 .save-contact{
-  border-color:#ffffff;
-
-  background:#ffffff;
-
-  color:#080808;
-}
-
-.save-contact .arrow{
-  color:#080808;
-  opacity:.5;
+  border-color:#2a2a2a;
+  background:#111;
+  color:#fff;
 }
 
 .save-contact:hover{
-  background:#eaeaea;
+  background:#181818;
+  border-color:#444;
+}
 
-  border-color:#ffffff;
+.save-contact .arrow{
+  color:#777;
+  opacity:1;
 }
 
 
@@ -511,6 +508,8 @@ footer{
   <div class="links">
 
 
+    <!-- INSTAGRAM -->
+
     <a
       class="link"
       href="https://www.instagram.com/sheinnema/"
@@ -529,6 +528,8 @@ footer{
     </a>
 
 
+
+    <!-- FACEBOOK -->
 
     <a
       class="link"
@@ -549,6 +550,8 @@ footer{
 
 
 
+    <!-- SHEINNEMA PAGE -->
+
     <a
       class="link"
       href="https://www.facebook.com/profile.php?id=61570786376664"
@@ -567,6 +570,8 @@ footer{
     </a>
 
 
+
+    <!-- TIKTOK -->
 
     <a
       class="link"
@@ -619,26 +624,6 @@ footer{
   <div class="links">
 
 
-    <!-- SAVE CONTACT -->
-
-    <button
-      class="link save-contact"
-      onclick="saveContact()"
-      type="button"
-    >
-
-      <span class="link-name">
-        SAVE CONTACT
-      </span>
-
-      <span class="arrow">
-        ↓
-      </span>
-
-    </button>
-
-
-
     <!-- CALL -->
 
     <a
@@ -676,6 +661,26 @@ footer{
     </a>
 
 
+
+    <!-- SAVE CONTACT -->
+
+    <button
+      class="link save-contact"
+      onclick="saveContact()"
+      type="button"
+    >
+
+      <span class="link-name">
+        SAVE CONTACT
+      </span>
+
+      <span class="arrow">
+        +
+      </span>
+
+    </button>
+
+
   </div>
 
 </section>
@@ -702,7 +707,7 @@ footer{
 
 
 <!-- =========================
-     ABOUT TAP SHEINNEMA BUTTON
+     ABOUT TAP SHEINNEMA
 ========================= -->
 
 <section class="tap-section">
@@ -778,12 +783,8 @@ function saveContact(){
 VERSION:3.0
 N:Mati-ong;Shein Bryan;;;
 FN:Shein Bryan Mati-ong
-ORG:SHEINNEMA
-TITLE:Visual Storyteller
 TEL;TYPE=CELL:+639505174579
 EMAIL;TYPE=INTERNET:xisheinn.am@gmail.com
-URL:https://tap.sheinnema.com
-NOTE:Filmmaker | Visual Storyteller | Drone / FPV Pilot
 END:VCARD`;
 
   const blob = new Blob(
