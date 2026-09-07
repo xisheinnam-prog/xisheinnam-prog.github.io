@@ -1,363 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Sheinnema.</title>
+<title>Sheinnema.</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
 
-    html {
-      scroll-behavior: smooth;
-    }
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
-    body {
-      background: #080808;
-      color: #ffffff;
-      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-    }
+html{
+  scroll-behavior:smooth;
+}
 
-    /* HERO */
+body{
+  background:#080808;
+  color:white;
+  font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+}
 
-    .hero {
-      min-height: 100vh;
-      position: relative;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      overflow: hidden;
-    }
+/* HERO */
 
-    .hero-image {
-      position: absolute;
-      inset: 0;
+.hero{
+  height:100svh;
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  overflow:hidden;
+}
 
-      background-image:
-        linear-gradient(
-          to bottom,
-          rgba(0,0,0,0.05) 20%,
-          rgba(0,0,0,0.25) 55%,
-          #080808 100%
-        ),
-        url("hero.jpg");
+.hero-image{
+  position:absolute;
+  inset:0;
 
-      background-size: cover;
-      background-position: center;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,.05),
+      rgba(0,0,0,.15) 45%,
+      #080808 100%
+    ),
+    url("hero.jpg");
 
-      animation: reveal 1.5s ease;
-    }
+  background-size:cover;
+  background-position:center;
 
-    @keyframes reveal {
-      from {
-        opacity: 0;
-        transform: scale(1.05);
-      }
+  animation:heroReveal 1.6s ease;
+}
 
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
+@keyframes heroReveal{
+  from{
+    opacity:0;
+    transform:scale(1.08);
+  }
+  to{
+    opacity:1;
+    transform:scale(1);
+  }
+}
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      padding: 40px 25px 70px;
-    }
+.hero-content{
+  position:relative;
+  z-index:2;
+  text-align:center;
+  padding:40px 20px 70px;
+}
 
-    .brand {
-      font-size: clamp(42px, 12vw, 72px);
-      letter-spacing: 8px;
-      font-weight: 500;
-    }
+.brand{
+  font-size:clamp(42px,12vw,76px);
+  letter-spacing:7px;
+  font-weight:500;
+}
 
-    .role {
-      margin-top: 12px;
-      color: rgba(255,255,255,.65);
-      font-size: 12px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-    }
+.role{
+  margin-top:12px;
+  font-size:10px;
+  letter-spacing:3px;
+  color:rgba(255,255,255,.65);
+  text-transform:uppercase;
+}
 
-    .scroll {
-      margin-top: 35px;
-      font-size: 10px;
-      letter-spacing: 4px;
-      color: rgba(255,255,255,.45);
-    }
-
-
-    /* PROFILE */
-
-    .profile {
-      max-width: 520px;
-      margin: auto;
-      padding: 80px 24px;
-    }
-
-    .eyebrow {
-      font-size: 10px;
-      letter-spacing: 5px;
-      color: #777;
-      margin-bottom: 18px;
-    }
-
-    .statement {
-      font-size: 34px;
-      line-height: 1.15;
-      font-weight: 400;
-      margin-bottom: 18px;
-    }
-
-    .bio {
-      color: #888;
-      line-height: 1.7;
-      font-size: 15px;
-      margin-bottom: 50px;
-    }
+.scroll{
+  margin-top:35px;
+  font-size:9px;
+  letter-spacing:4px;
+  color:rgba(255,255,255,.4);
+}
 
 
-    /* LINKS */
+/* CONTENT */
 
-    .links {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
+.profile{
+  max-width:520px;
+  margin:auto;
+  padding:90px 24px;
+}
 
-    .link {
-      text-decoration: none;
-      color: white;
+.eyebrow{
+  font-size:9px;
+  letter-spacing:5px;
+  color:#666;
+  margin-bottom:22px;
+}
 
-      border: 1px solid #242424;
-      border-radius: 18px;
+.statement{
+  font-size:40px;
+  line-height:1.1;
+  font-weight:400;
+  margin-bottom:25px;
+}
 
-      padding: 20px 22px;
-
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      transition: .25s ease;
-
-      background: #0d0d0d;
-    }
-
-    .link:hover {
-      background: #161616;
-      transform: translateY(-2px);
-      border-color: #444;
-    }
-
-    .link-name {
-      font-size: 14px;
-      letter-spacing: 2px;
-    }
-
-    .arrow {
-      opacity: .4;
-      font-size: 18px;
-    }
+.bio{
+  color:#888;
+  font-size:15px;
+  line-height:1.8;
+  margin-bottom:50px;
+}
 
 
-    /* QUOTE */
+/* LINKS */
 
-    .quote {
-      padding: 120px 25px;
-      text-align: center;
-    }
+.links{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
 
-    .quote p {
-      font-size: clamp(28px, 8vw, 48px);
-      line-height: 1.25;
-      font-weight: 300;
-    }
+.link{
+  text-decoration:none;
+  color:white;
 
-    .quote span {
-      display: block;
-      margin-top: 20px;
+  padding:20px 22px;
 
-      color: #555;
+  border:1px solid #222;
+  border-radius:18px;
 
-      font-size: 10px;
-      letter-spacing: 5px;
-    }
+  background:#0d0d0d;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  transition:.25s ease;
+}
+
+.link:hover{
+  transform:translateY(-2px);
+  background:#151515;
+  border-color:#444;
+}
+
+.link-name{
+  font-size:12px;
+  letter-spacing:2.5px;
+}
+
+.arrow{
+  opacity:.4;
+  font-size:18px;
+}
 
 
-    /* FOOTER */
+/* QUOTE */
 
-    footer {
-      padding: 80px 20px 50px;
-      text-align: center;
-      border-top: 1px solid #161616;
-    }
+.quote{
+  padding:120px 25px;
+  text-align:center;
+}
 
-    .footer-brand {
-      font-size: 16px;
-      letter-spacing: 5px;
-    }
+.quote p{
+  font-size:clamp(28px,8vw,48px);
+  line-height:1.25;
+  font-weight:300;
+}
 
-    .tagline {
-      margin-top: 15px;
+.quote span{
+  display:block;
+  margin-top:25px;
+  color:#555;
+  font-size:9px;
+  letter-spacing:5px;
+}
 
-      font-size: 9px;
-      letter-spacing: 4px;
 
-      color: #555;
-    }
+/* FOOTER */
 
-    .copyright {
-      margin-top: 45px;
-      font-size: 9px;
-      color: #333;
-    }
+footer{
+  padding:80px 20px 50px;
+  text-align:center;
+  border-top:1px solid #161616;
+}
 
-  </style>
+.footer-brand{
+  font-size:17px;
+  letter-spacing:5px;
+}
+
+.tagline{
+  margin-top:15px;
+  font-size:9px;
+  letter-spacing:4px;
+  color:#555;
+}
+
+.copyright{
+  margin-top:45px;
+  font-size:9px;
+  color:#333;
+}
+
+</style>
 </head>
 
 
 <body>
 
-  <!-- HERO -->
 
-  <section class="hero">
+<!-- HERO -->
 
-    <div class="hero-image"></div>
+<section class="hero">
 
-    <div class="hero-content">
+  <div class="hero-image"></div>
 
-      <h1 class="brand">
-        SHEINNEMA.
-      </h1>
+  <div class="hero-content">
 
-      <p class="role">
-        Visual Storyteller · Filmmaker · Drone / FPV Pilot
-      </p>
-
-      <p class="scroll">
-        SCROLL TO CONNECT ↓
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <!-- PROFILE -->
-
-  <section class="profile">
-
-    <p class="eyebrow">
-      THROUGH MY LENS
-    </p>
-
-    <h2 class="statement">
-      Above.<br>
-      Beyond.<br>
-      Sheinnema.
-    </h2>
-
-    <p class="bio">
-      Stories from the ground to the skies.
-      Cinematic filmmaking, aerial perspectives,
-      and moments worth remembering.
-    </p>
-
-
-    <div class="links">
-
-      <a class="link"
-         href="https://instagram.com/sheinnema"
-         target="_blank">
-
-        <span class="link-name">INSTAGRAM</span>
-        <span class="arrow">↗</span>
-
-      </a>
-
-
-      <a class="link"
-         href="https://www.facebook.com/Xisheinn/"
-         target="_blank">
-
-        <span class="link-name">FACEBOOK</span>
-        <span class="arrow">↗</span>
-
-      </a>
-
-
-      <a class="link"
-         href="#"
-         target="_blank">
-
-        <span class="link-name">TIKTOK</span>
-        <span class="arrow">↗</span>
-
-      </a>
-
-
-      <a class="link"
-         href="#">
-
-        <span class="link-name">VIEW MY WORK</span>
-        <span class="arrow">↗</span>
-
-      </a>
-
-
-      <a class="link"
-         href="mailto:YOUR-EMAIL-HERE">
-
-        <span class="link-name">CONTACT</span>
-        <span class="arrow">↗</span>
-
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- BRAND STATEMENT -->
-
-  <section class="quote">
-
-    <p>
-      Stories don't just<br>
-      happen on the ground.
-    </p>
-
-    <span>
-      LOOK ABOVE
-    </span>
-
-  </section>
-
-
-  <!-- FOOTER -->
-
-  <footer>
-
-    <div class="footer-brand">
+    <h1 class="brand">
       SHEINNEMA.
-    </div>
+    </h1>
 
-    <div class="tagline">
-      TAP. CONNECT. BEYOND.
-    </div>
+    <p class="role">
+      Visual Storyteller · Filmmaker · Drone / FPV Pilot
+    </p>
 
-    <div class="copyright">
-      © 2026 SHEINNEMA
-    </div>
+    <p class="scroll">
+      SCROLL TO CONNECT ↓
+    </p>
 
-  </footer>
+  </div>
+
+</section>
+
+
+
+<!-- PROFILE -->
+
+<section class="profile">
+
+  <p class="eyebrow">
+    THROUGH MY LENS
+  </p>
+
+  <h2 class="statement">
+    Above.<br>
+    Beyond.<br>
+    Sheinnema.
+  </h2>
+
+  <p class="bio">
+    Stories from the ground to the skies.
+    Cinematic filmmaking, aerial perspectives,
+    and moments worth remembering.
+  </p>
+
+
+  <div class="links">
+
+
+    <!-- INSTAGRAM -->
+
+    <a class="link"
+       href="https://www.instagram.com/sheinnema/"
+       target="_blank">
+
+      <span class="link-name">
+        INSTAGRAM
+      </span>
+
+      <span class="arrow">↗</span>
+
+    </a>
+
+
+    <!-- FACEBOOK PROFILE -->
+
+    <a class="link"
+       href="https://www.facebook.com/Xisheinn/"
+       target="_blank">
+
+      <span class="link-name">
+        FACEBOOK
+      </span>
+
+      <span class="arrow">↗</span>
+
+    </a>
+
+
+    <!-- FACEBOOK PAGE -->
+
+    <a class="link"
+       href="https://www.facebook.com/profile.php?id=61570786376664"
+       target="_blank">
+
+      <span class="link-name">
+        SHEINNEMA PAGE
+      </span>
+
+      <span class="arrow">↗</span>
+
+    </a>
+
+
+    <!-- TIKTOK -->
+
+    <a class="link"
+       href="https://www.tiktok.com/@xi_magination"
+       target="_blank">
+
+      <span class="link-name">
+        TIKTOK
+      </span>
+
+      <span class="arrow">↗</span>
+
+    </a>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- QUOTE -->
+
+<section class="quote">
+
+  <p>
+    Stories don't just<br>
+    happen on the ground.
+  </p>
+
+  <span>
+    LOOK ABOVE
+  </span>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="footer-brand">
+    SHEINNEMA.
+  </div>
+
+  <div class="tagline">
+    TAP. CONNECT. SHEINNEMA.
+  </div>
+
+  <div class="copyright">
+    © 2026 SHEINNEMA
+  </div>
+
+</footer>
+
 
 </body>
 </html>
