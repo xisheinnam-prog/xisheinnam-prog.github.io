@@ -60,7 +60,6 @@ body{
   gap:10px;
 
   text-decoration:none;
-
   color:#666;
 
   font-size:9px;
@@ -149,6 +148,9 @@ body{
   transform-style:preserve-3d;
 }
 
+
+/* FLOATING ANIMATION */
+
 @keyframes floatCard{
 
   0%{
@@ -190,7 +192,8 @@ body{
 
   transform-style:preserve-3d;
 
-  transition:transform .85s cubic-bezier(.2,.7,.2,1);
+  transition:
+    transform .85s cubic-bezier(.2,.7,.2,1);
 
   outline:none;
 }
@@ -198,6 +201,9 @@ body{
 .card-flip.flipped{
   transform:rotateY(180deg);
 }
+
+
+/* CARD FACE */
 
 .card-face{
   position:absolute;
@@ -226,6 +232,9 @@ body{
 
   overflow:hidden;
 }
+
+
+/* SUBTLE CARD SHINE */
 
 .card-face::after{
   content:"";
@@ -264,12 +273,15 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:flex-start;
+
   gap:20px;
 }
 
 .card-brand{
   font-size:18px;
+
   letter-spacing:4px;
+
   font-weight:500;
 }
 
@@ -294,6 +306,7 @@ body{
 
 .card-tagline{
   font-size:10px;
+
   letter-spacing:1.4px;
 
   color:#777;
@@ -303,6 +316,7 @@ body{
   text-align:right;
 
   font-size:7px;
+
   letter-spacing:2.2px;
 
   color:#444;
@@ -321,39 +335,59 @@ body{
   text-align:center;
 }
 
+
+/* MINIMAL BACK DESIGN */
+
 .back-content{
   position:relative;
   z-index:2;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 }
+
+
+/* POWERED BY */
 
 .back-small{
-  font-size:8px;
-
-  letter-spacing:5px;
-
-  color:#555;
-
-  margin-bottom:16px;
-}
-
-.back-brand{
-  font-size:22px;
+  font-size:6px;
 
   letter-spacing:4px;
 
-  font-weight:500;
+  color:#444;
 
-  line-height:1.3;
+  margin-bottom:12px;
+
+  font-weight:500;
 }
 
+
+/* TAP SHEINNEMA */
+
+.back-brand{
+  font-size:15px;
+
+  letter-spacing:3.5px;
+
+  font-weight:500;
+
+  line-height:1.2;
+
+  color:#e8e8e8;
+}
+
+
+/* TAGLINE */
+
 .back-tagline{
-  margin-top:18px;
+  margin-top:14px;
 
-  font-size:10px;
+  font-size:8px;
 
-  letter-spacing:1.4px;
+  letter-spacing:1.5px;
 
-  color:#666;
+  color:#4d4d4d;
 }
 
 
@@ -392,6 +426,7 @@ body{
 
 .section-label{
   font-size:9px;
+
   letter-spacing:5px;
 
   color:#666;
@@ -401,6 +436,7 @@ body{
 
 .statement{
   font-size:clamp(32px,8vw,46px);
+
   line-height:1.15;
 
   font-weight:400;
@@ -412,6 +448,7 @@ body{
   color:#999;
 
   font-size:15px;
+
   line-height:1.9;
 
   margin-bottom:24px;
@@ -455,13 +492,14 @@ body{
   color:#999;
 
   font-size:20px;
+
   line-height:1.8;
 
   font-weight:400;
 }
 
 
-/* RETURN BUTTON */
+/* RETURN */
 
 .return-section{
   padding:20px 0 120px;
@@ -477,6 +515,7 @@ body{
   padding:20px 22px;
 
   border:1px solid #222;
+
   border-radius:18px;
 
   background:#0d0d0d;
@@ -538,6 +577,7 @@ body{
   margin-top:13px;
 
   font-size:11px;
+
   letter-spacing:1.5px;
 
   color:#666;
@@ -588,12 +628,22 @@ footer{
 
   .card-brand{
     font-size:15px;
+
     letter-spacing:3px;
   }
 
   .back-brand{
-    font-size:19px;
+    font-size:13px;
+
     letter-spacing:3px;
+  }
+
+  .back-small{
+    font-size:5px;
+  }
+
+  .back-tagline{
+    font-size:7px;
   }
 
 }
@@ -660,6 +710,7 @@ footer{
 
   <div class="card-glow"></div>
 
+
   <div class="card-float">
 
     <div
@@ -675,6 +726,7 @@ footer{
       <!-- FRONT -->
 
       <div class="card-face card-front">
+
 
         <div class="card-top">
 
@@ -701,12 +753,14 @@ footer{
 
         </div>
 
+
       </div>
 
 
       <!-- BACK -->
 
       <div class="card-face card-back">
+
 
         <div class="back-content">
 
@@ -723,6 +777,7 @@ footer{
           </div>
 
         </div>
+
 
       </div>
 
@@ -842,7 +897,7 @@ footer{
 </main>
 
 
-<!-- TAP SHEINNEMA -->
+<!-- FOOTER BRAND -->
 
 <section class="footer-brand">
 
@@ -872,7 +927,9 @@ footer{
 
 <script>
 
-const tapCard = document.getElementById("tapCard");
+const tapCard =
+  document.getElementById("tapCard");
+
 
 function flipCard(){
 
@@ -888,10 +945,12 @@ function flipCard(){
 
 }
 
+
 tapCard.addEventListener(
   "click",
   flipCard
 );
+
 
 tapCard.addEventListener(
   "keydown",
