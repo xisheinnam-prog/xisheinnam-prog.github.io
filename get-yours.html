@@ -144,6 +144,8 @@ select{
   display:flex;
   flex-direction:column;
   gap:10px;
+
+  min-width:0;
 }
 
 .field label,
@@ -158,6 +160,8 @@ select{
 .field textarea,
 .field select{
   width:100%;
+
+  min-width:0;
 
   border:1px solid #222;
 
@@ -211,14 +215,23 @@ select{
 
 .options{
   display:grid;
+
   grid-template-columns:1fr 1fr;
+
   gap:10px;
+
+  width:100%;
 }
 
 .option{
+  width:100%;
+
+  min-width:0;
+
   display:flex;
   align-items:center;
-  gap:10px;
+
+  gap:12px;
 
   padding:15px 16px;
 
@@ -231,11 +244,44 @@ select{
 
   font-size:11px;
 
+  line-height:1.4;
+
   cursor:pointer;
+
+  overflow:hidden;
 }
 
+.option:hover{
+  border-color:#3a3a3a;
+  color:#bbb;
+}
+
+
+/* IMPORTANT IPHONE FIX */
+
 .option input{
-  accent-color:#fff;
+  appearance:auto;
+  -webkit-appearance:auto;
+
+  width:18px !important;
+  height:18px !important;
+
+  min-width:18px !important;
+  max-width:18px !important;
+
+  flex:0 0 18px;
+
+  margin:0;
+
+  padding:0;
+
+  accent-color:#ffffff;
+}
+
+.option span{
+  min-width:0;
+
+  overflow-wrap:anywhere;
 }
 
 
@@ -261,8 +307,11 @@ select{
 
 .honeypot{
   position:absolute;
+
   left:-9999px;
+
   opacity:0;
+
   pointer-events:none;
 }
 
@@ -271,6 +320,7 @@ select{
 
 .actions{
   display:flex;
+
   flex-direction:column;
 
   gap:12px;
@@ -530,6 +580,11 @@ select{
 
 @media(max-width:480px){
 
+  .page{
+    padding-left:22px;
+    padding-right:22px;
+  }
+
   .row{
     grid-template-columns:1fr;
   }
@@ -540,6 +595,49 @@ select{
 
   .top{
     margin-bottom:90px;
+  }
+
+  .option{
+    padding:16px;
+
+    font-size:11px;
+  }
+
+}
+
+
+/* SMALL IPHONES */
+
+@media(max-width:390px){
+
+  .page{
+    padding-left:20px;
+    padding-right:20px;
+  }
+
+  .title{
+    font-size:39px;
+  }
+
+  .option{
+    gap:11px;
+  }
+
+}
+
+
+/* REDUCED MOTION */
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  .success.show{
+    animation:none;
+    opacity:1;
+    transform:none;
   }
 
 }
@@ -940,7 +1038,9 @@ select{
   value="Call Me"
 >
 
-CALL ME
+<span>
+  CALL ME
+</span>
 
 </label>
 
@@ -953,7 +1053,9 @@ CALL ME
   value="Email Me"
 >
 
-EMAIL ME
+<span>
+  EMAIL ME
+</span>
 
 </label>
 
@@ -966,7 +1068,9 @@ EMAIL ME
   value="Save Contact"
 >
 
-SAVE CONTACT
+<span>
+  SAVE CONTACT
+</span>
 
 </label>
 
