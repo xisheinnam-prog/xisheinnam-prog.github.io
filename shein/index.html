@@ -12,7 +12,7 @@
 
 <meta name="theme-color" content="#080808">
 
-<title>Shein Bryan Mati-ong Culi | TAP SHEINNEMA.</title>
+<title>Sheinnema.</title>
 
 <meta
   name="description"
@@ -58,9 +58,7 @@ a{
   min-height:100svh;
 
   display:flex;
-
   flex-direction:column;
-
   justify-content:flex-end;
 
   padding:
@@ -78,26 +76,19 @@ a{
     url("../hero.jpg");
 
   background-size:cover;
-
   background-position:center;
 }
 
 .hero-content{
   width:100%;
+
   max-width:520px;
 
-  margin:
-    0
-    auto;
+  margin:auto auto 0;
 }
 
 .hero-title{
-  font-size:
-    clamp(
-      52px,
-      15vw,
-      76px
-    );
+  font-size:clamp(52px,15vw,76px);
 
   line-height:.94;
 
@@ -160,12 +151,7 @@ a{
 }
 
 .profile-headline{
-  font-size:
-    clamp(
-      37px,
-      10vw,
-      51px
-    );
+  font-size:clamp(37px,10vw,51px);
 
   font-weight:400;
 
@@ -204,7 +190,7 @@ a{
 }
 
 
-/* SOCIAL LINKS */
+/* LINKS */
 
 .links{
   border-top:1px solid #191919;
@@ -226,18 +212,6 @@ a{
   text-decoration:none;
 
   font-size:13px;
-
-  transition:
-    padding .2s ease,
-    color .2s ease;
-}
-
-.link:hover{
-  padding-left:6px;
-}
-
-.link-name{
-  min-width:0;
 }
 
 .link-arrow{
@@ -250,10 +224,6 @@ a{
 
 
 /* CONTACT */
-
-.contact-details{
-  margin-bottom:34px;
-}
 
 .contact-detail{
   display:block;
@@ -273,11 +243,9 @@ a{
   overflow-wrap:anywhere;
 }
 
-.contact-detail:hover{
-  color:#fff;
-}
-
 .contact-actions{
+  margin-top:34px;
+
   display:flex;
 
   flex-direction:column;
@@ -298,9 +266,7 @@ a{
 
   color:#ffffff;
 
-  padding:
-    19px
-    20px;
+  padding:19px 20px;
 
   display:flex;
 
@@ -319,17 +285,18 @@ a{
   cursor:pointer;
 
   transition:
-    transform .2s ease,
-    border-color .2s ease,
-    background .2s ease;
+    transform .25s ease,
+    background .25s ease,
+    border-color .25s ease,
+    color .25s ease;
 }
 
 .action:hover{
   transform:translateY(-2px);
 
-  border-color:#414141;
+  background:#141414;
 
-  background:#121212;
+  border-color:#444;
 }
 
 .action-symbol{
@@ -346,9 +313,7 @@ a{
 .quote{
   margin-top:110px;
 
-  padding:
-    58px
-    0;
+  padding:58px 0;
 
   border-top:1px solid #181818;
 
@@ -356,12 +321,7 @@ a{
 }
 
 .quote-text{
-  font-size:
-    clamp(
-      29px,
-      8vw,
-      39px
-    );
+  font-size:clamp(29px,8vw,39px);
 
   font-weight:400;
 
@@ -381,7 +341,7 @@ a{
 }
 
 
-/* POWERED BY */
+/* POWERED */
 
 .powered-section{
   margin-top:115px;
@@ -414,14 +374,70 @@ a{
 }
 
 
+/* ABOUT US BUTTON */
+
+.about-section{
+  margin-top:45px;
+}
+
+.about-button{
+  width:100%;
+
+  min-height:60px;
+
+  border:1px solid #202020;
+
+  border-radius:17px;
+
+  background:#0d0d0d;
+
+  color:#ffffff;
+
+  padding:19px 20px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:20px;
+
+  text-decoration:none;
+
+  font-size:9px;
+
+  letter-spacing:2.5px;
+
+  transition:
+    transform .25s ease,
+    background .25s ease,
+    border-color .25s ease;
+}
+
+.about-button:hover{
+  transform:translateY(-2px);
+
+  background:#141414;
+
+  border-color:#444;
+}
+
+.about-arrow{
+  color:#777;
+
+  font-size:17px;
+
+  letter-spacing:0;
+}
+
+
 /* FOOTER */
 
 .footer{
   margin-top:80px;
 
-  padding:
-    45px
-    24px;
+  padding:45px 24px;
 
   border-top:1px solid #151515;
 
@@ -433,114 +449,14 @@ a{
 }
 
 
-/* SAVE CONTACT FEEDBACK */
-
-.save-message{
-  position:fixed;
-
-  left:50%;
-  bottom:28px;
-
-  transform:
-    translateX(-50%)
-    translateY(20px);
-
-  width:
-    calc(100% - 40px);
-
-  max-width:420px;
-
-  padding:15px 20px;
-
-  border:1px solid #252525;
-
-  border-radius:16px;
-
-  background:
-    rgba(15,15,15,.94);
-
-  backdrop-filter:blur(18px);
-
-  -webkit-backdrop-filter:blur(18px);
-
-  color:#aaa;
-
-  font-size:9px;
-
-  letter-spacing:2px;
-
-  text-align:center;
-
-  opacity:0;
-
-  pointer-events:none;
-
-  transition:
-    opacity .3s ease,
-    transform .3s ease;
-
-  z-index:50;
-}
-
-.save-message.show{
-  opacity:1;
-
-  transform:
-    translateX(-50%)
-    translateY(0);
-}
-
-
 /* MOBILE */
 
 @media(max-width:480px){
 
-  .hero{
-    padding-left:22px;
-    padding-right:22px;
-  }
-
+  .hero,
   .page{
     padding-left:22px;
     padding-right:22px;
-  }
-
-}
-
-
-/* SMALL IPHONES */
-
-@media(max-width:390px){
-
-  .hero{
-    padding-left:20px;
-    padding-right:20px;
-  }
-
-  .page{
-    padding-left:20px;
-    padding-right:20px;
-  }
-
-  .hero-title{
-    font-size:51px;
-  }
-
-}
-
-
-/* REDUCED MOTION */
-
-@media(prefers-reduced-motion:reduce){
-
-  html{
-    scroll-behavior:auto;
-  }
-
-  .action,
-  .link,
-  .save-message{
-    transition:none;
   }
 
 }
@@ -553,7 +469,6 @@ a{
 <body>
 
 
-<!-- HERO -->
 
 <section class="hero">
 
@@ -576,8 +491,6 @@ a{
 </section>
 
 
-
-<!-- PROFILE -->
 
 <main class="page">
 
@@ -602,13 +515,11 @@ a{
 
 
 
-<!-- SOCIALS -->
-
 <section class="section">
 
-  <p class="section-label">
-    FIND ME
-  </p>
+<p class="section-label">
+  FIND ME
+</p>
 
 
 <div class="links">
@@ -618,73 +529,66 @@ a{
   class="link"
   href="https://www.instagram.com/sheinnema/"
   target="_blank"
-  rel="noopener noreferrer"
 >
 
-  <span class="link-name">
-    Instagram
-  </span>
+<span>
+  Instagram
+</span>
 
-  <span class="link-arrow">
-    ↗
-  </span>
+<span class="link-arrow">
+  ↗
+</span>
 
 </a>
-
 
 
 <a
   class="link"
   href="https://www.facebook.com/Xisheinn/"
   target="_blank"
-  rel="noopener noreferrer"
 >
 
-  <span class="link-name">
-    Facebook
-  </span>
+<span>
+  Facebook
+</span>
 
-  <span class="link-arrow">
-    ↗
-  </span>
+<span class="link-arrow">
+  ↗
+</span>
 
 </a>
-
 
 
 <a
   class="link"
   href="https://www.facebook.com/profile.php?id=61570786376664"
   target="_blank"
-  rel="noopener noreferrer"
 >
 
-  <span class="link-name">
-    Sheinnema Page
-  </span>
+<span>
+  Sheinnema Page
+</span>
 
-  <span class="link-arrow">
-    ↗
-  </span>
+<span class="link-arrow">
+  ↗
+</span>
 
 </a>
-
 
 
 <a
   class="link"
   href="https://www.tiktok.com/@xi_magination"
   target="_blank"
-  rel="noopener noreferrer"
 >
 
-  <span class="link-name">
-    TikTok
-  </span>
+<span>
+  TikTok
+</span>
 
-  <span class="link-arrow">
-    ↗
-  </span>
+<span class="link-arrow">
+  ↗
+</span>
 
 </a>
 
@@ -695,16 +599,11 @@ a{
 
 
 
-<!-- CONTACT -->
-
 <section class="section">
 
-  <p class="section-label">
-    LET'S CONNECT
-  </p>
-
-
-<div class="contact-details">
+<p class="section-label">
+  LET'S CONNECT
+</p>
 
 
 <a
@@ -723,9 +622,6 @@ a{
 </a>
 
 
-</div>
-
-
 
 <div class="contact-actions">
 
@@ -735,16 +631,15 @@ a{
   href="tel:+639505174579"
 >
 
-  <span>
-    CALL ME
-  </span>
+<span>
+  CALL ME
+</span>
 
-  <span class="action-symbol">
-    →
-  </span>
+<span class="action-symbol">
+  →
+</span>
 
 </a>
-
 
 
 <a
@@ -752,16 +647,15 @@ a{
   href="mailto:xisheinn.am@gmail.com"
 >
 
-  <span>
-    EMAIL ME
-  </span>
+<span>
+  EMAIL ME
+</span>
 
-  <span class="action-symbol">
-    →
-  </span>
+<span class="action-symbol">
+  →
+</span>
 
 </a>
-
 
 
 <button
@@ -770,13 +664,13 @@ a{
   onclick="saveContact()"
 >
 
-  <span>
-    SAVE CONTACT
-  </span>
+<span>
+  SAVE CONTACT
+</span>
 
-  <span class="action-symbol">
-    ↓
-  </span>
+<span class="action-symbol">
+  ↓
+</span>
 
 </button>
 
@@ -786,8 +680,6 @@ a{
 </section>
 
 
-
-<!-- QUOTE -->
 
 <section class="quote">
 
@@ -803,8 +695,6 @@ a{
 </section>
 
 
-
-<!-- POWERED BY -->
 
 <section class="powered-section">
 
@@ -823,6 +713,27 @@ a{
 </section>
 
 
+
+<section class="about-section">
+
+<a
+  class="about-button"
+  href="/"
+>
+
+  <span>
+    ABOUT US
+  </span>
+
+  <span class="about-arrow">
+    ↗
+  </span>
+
+</a>
+
+</section>
+
+
 </main>
 
 
@@ -830,15 +741,6 @@ a{
 <footer class="footer">
   © 2026 SHEINNEMA
 </footer>
-
-
-
-<div
-  class="save-message"
-  id="saveMessage"
->
-  CONTACT READY TO SAVE
-</div>
 
 
 
@@ -874,48 +776,17 @@ END:VCARD`;
   link.download =
     "Shein-Bryan-Mati-ong.vcf";
 
-  document.body.appendChild(
-    link
-  );
+  document.body.appendChild(link);
 
   link.click();
 
-  document.body.removeChild(
-    link
-  );
-
-
-  const message =
-    document.getElementById(
-      "saveMessage"
-    );
-
-  message.classList.add(
-    "show"
-  );
-
+  document.body.removeChild(link);
 
   setTimeout(
     function(){
-
-      message.classList.remove(
-        "show"
-      );
-
+      URL.revokeObjectURL(url);
     },
-    2200
-  );
-
-
-  setTimeout(
-    function(){
-
-      URL.revokeObjectURL(
-        url
-      );
-
-    },
-    3000
+    2000
   );
 
 }
