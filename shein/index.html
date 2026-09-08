@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<meta name="theme-color" content="#080808">
+
+<title>Shein | TAP SHEINNEMA.</title>
+
+<meta
+  name="description"
+  content="Shein Bryan Mati-ong Culi. Visual Storyteller, Filmmaker, Drone and FPV Pilot."
+>
+
+<style>
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#080808;
+
+  color:#ffffff;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+}
+
+
+/* HERO */
+
+.hero{
+  position:relative;
+
+  min-height:100svh;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:flex-end;
+
+  padding:
+    40px
+    24px
+    48px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,.08) 10%,
+      rgba(0,0,0,.2) 45%,
+      rgba(0,0,0,.85) 100%
+    ),
+    url("../hero.jpg");
+
+  background-size:cover;
+
+  background-position:center;
+}
+
+.hero-content{
+  width:100%;
+
+  max-width:520px;
+
+  margin:
+    0
+    auto;
+}
+
+.hero-title{
+  font-size:
+    clamp(
+      52px,
+      15vw,
+      76px
+    );
+
+  line-height:.95;
+
+  font-weight:600;
+
+  letter-spacing:-3px;
+}
+
+.hero-role{
+  margin-top:22px;
+
+  color:rgba(255,255,255,.72);
+
+  font-size:9px;
+
+  letter-spacing:2px;
+
+  line-height:1.7;
+}
+
+.scroll{
+  margin-top:40px;
+
+  color:rgba(255,255,255,.42);
+
+  font-size:7px;
+
+  letter-spacing:4px;
+}
+
+
+/* PAGE */
+
+.page{
+  max-width:520px;
+
+  margin:auto;
+
+  padding:
+    100px
+    24px
+    110px;
+}
+
+
+/* PROFILE */
+
+.eyebrow{
+  color:#555;
+
+  font-size:8px;
+
+  letter-spacing:4px;
+
+  line-height:1.7;
+
+  margin-bottom:28px;
+}
+
+.headline{
+  font-size:
+    clamp(
+      37px,
+      10vw,
+      51px
+    );
+
+  font-weight:400;
+
+  line-height:1.07;
+
+  letter-spacing:-1.5px;
+}
+
+.bio{
+  margin-top:32px;
+
+  max-width:420px;
+
+  color:#858585;
+
+  font-size:14px;
+
+  line-height:1.9;
+}
+
+
+/* SECTIONS */
+
+.section{
+  margin-top:95px;
+}
+
+.section-label{
+  color:#444;
+
+  font-size:8px;
+
+  letter-spacing:4px;
+
+  margin-bottom:24px;
+}
+
+
+/* SOCIALS */
+
+.links{
+  border-top:1px solid #191919;
+}
+
+.link{
+  min-height:70px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  border-bottom:1px solid #191919;
+
+  text-decoration:none;
+
+  font-size:13px;
+
+  transition:
+    padding .2s ease,
+    color .2s ease;
+}
+
+.link:hover{
+  padding-left:6px;
+}
+
+.link-arrow{
+  color:#555;
+
+  font-size:18px;
+}
+
+
+/* CONTACT */
+
+.contact-detail{
+  color:#888;
+
+  font-size:14px;
+
+  line-height:1.8;
+
+  margin-bottom:6px;
+
+  text-decoration:none;
+
+  display:block;
+}
+
+.contact-actions{
+  margin-top:32px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:10px;
+}
+
+.action{
+  width:100%;
+
+  min-height:58px;
+
+  padding:
+    19px
+    20px;
+
+  border:
+    1px solid #202020;
+
+  border-radius:17px;
+
+  background:#0d0d0d;
+
+  color:#ffffff;
+
+  text-decoration:none;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  font-size:9px;
+
+  letter-spacing:2.5px;
+
+  cursor:pointer;
+
+  transition:
+    transform .2s ease,
+    border-color .2s ease,
+    background .2s ease;
+}
+
+.action:hover{
+  transform:translateY(-2px);
+
+  border-color:#414141;
+
+  background:#121212;
+}
+
+
+/* QUOTE */
+
+.quote{
+  margin-top:110px;
+
+  padding:
+    55px
+    0;
+
+  border-top:
+    1px solid #181818;
+
+  border-bottom:
+    1px solid #181818;
+}
+
+.quote-text{
+  font-size:
+    clamp(
+      29px,
+      8vw,
+      39px
+    );
+
+  font-weight:400;
+
+  line-height:1.25;
+}
+
+.quote-bottom{
+  margin-top:28px;
+
+  color:#444;
+
+  font-size:7px;
+
+  letter-spacing:4px;
+}
+
+
+/* TAP BRAND */
+
+.tap-section{
+  margin-top:90px;
+
+  text-align:center;
+}
+
+.tap-button{
+  min-height:58px;
+
+  border:
+    1px solid #222;
+
+  border-radius:17px;
+
+  background:#0d0d0d;
+
+  color:white;
+
+  padding:
+    19px
+    20px;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  text-decoration:none;
+
+  font-size:9px;
+
+  letter-spacing:2.5px;
+}
+
+.powered{
+  margin-top:75px;
+
+  color:#383838;
+
+  font-size:7px;
+
+  letter-spacing:4px;
+}
+
+.brand{
+  margin-top:15px;
+
+  font-size:15px;
+
+  letter-spacing:5px;
+}
+
+.tagline{
+  margin-top:11px;
+
+  color:#555;
+
+  font-size:10px;
+}
+
+
+/* FOOTER */
+
+.footer{
+  text-align:center;
+
+  border-top:
+    1px solid #151515;
+
+  color:#333;
+
+  font-size:9px;
+
+  padding:
+    45px
+    24px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:480px){
+
+  .page{
+    padding-left:22px;
+    padding-right:22px;
+  }
+
+  .hero{
+    padding-left:22px;
+    padding-right:22px;
+  }
+
+}
+
+
+/* SMALL PHONE */
+
+@media(max-width:390px){
+
+  .page{
+    padding-left:20px;
+    padding-right:20px;
+  }
+
+  .hero{
+    padding-left:20px;
+    padding-right:20px;
+  }
+
+  .hero-title{
+    font-size:51px;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+
+<section class="hero">
+
+<div class="hero-content">
+
+  <h1 class="hero-title">
+    SHEINNEMA.
+  </h1>
+
+  <p class="hero-role">
+    VISUAL STORYTELLER · FILMMAKER · DRONE / FPV PILOT
+  </p>
+
+  <p class="scroll">
+    SCROLL TO CONNECT ↓
+  </p>
+
+</div>
+
+</section>
+
+
+
+<main class="page">
+
+
+<section>
+
+  <p class="eyebrow">
+    SHEIN BRYAN MATI-ONG CULI
+  </p>
+
+  <h2 class="headline">
+    From the ground<br>
+    to the skies.
+  </h2>
+
+  <p class="bio">
+    Cinematic filmmaking, aerial perspectives,
+    and moments worth remembering.
+  </p>
+
+</section>
+
+
+
+<section class="section">
+
+  <p class="section-label">
+    FIND ME
+  </p>
+
+
+<div class="links">
+
+
+<a
+  class="link"
+  href="https://www.instagram.com/sheinnema/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+
+  <span>
+    Instagram
+  </span>
+
+  <span class="link-arrow">
+    ↗
+  </span>
+
+</a>
+
+
+<a
+  class="link"
+  href="https://www.facebook.com/Xisheinn/"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+
+  <span>
+    Facebook
+  </span>
+
+  <span class="link-arrow">
+    ↗
+  </span>
+
+</a>
+
+
+<a
+  class="link"
+  href="https://www.facebook.com/profile.php?id=61570786376664"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+
+  <span>
+    Sheinnema Page
+  </span>
+
+  <span class="link-arrow">
+    ↗
+  </span>
+
+</a>
+
+
+<a
+  class="link"
+  href="https://www.tiktok.com/@xi_magination"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+
+  <span>
+    TikTok
+  </span>
+
+  <span class="link-arrow">
+    ↗
+  </span>
+
+</a>
+
+
+</div>
+
+</section>
+
+
+
+<section class="section">
+
+  <p class="section-label">
+    LET'S CONNECT
+  </p>
+
+
+<a
+  class="contact-detail"
+  href="tel:+639505174579"
+>
+  +63 950 517 4579
+</a>
+
+
+<a
+  class="contact-detail"
+  href="mailto:xisheinn.am@gmail.com"
+>
+  xisheinn.am@gmail.com
+</a>
+
+
+<div class="contact-actions">
+
+
+<a
+  class="action"
+  href="tel:+639505174579"
+>
+
+  <span>
+    CALL ME
+  </span>
+
+  <span>
+    →
+  </span>
+
+</a>
+
+
+<a
+  class="action"
+  href="mailto:xisheinn.am@gmail.com"
+>
+
+  <span>
+    EMAIL ME
+  </span>
+
+  <span>
+    →
+  </span>
+
+</a>
+
+
+<button
+  class="action"
+  type="button"
+  onclick="saveContact()"
+>
+
+  <span>
+    SAVE CONTACT
+  </span>
+
+  <span>
+    ↓
+  </span>
+
+</button>
+
+
+</div>
+
+</section>
+
+
+
+<section class="quote">
+
+  <p class="quote-text">
+    Stories don't just<br>
+    happen on the ground.
+  </p>
+
+  <p class="quote-bottom">
+    LOOK ABOVE
+  </p>
+
+</section>
+
+
+
+<section class="tap-section">
+
+
+<a
+  class="tap-button"
+  href="/"
+>
+
+  <span>
+    ABOUT TAP SHEINNEMA
+  </span>
+
+  <span>
+    ↗
+  </span>
+
+</a>
+
+
+<p class="powered">
+  POWERED BY
+</p>
+
+<div class="brand">
+  TAP SHEINNEMA.
+</div>
+
+<div class="tagline">
+  One tap. Everything.
+</div>
+
+
+</section>
+
+
+</main>
+
+
+
+<footer class="footer">
+  © 2026 SHEINNEMA
+</footer>
+
+
+
+<script>
+
+function saveContact(){
+
+  const vCard = `BEGIN:VCARD
+VERSION:3.0
+N:Mati-ong;Shein Bryan;;;
+FN:Shein Bryan Mati-ong
+TEL;TYPE=CELL:+639505174579
+EMAIL;TYPE=INTERNET:xisheinn.am@gmail.com
+END:VCARD`;
+
+  const blob =
+    new Blob(
+      [vCard],
+      {
+        type:
+          "text/vcard;charset=utf-8"
+      }
+    );
+
+  const url =
+    URL.createObjectURL(blob);
+
+  const link =
+    document.createElement("a");
+
+  link.href =
+    url;
+
+  link.download =
+    "Shein-Bryan-Mati-ong.vcf";
+
+  document.body.appendChild(
+    link
+  );
+
+  link.click();
+
+  document.body.removeChild(
+    link
+  );
+
+  setTimeout(
+    function(){
+
+      URL.revokeObjectURL(
+        url
+      );
+
+    },
+    1000
+  );
+
+}
+
+</script>
+
+
+</body>
+
+</html>
