@@ -12,14 +12,19 @@
 
 <meta name="theme-color" content="#080808">
 
-<title>About TAP SHEINNEMA.</title>
+<title>About Us | TAP SHEINNEMA.</title>
+
+<meta
+  name="description"
+  content="Discover TAP SHEINNEMA. One tap. Everything."
+>
 
 <style>
 
 *{
-  box-sizing:border-box;
   margin:0;
   padding:0;
+  box-sizing:border-box;
 }
 
 html{
@@ -40,402 +45,56 @@ body{
   overflow-x:hidden;
 }
 
+a{
+  color:inherit;
+}
+
 
 /* PAGE */
 
 .page{
-  max-width:520px;
+  width:100%;
+  max-width:560px;
+
   margin:auto;
-  padding:40px 24px 0;
+
+  padding:
+    42px
+    24px
+    110px;
 }
 
 
-/* BACK */
+/* RETURN TO CLIENT */
 
-.back{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-
-  text-decoration:none;
-  color:#666;
-
-  font-size:9px;
-  letter-spacing:3px;
-
-  margin-bottom:100px;
-
-  transition:color .25s ease;
+.return-wrap{
+  padding-top:8px;
 }
 
-.back:hover{
+.return-profile{
+  width:100%;
+
+  min-height:58px;
+
+  padding:18px 20px;
+
+  border:1px solid #202020;
+
+  border-radius:17px;
+
+  background:#0d0d0d;
+
   color:#ffffff;
-}
-
-
-/* INTRO */
-
-.intro{
-  padding-bottom:70px;
-}
-
-.eyebrow{
-  font-size:9px;
-  letter-spacing:5px;
-  color:#666;
-  margin-bottom:24px;
-}
-
-.brand{
-  font-size:clamp(42px,12vw,68px);
-  line-height:1;
-  font-weight:500;
-  letter-spacing:2px;
-}
-
-.tagline{
-  margin-top:20px;
-  color:#777;
-  font-size:14px;
-  letter-spacing:1px;
-}
-
-
-/* CARD */
-
-.card-stage{
-  position:relative;
 
   display:flex;
-  flex-direction:column;
-  justify-content:center;
   align-items:center;
-
-  padding:50px 0 110px;
-
-  perspective:1200px;
-}
-
-.card-glow{
-  position:absolute;
-
-  width:280px;
-  height:90px;
-
-  bottom:85px;
-
-  background:rgba(255,255,255,.04);
-
-  border-radius:50%;
-  filter:blur(32px);
-
-  pointer-events:none;
-}
-
-.card-float{
-  width:min(340px,88vw);
-
-  animation:
-    floatCard 5s ease-in-out infinite;
-
-  transform-style:preserve-3d;
-}
-
-@keyframes floatCard{
-
-  0%{
-    transform:
-      translateY(0)
-      rotateX(4deg)
-      rotateY(-5deg)
-      rotateZ(-1deg);
-  }
-
-  50%{
-    transform:
-      translateY(-18px)
-      rotateX(1deg)
-      rotateY(5deg)
-      rotateZ(1deg);
-  }
-
-  100%{
-    transform:
-      translateY(0)
-      rotateX(4deg)
-      rotateY(-5deg)
-      rotateZ(-1deg);
-  }
-
-}
-
-
-/* FLIP */
-
-.card-flip{
-  width:100%;
-  aspect-ratio:1.586 / 1;
-
-  position:relative;
-
-  cursor:pointer;
-
-  transform-style:preserve-3d;
-
-  transition:
-    transform .85s cubic-bezier(.2,.7,.2,1);
-
-  outline:none;
-}
-
-.card-flip.flipped{
-  transform:rotateY(180deg);
-}
-
-
-/* CARD FACE */
-
-.card-face{
-  position:absolute;
-  inset:0;
-
-  backface-visibility:hidden;
-  -webkit-backface-visibility:hidden;
-
-  border-radius:22px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #161616 0%,
-      #0b0b0b 55%,
-      #141414 100%
-    );
-
-  border:1px solid #2a2a2a;
-
-  box-shadow:
-    0 30px 70px rgba(0,0,0,.65),
-    inset 0 1px 0 rgba(255,255,255,.04);
-
-  padding:26px;
-
-  overflow:hidden;
-}
-
-.card-face::after{
-  content:"";
-
-  position:absolute;
-
-  top:-40%;
-  left:-50%;
-
-  width:80%;
-  height:180%;
-
-  background:
-    linear-gradient(
-      to right,
-      transparent,
-      rgba(255,255,255,.025),
-      transparent
-    );
-
-  transform:rotate(18deg);
-
-  pointer-events:none;
-}
-
-
-/* FRONT */
-
-.card-front{
-  display:flex;
-  flex-direction:column;
   justify-content:space-between;
-}
-
-.card-top{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
-}
-
-.card-brand{
-  font-size:18px;
-  letter-spacing:4px;
-  font-weight:500;
-}
-
-.nfc-symbol{
-  font-size:19px;
-  line-height:1;
-  color:#777;
-  letter-spacing:-2px;
-}
-
-.card-bottom{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-end;
-}
-
-.card-tagline{
-  font-size:10px;
-  letter-spacing:1.4px;
-  color:#777;
-}
-
-.card-small{
-  text-align:right;
-  font-size:7px;
-  letter-spacing:2.2px;
-  color:#444;
-}
-
-
-/* BACK */
-
-.card-back{
-  transform:rotateY(180deg);
-
-  display:flex;
-  justify-content:center;
-  align-items:center;
-
-  text-align:center;
-}
-
-.back-content{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-}
-
-.back-small{
-  font-size:6px;
-  letter-spacing:4px;
-  color:#444;
-  margin-bottom:12px;
-}
-
-.back-brand{
-  font-size:15px;
-  letter-spacing:3.5px;
-  font-weight:500;
-  color:#e8e8e8;
-}
-
-.back-tagline{
-  margin-top:14px;
-  font-size:8px;
-  letter-spacing:1.5px;
-  color:#4d4d4d;
-}
-
-.tap-hint{
-  margin-top:28px;
-  font-size:8px;
-  letter-spacing:4px;
-  color:#444;
-}
-
-
-/* DIVIDER */
-
-.divider{
-  width:100%;
-  height:1px;
-  background:#1a1a1a;
-}
-
-
-/* CONTENT */
-
-.about{
-  padding:100px 0;
-}
-
-.section-label{
-  font-size:9px;
-  letter-spacing:5px;
-  color:#666;
-  margin-bottom:42px;
-}
-
-.statement{
-  font-size:clamp(32px,8vw,46px);
-  line-height:1.15;
-  font-weight:400;
-  margin-bottom:38px;
-}
-
-.copy{
-  color:#999;
-  font-size:15px;
-  line-height:1.9;
-  margin-bottom:24px;
-}
-
-
-/* PROMISE */
-
-.promise{
-  padding:110px 0;
-  text-align:center;
-}
-
-.promise-small{
-  font-size:9px;
-  letter-spacing:5px;
-  color:#555;
-  margin-bottom:28px;
-}
-
-.promise-text{
-  font-size:clamp(30px,8vw,48px);
-  line-height:1.2;
-  font-weight:300;
-}
-
-
-/* IDEA */
-
-.idea{
-  padding:100px 0;
-}
-
-.idea-text{
-  color:#999;
-  font-size:20px;
-  line-height:1.8;
-}
-
-
-/* ACTION BUTTONS */
-
-.actions{
-  padding:20px 0 120px;
-
-  display:flex;
-  flex-direction:column;
-
-  gap:12px;
-}
-
-.action-button{
-  width:100%;
 
   text-decoration:none;
 
-  padding:20px 22px;
+  font-size:8px;
 
-  border-radius:18px;
-
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+  letter-spacing:3px;
 
   transition:
     transform .25s ease,
@@ -443,87 +102,571 @@ body{
     border-color .25s ease;
 }
 
-.action-button:hover{
-  transform:translateY(-2px);
-}
-
-.action-button:active{
-  transform:scale(.98);
-}
-
-
-/* GET YOURS */
-
-.get-yours{
-  background:#ffffff;
-  color:#080808;
-
-  border:1px solid #ffffff;
-}
-
-.get-yours:hover{
-  background:#e9e9e9;
-}
-
-
-/* RETURN */
-
-.return-profile{
-  color:#ffffff;
-
-  border:1px solid #222;
-
-  background:#0d0d0d;
-}
-
 .return-profile:hover{
-  background:#151515;
+  transform:translateY(-2px);
+
+  background:#141414;
+
   border-color:#444;
 }
 
-.button-name{
-  font-size:11px;
-  letter-spacing:2.5px;
-  font-weight:600;
+.return-arrow{
+  color:#777;
+
+  font-size:17px;
+
+  letter-spacing:0;
 }
 
-.button-arrow{
+
+/* HERO */
+
+.hero{
+  min-height:68svh;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+}
+
+.hero-label{
+  color:#555;
+
+  font-size:8px;
+
+  letter-spacing:5px;
+
+  margin-bottom:30px;
+}
+
+.hero-title{
+  font-size:clamp(48px,13vw,72px);
+
+  font-weight:400;
+
+  letter-spacing:-2px;
+
+  line-height:.96;
+}
+
+.hero-title span{
+  display:block;
+}
+
+.hero-tagline{
+  margin-top:30px;
+
+  color:#777;
+
+  font-size:13px;
+
+  letter-spacing:1px;
+}
+
+.hero-scroll{
+  margin-top:55px;
+
+  color:#3f3f3f;
+
+  font-size:7px;
+
+  letter-spacing:4px;
+}
+
+
+/* CARD */
+
+.card-section{
+  padding:
+    25px
+    0
+    110px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+}
+
+.card-float{
+  animation:
+    cardFloat
+    5s
+    ease-in-out
+    infinite;
+}
+
+@keyframes cardFloat{
+
+  0%,
+  100%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-12px);
+  }
+
+}
+
+.card-scene{
+  width:320px;
+
+  max-width:88vw;
+
+  aspect-ratio:1.6 / 1;
+
+  perspective:1200px;
+
+  cursor:pointer;
+
+  outline:none;
+}
+
+.card{
+  width:100%;
+  height:100%;
+
+  position:relative;
+
+  transform-style:preserve-3d;
+
+  transition:
+    transform
+    .8s
+    cubic-bezier(.2,.7,.2,1);
+}
+
+.card.flipped{
+  transform:rotateY(180deg);
+}
+
+.card-face{
+  position:absolute;
+
+  inset:0;
+
+  padding:25px;
+
+  border:1px solid #272727;
+
+  border-radius:22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #151515,
+      #090909
+    );
+
+  overflow:hidden;
+
+  backface-visibility:hidden;
+
+  -webkit-backface-visibility:hidden;
+
+  box-shadow:
+    0
+    25px
+    70px
+    rgba(0,0,0,.45);
+}
+
+
+/* CARD FRONT */
+
+.card-front{
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:space-between;
+}
+
+.card-top{
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:flex-start;
+}
+
+.card-brand{
+  font-size:13px;
+
+  letter-spacing:3px;
+
+  font-weight:500;
+}
+
+.nfc{
+  color:#aaa;
+
+  font-size:13px;
+}
+
+.card-bottom{
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:flex-end;
+}
+
+.card-tagline{
+  color:#777;
+
+  font-size:8px;
+}
+
+.card-type{
+  color:#444;
+
+  font-size:6px;
+
+  letter-spacing:3px;
+}
+
+
+/* CARD BACK */
+
+.card-back{
+  transform:rotateY(180deg);
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+
+  align-items:center;
+
+  text-align:center;
+}
+
+.card-back-label{
+  color:#444;
+
+  font-size:6px;
+
+  letter-spacing:4px;
+
+  margin-bottom:13px;
+}
+
+.card-back-brand{
+  color:#e8e8e8;
+
+  font-size:15px;
+
+  letter-spacing:3.5px;
+}
+
+.card-back-tagline{
+  margin-top:14px;
+
+  color:#4d4d4d;
+
+  font-size:8px;
+}
+
+.card-hint{
+  margin-top:28px;
+
+  color:#393939;
+
+  font-size:7px;
+
+  letter-spacing:3px;
+}
+
+
+/* CONTENT */
+
+.section-label{
+  color:#555;
+
+  font-size:8px;
+
+  letter-spacing:4px;
+
+  margin-bottom:25px;
+}
+
+.section-title{
+  font-size:clamp(35px,9vw,49px);
+
+  font-weight:400;
+
+  line-height:1.08;
+
+  letter-spacing:-1px;
+}
+
+.copy{
+  margin-top:34px;
+
+  color:#888;
+
+  font-size:14px;
+
+  line-height:1.9;
+}
+
+.copy p + p{
+  margin-top:23px;
+}
+
+
+/* PROMISE */
+
+.promise{
+  margin-top:80px;
+
+  padding:
+    42px
+    0;
+
+  border-top:1px solid #181818;
+
+  border-bottom:1px solid #181818;
+}
+
+.promise-label{
+  color:#444;
+
+  font-size:7px;
+
+  letter-spacing:4px;
+
+  margin-bottom:22px;
+}
+
+.promise-text{
+  font-size:clamp(27px,7vw,36px);
+
+  font-weight:400;
+
+  line-height:1.28;
+}
+
+
+/* HOW */
+
+.how{
+  margin-top:90px;
+}
+
+.steps{
+  margin-top:38px;
+
+  border-top:1px solid #181818;
+}
+
+.step{
+  display:grid;
+
+  grid-template-columns:
+    45px
+    1fr;
+
+  gap:15px;
+
+  padding:
+    28px
+    0;
+
+  border-bottom:1px solid #181818;
+}
+
+.step-number{
+  color:#444;
+
+  font-size:8px;
+
+  letter-spacing:2px;
+}
+
+.step-title{
+  font-size:14px;
+
+  font-weight:400;
+}
+
+.step-copy{
+  margin-top:10px;
+
+  color:#777;
+
+  font-size:12px;
+
+  line-height:1.7;
+}
+
+
+/* CTA */
+
+.cta{
+  margin-top:110px;
+
+  padding-top:20px;
+}
+
+.cta-label{
+  color:#444;
+
+  font-size:7px;
+
+  letter-spacing:4px;
+
+  margin-bottom:22px;
+}
+
+.cta-title{
+  font-size:clamp(35px,9vw,49px);
+
+  font-weight:400;
+
+  line-height:1.08;
+}
+
+.cta-copy{
+  margin-top:25px;
+
+  color:#777;
+
+  font-size:13px;
+
+  line-height:1.8;
+}
+
+
+/* ACTIONS */
+
+.actions{
+  display:flex;
+
+  flex-direction:column;
+
+  gap:12px;
+
+  margin-top:40px;
+}
+
+.button{
+  width:100%;
+
+  min-height:64px;
+
+  padding:
+    20px
+    22px;
+
+  border-radius:18px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  text-decoration:none;
+
+  font-size:10px;
+
+  letter-spacing:2.5px;
+
+  transition:
+    transform .25s ease,
+    background .25s ease,
+    border-color .25s ease;
+}
+
+.button:hover{
+  transform:translateY(-2px);
+}
+
+.primary{
+  background:#ffffff;
+
+  color:#080808;
+}
+
+.secondary{
+  background:#0d0d0d;
+
+  color:#ffffff;
+
+  border:1px solid #222;
+}
+
+.secondary:hover{
+  background:#141414;
+
+  border-color:#444;
+}
+
+.arrow{
   font-size:18px;
+
+  letter-spacing:0;
+}
+
+
+/* SECOND RETURN BUTTON */
+
+.bottom-return{
+  margin-top:65px;
 }
 
 
 /* FOOTER */
 
-.footer-brand{
-  text-align:center;
+.footer{
+  margin-top:110px;
 
-  padding:100px 20px 70px;
+  padding:
+    55px
+    24px;
 
   border-top:1px solid #161616;
+
+  text-align:center;
 }
 
-.footer-logo{
-  font-size:16px;
+.footer-label{
+  color:#393939;
+
+  font-size:7px;
+
+  letter-spacing:4px;
+}
+
+.footer-brand{
+  margin-top:16px;
+
+  font-size:14px;
+
   letter-spacing:5px;
 }
 
 .footer-tagline{
-  margin-top:13px;
+  margin-top:11px;
 
-  font-size:11px;
-  letter-spacing:1.5px;
+  color:#505050;
 
-  color:#666;
-}
-
-footer{
-  padding:0 20px 50px;
-  text-align:center;
+  font-size:10px;
 }
 
 .copyright{
+  margin-top:48px;
+
+  color:#303030;
+
   font-size:9px;
-  color:#333;
 }
 
 
@@ -531,31 +674,37 @@ footer{
 
 @media(max-width:480px){
 
-  .card-face{
-    padding:22px;
-  }
+  .page{
+    padding-left:22px;
 
-  .card-brand{
-    font-size:15px;
-    letter-spacing:3px;
-  }
-
-  .idea-text{
-    font-size:18px;
+    padding-right:22px;
   }
 
 }
 
 
-/* REDUCED MOTION */
+@media(max-width:390px){
+
+  .page{
+    padding-left:20px;
+
+    padding-right:20px;
+  }
+
+}
+
 
 @media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
 
   .card-float{
     animation:none;
   }
 
-  .card-flip{
+  .card{
     transition:none;
   }
 
@@ -572,218 +721,403 @@ footer{
 <main class="page">
 
 
-<a
-  class="back"
-  href="index.html"
+<!-- BACK TO CLIENT -->
+
+<section
+  class="return-wrap"
+  id="topReturn"
 >
+
+<a
+  class="return-profile"
+  id="returnProfileTop"
+  href="/"
+>
+
+<span>
   ← BACK TO PROFILE
+</span>
+
+<span class="return-arrow">
+  ↙
+</span>
+
 </a>
 
+</section>
 
-<section class="intro">
 
-  <p class="eyebrow">
-    INTRODUCING
-  </p>
 
-  <h1 class="brand">
-    TAP<br>
-    SHEINNEMA.
-  </h1>
+<!-- HERO -->
 
-  <p class="tagline">
-    One tap. Everything.
-  </p>
+<section class="hero">
+
+<p class="hero-label">
+  ABOUT US
+</p>
+
+
+<h1 class="hero-title">
+
+<span>
+  TAP
+</span>
+
+<span>
+  SHEINNEMA.
+</span>
+
+</h1>
+
+
+<p class="hero-tagline">
+  One tap. Everything.
+</p>
+
+
+<p class="hero-scroll">
+  DISCOVER ↓
+</p>
 
 </section>
+
 
 
 <!-- CARD -->
 
-<section class="card-stage">
-
-  <div class="card-glow"></div>
-
-  <div class="card-float">
-
-    <div
-      class="card-flip"
-      id="tapCard"
-      role="button"
-      tabindex="0"
-    >
+<section class="card-section">
 
 
-      <div class="card-face card-front">
-
-        <div class="card-top">
-
-          <div class="card-brand">
-            TAP SHEINNEMA.
-          </div>
-
-          <div class="nfc-symbol">
-            )))
-          </div>
-
-        </div>
+<div class="card-float">
 
 
-        <div class="card-bottom">
-
-          <div class="card-tagline">
-            One tap. Everything.
-          </div>
-
-          <div class="card-small">
-            DIGITAL IDENTITY
-          </div>
-
-        </div>
-
-      </div>
+<div
+  class="card-scene"
+  id="cardScene"
+  role="button"
+  tabindex="0"
+  aria-label="Tap to flip card"
+>
 
 
-      <div class="card-face card-back">
-
-        <div class="back-content">
-
-          <div class="back-small">
-            POWERED BY
-          </div>
-
-          <div class="back-brand">
-            TAP SHEINNEMA.
-          </div>
-
-          <div class="back-tagline">
-            One tap. Everything.
-          </div>
-
-        </div>
-
-      </div>
+<div
+  class="card"
+  id="card"
+>
 
 
-    </div>
-
-  </div>
+<div class="card-face card-front">
 
 
-  <div class="tap-hint">
-    TAP CARD TO FLIP
-  </div>
+<div class="card-top">
+
+<div class="card-brand">
+  TAP SHEINNEMA.
+</div>
+
+<div class="nfc">
+  )))
+</div>
+
+</div>
+
+
+<div class="card-bottom">
+
+<div class="card-tagline">
+  One tap. Everything.
+</div>
+
+<div class="card-type">
+  DIGITAL IDENTITY
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<div class="card-face card-back">
+
+<p class="card-back-label">
+  POWERED BY
+</p>
+
+<p class="card-back-brand">
+  TAP SHEINNEMA.
+</p>
+
+<p class="card-back-tagline">
+  One tap. Everything.
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+<p class="card-hint">
+  TAP CARD TO FLIP
+</p>
+
 
 </section>
 
 
-<div class="divider"></div>
+
+<!-- ABOUT -->
+
+<section>
 
 
-<section class="about">
+<p class="section-label">
+  WHAT IS TAP SHEINNEMA?
+</p>
 
-  <p class="section-label">
-    ABOUT TAP SHEINNEMA
-  </p>
 
-  <h2 class="statement">
-    Your identity.<br>
-    One tap away.
-  </h2>
+<h2 class="section-title">
+  Your identity.<br>
+  One tap away.
+</h2>
 
-  <p class="copy">
-    TAP SHEINNEMA transforms the traditional
-    business card into a smarter and more meaningful
-    way to connect.
-  </p>
 
-  <p class="copy">
-    One tap brings your socials, portfolio,
-    contact information, work, and digital presence
-    together, all in one place.
-  </p>
+<div class="copy">
 
-  <p class="copy">
-    Instead of handing someone a card they may forget,
-    TAP SHEINNEMA gives them instant access to the things
-    that represent you.
-  </p>
+<p>
+  TAP SHEINNEMA transforms the traditional
+  business card into a smarter and more
+  meaningful way to connect.
+</p>
+
+
+<p>
+  Your profile brings your socials, portfolio,
+  contact information, work, and digital
+  presence together in one place.
+</p>
+
+
+<p>
+  No searching usernames. No typing links.
+  No handing someone a card they may
+  eventually forget.
+</p>
+
+
+<p>
+  Just tap.
+</p>
+
+</div>
+
 
 </section>
 
 
-<div class="divider"></div>
 
+<!-- PROMISE -->
 
 <section class="promise">
 
-  <p class="promise-small">
-    THE PROMISE
-  </p>
+<p class="promise-label">
+  THE PROMISE
+</p>
 
-  <p class="promise-text">
-    Your information changes.<br>
-    Your card doesn't.
-  </p>
-
-</section>
-
-
-<div class="divider"></div>
-
-
-<section class="idea">
-
-  <p class="section-label">
-    THE IDEA
-  </p>
-
-  <p class="idea-text">
-    Your card is only the beginning.
-    TAP SHEINNEMA is designed to become your
-    digital identity, a simple connection between
-    the physical world and everything you want
-    people to discover about you.
-  </p>
+<h3 class="promise-text">
+  Your information changes.<br>
+  Your card doesn't.
+</h3>
 
 </section>
 
 
-<!-- BUTTONS -->
 
-<section class="actions">
+<!-- HOW -->
 
-
-  <a
-    class="action-button get-yours"
-    href="get-yours.html"
-  >
-
-    <span class="button-name">
-      GET YOURS
-    </span>
-
-    <span class="button-arrow">
-      →
-    </span>
-
-  </a>
+<section class="how">
 
 
-  <a
-    class="action-button return-profile"
-    href="index.html"
-  >
+<p class="section-label">
+  HOW IT WORKS
+</p>
 
-    <span class="button-name">
-      RETURN TO PROFILE
-    </span>
 
-    <span class="button-arrow">
-      ↗
-    </span>
+<h2 class="section-title">
+  Simple by design.
+</h2>
 
-  </a>
+
+<div class="steps">
+
+
+<div class="step">
+
+<div class="step-number">
+  01
+</div>
+
+<div>
+
+<h3 class="step-title">
+  TAP
+</h3>
+
+<p class="step-copy">
+  Hold the TAP SHEINNEMA card
+  near a compatible smartphone.
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="step">
+
+<div class="step-number">
+  02
+</div>
+
+<div>
+
+<h3 class="step-title">
+  CONNECT
+</h3>
+
+<p class="step-copy">
+  Your personal digital profile
+  opens instantly in the browser.
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="step">
+
+<div class="step-number">
+  03
+</div>
+
+<div>
+
+<h3 class="step-title">
+  DISCOVER
+</h3>
+
+<p class="step-copy">
+  Socials, contact information,
+  portfolio, work, and everything
+  you want people to discover.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+
+<p class="cta-label">
+  READY?
+</p>
+
+
+<h2 class="cta-title">
+  Make your first<br>
+  tap yours.
+</h2>
+
+
+<p class="cta-copy">
+  Build your own TAP SHEINNEMA profile
+  and turn one simple tap into everything
+  you want people to know about you.
+</p>
+
+
+<div class="actions">
+
+
+<a
+  class="button primary"
+  href="/get-yours.html"
+>
+
+<span>
+  GET YOURS
+</span>
+
+<span class="arrow">
+  →
+</span>
+
+</a>
+
+
+<a
+  class="button secondary"
+  href="/sample/"
+>
+
+<span>
+  VIEW SAMPLE PROFILE
+</span>
+
+<span class="arrow">
+  ↗
+</span>
+
+</a>
+
+
+</div>
+
+
+
+<!-- BACK TO CLIENT AGAIN -->
+
+<div class="bottom-return">
+
+<a
+  class="return-profile"
+  id="returnProfileBottom"
+  href="/"
+>
+
+<span>
+  BACK TO PROFILE
+</span>
+
+<span class="return-arrow">
+  ←
+</span>
+
+</a>
+
+</div>
 
 
 </section>
@@ -792,50 +1126,59 @@ footer{
 </main>
 
 
-<section class="footer-brand">
 
-  <div class="footer-logo">
-    TAP SHEINNEMA.
-  </div>
-
-  <div class="footer-tagline">
-    One tap. Everything.
-  </div>
-
-</section>
+<footer class="footer">
 
 
-<footer>
+<p class="footer-label">
+  POWERED BY
+</p>
 
-  <div class="copyright">
-    © 2026 SHEINNEMA
-  </div>
+
+<div class="footer-brand">
+  TAP SHEINNEMA.
+</div>
+
+
+<div class="footer-tagline">
+  One tap. Everything.
+</div>
+
+
+<div class="copyright">
+  © 2026 SHEINNEMA
+</div>
+
 
 </footer>
 
 
+
 <script>
 
-const tapCard =
-  document.getElementById("tapCard");
+/* CARD FLIP */
+
+const cardScene =
+  document.getElementById("cardScene");
+
+const card =
+  document.getElementById("card");
 
 
 function flipCard(){
 
-  tapCard.classList.toggle(
-    "flipped"
-  );
+  card.classList.toggle("flipped");
 
 }
 
 
-tapCard.addEventListener(
+cardScene.addEventListener(
   "click",
   flipCard
 );
 
 
-tapCard.addEventListener(
+cardScene.addEventListener(
   "keydown",
   function(event){
 
@@ -852,6 +1195,71 @@ tapCard.addEventListener(
 
   }
 );
+
+
+/* RETURN TO CLIENT PROFILE */
+
+const params =
+  new URLSearchParams(
+    window.location.search
+  );
+
+let returnPath =
+  params.get("from");
+
+
+/*
+Only allow a local profile path.
+This prevents outside websites
+from controlling the return button.
+*/
+
+if(
+  !returnPath ||
+  !returnPath.startsWith("/") ||
+  returnPath.startsWith("//")
+){
+
+  returnPath = "/";
+
+}
+
+
+document
+  .getElementById(
+    "returnProfileTop"
+  )
+  .href = returnPath;
+
+
+document
+  .getElementById(
+    "returnProfileBottom"
+  )
+  .href = returnPath;
+
+
+/*
+If somebody visits about.html directly
+instead of coming from a client profile,
+hide the BACK TO PROFILE buttons.
+*/
+
+if(returnPath === "/"){
+
+  document
+    .getElementById(
+      "topReturn"
+    )
+    .style.display = "none";
+
+  document
+    .querySelector(
+      ".bottom-return"
+    )
+    .style.display = "none";
+
+}
 
 </script>
 
