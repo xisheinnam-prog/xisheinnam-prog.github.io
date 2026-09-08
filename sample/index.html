@@ -12,7 +12,12 @@
 
 <meta name="theme-color" content="#080808">
 
-<title>Sample Profile | TAP SHEINNEMA.</title>
+<title>Sheinnema.</title>
+
+<meta
+  name="description"
+  content="Shein Bryan Mati-ong Culi. Visual Storyteller, Filmmaker, Drone and FPV Pilot."
+>
 
 <style>
 
@@ -45,50 +50,6 @@ a{
 }
 
 
-/* BACK BUTTON */
-
-.back-home{
-  position:absolute;
-
-  top:28px;
-  left:24px;
-
-  z-index:20;
-
-  color:rgba(255,255,255,.55);
-
-  text-decoration:none;
-
-  font-size:7px;
-
-  letter-spacing:3px;
-
-  transition:color .2s ease;
-}
-
-.back-home:hover{
-  color:#fff;
-}
-
-
-/* DEMO LABEL */
-
-.demo-label{
-  position:absolute;
-
-  top:28px;
-  right:24px;
-
-  z-index:20;
-
-  color:rgba(255,255,255,.4);
-
-  font-size:7px;
-
-  letter-spacing:3px;
-}
-
-
 /* HERO */
 
 .hero{
@@ -110,9 +71,9 @@ a{
   background:
     linear-gradient(
       to bottom,
-      rgba(0,0,0,.05),
-      rgba(0,0,0,.25) 45%,
-      rgba(0,0,0,.9) 100%
+      rgba(0,0,0,.05) 10%,
+      rgba(0,0,0,.18) 45%,
+      rgba(0,0,0,.88) 100%
     ),
     url("../hero.jpg");
 
@@ -123,15 +84,16 @@ a{
 
 .hero-content{
   width:100%;
+
   max-width:520px;
 
   margin:auto auto 0;
 }
 
 .hero-title{
-  font-size:clamp(50px,14vw,74px);
+  font-size:clamp(52px,15vw,76px);
 
-  line-height:.95;
+  line-height:.94;
 
   font-weight:600;
 
@@ -141,7 +103,7 @@ a{
 .hero-role{
   margin-top:22px;
 
-  color:rgba(255,255,255,.7);
+  color:rgba(255,255,255,.72);
 
   font-size:9px;
 
@@ -164,6 +126,8 @@ a{
 /* PAGE */
 
 .page{
+  width:100%;
+
   max-width:520px;
 
   margin:auto;
@@ -177,17 +141,19 @@ a{
 
 /* PROFILE */
 
-.eyebrow{
+.profile-eyebrow{
   color:#555;
 
   font-size:8px;
 
   letter-spacing:4px;
 
+  line-height:1.8;
+
   margin-bottom:28px;
 }
 
-.headline{
+.profile-headline{
   font-size:clamp(37px,10vw,51px);
 
   font-weight:400;
@@ -197,16 +163,16 @@ a{
   letter-spacing:-1.5px;
 }
 
-.bio{
+.profile-bio{
   margin-top:32px;
+
+  max-width:420px;
 
   color:#858585;
 
   font-size:14px;
 
   line-height:1.9;
-
-  max-width:420px;
 }
 
 
@@ -242,6 +208,8 @@ a{
 
   justify-content:space-between;
 
+  gap:20px;
+
   border-bottom:1px solid #191919;
 
   text-decoration:none;
@@ -253,6 +221,8 @@ a{
   color:#555;
 
   font-size:18px;
+
+  flex-shrink:0;
 }
 
 
@@ -261,17 +231,23 @@ a{
 .contact-detail{
   display:block;
 
-  color:#888;
+  width:max-content;
 
-  text-decoration:none;
+  max-width:100%;
+
+  color:#888;
 
   font-size:14px;
 
   line-height:1.9;
+
+  text-decoration:none;
+
+  overflow-wrap:anywhere;
 }
 
 .contact-actions{
-  margin-top:32px;
+  margin-top:34px;
 
   display:flex;
 
@@ -291,7 +267,7 @@ a{
 
   background:#0d0d0d;
 
-  color:#fff;
+  color:#ffffff;
 
   padding:19px 20px;
 
@@ -301,11 +277,23 @@ a{
 
   justify-content:space-between;
 
+  gap:20px;
+
   text-decoration:none;
 
   font-size:9px;
 
   letter-spacing:2.5px;
+
+  cursor:pointer;
+}
+
+.action-symbol{
+  color:#777;
+
+  font-size:16px;
+
+  letter-spacing:0;
 }
 
 
@@ -327,6 +315,8 @@ a{
   font-weight:400;
 
   line-height:1.25;
+
+  letter-spacing:-.5px;
 }
 
 .quote-caption{
@@ -342,7 +332,7 @@ a{
 
 /* POWERED */
 
-.powered{
+.powered-section{
   margin-top:115px;
 
   text-align:center;
@@ -400,14 +390,6 @@ a{
     padding-right:22px;
   }
 
-  .back-home{
-    left:22px;
-  }
-
-  .demo-label{
-    right:22px;
-  }
-
 }
 
 </style>
@@ -418,30 +400,17 @@ a{
 <body>
 
 
-<a
-  class="back-home"
-  href="/"
->
-  ← TAP SHEINNEMA
-</a>
-
-
-<div class="demo-label">
-  SAMPLE PROFILE
-</div>
-
-
 
 <section class="hero">
 
 <div class="hero-content">
 
   <h1 class="hero-title">
-    ALEX.
+    SHEINNEMA.
   </h1>
 
   <p class="hero-role">
-    CREATIVE DIRECTOR · PHOTOGRAPHER · STORYTELLER
+    VISUAL STORYTELLER · FILMMAKER · DRONE / FPV PILOT
   </p>
 
   <p class="scroll">
@@ -459,19 +428,18 @@ a{
 
 <section>
 
-  <p class="eyebrow">
-    ALEX RIVERA
+  <p class="profile-eyebrow">
+    SHEIN BRYAN MATI-ONG CULI
   </p>
 
-  <h2 class="headline">
-    Creating things<br>
-    worth remembering.
+  <h2 class="profile-headline">
+    From the ground<br>
+    to the skies.
   </h2>
 
-  <p class="bio">
-    Visual storytelling, creative direction,
-    photography, and meaningful work built
-    around people and ideas.
+  <p class="profile-bio">
+    Cinematic filmmaking, aerial perspectives,
+    and moments worth remembering.
   </p>
 
 </section>
@@ -488,7 +456,11 @@ a{
 <div class="links">
 
 
-<a class="link" href="#">
+<a
+  class="link"
+  href="https://www.instagram.com/sheinnema/"
+  target="_blank"
+>
 
 <span>
   Instagram
@@ -501,7 +473,11 @@ a{
 </a>
 
 
-<a class="link" href="#">
+<a
+  class="link"
+  href="https://www.facebook.com/Xisheinn/"
+  target="_blank"
+>
 
 <span>
   Facebook
@@ -514,10 +490,14 @@ a{
 </a>
 
 
-<a class="link" href="#">
+<a
+  class="link"
+  href="https://www.facebook.com/profile.php?id=61570786376664"
+  target="_blank"
+>
 
 <span>
-  Portfolio
+  Sheinnema Page
 </span>
 
 <span class="link-arrow">
@@ -527,7 +507,11 @@ a{
 </a>
 
 
-<a class="link" href="#">
+<a
+  class="link"
+  href="https://www.tiktok.com/@xi_magination"
+  target="_blank"
+>
 
 <span>
   TikTok
@@ -555,18 +539,19 @@ a{
 
 <a
   class="contact-detail"
-  href="#"
+  href="tel:+639505174579"
 >
-  +63 900 000 0000
+  +63 950 517 4579
 </a>
 
 
 <a
   class="contact-detail"
-  href="#"
+  href="mailto:xisheinn.am@gmail.com"
 >
-  hello@example.com
+  xisheinn.am@gmail.com
 </a>
+
 
 
 <div class="contact-actions">
@@ -574,14 +559,14 @@ a{
 
 <a
   class="action"
-  href="#"
+  href="tel:+639505174579"
 >
 
 <span>
   CALL ME
 </span>
 
-<span>
+<span class="action-symbol">
   →
 </span>
 
@@ -590,34 +575,35 @@ a{
 
 <a
   class="action"
-  href="#"
+  href="mailto:xisheinn.am@gmail.com"
 >
 
 <span>
   EMAIL ME
 </span>
 
-<span>
+<span class="action-symbol">
   →
 </span>
 
 </a>
 
 
-<a
+<button
   class="action"
-  href="#"
+  type="button"
+  onclick="saveContact()"
 >
 
 <span>
   SAVE CONTACT
 </span>
 
-<span>
+<span class="action-symbol">
   ↓
 </span>
 
-</a>
+</button>
 
 
 </div>
@@ -629,19 +615,19 @@ a{
 <section class="quote">
 
   <p class="quote-text">
-    Make your first<br>
-    impression count.
+    Stories don't just<br>
+    happen on the ground.
   </p>
 
   <p class="quote-caption">
-    ONE TAP AWAY
+    LOOK ABOVE
   </p>
 
 </section>
 
 
 
-<section class="powered">
+<section class="powered-section">
 
   <p class="powered-label">
     POWERED BY
@@ -663,8 +649,59 @@ a{
 
 
 <footer class="footer">
-  © 2026 TAP SHEINNEMA
+  © 2026 SHEINNEMA
 </footer>
+
+
+
+<script>
+
+function saveContact(){
+
+  const vCard = `BEGIN:VCARD
+VERSION:3.0
+N:Mati-ong;Shein Bryan;;;
+FN:Shein Bryan Mati-ong
+TEL;TYPE=CELL:+639505174579
+EMAIL;TYPE=INTERNET:xisheinn.am@gmail.com
+END:VCARD`;
+
+  const blob =
+    new Blob(
+      [vCard],
+      {
+        type:"text/vcard;charset=utf-8"
+      }
+    );
+
+  const url =
+    URL.createObjectURL(blob);
+
+  const link =
+    document.createElement("a");
+
+  link.href =
+    url;
+
+  link.download =
+    "Shein-Bryan-Mati-ong.vcf";
+
+  document.body.appendChild(link);
+
+  link.click();
+
+  document.body.removeChild(link);
+
+  setTimeout(
+    function(){
+      URL.revokeObjectURL(url);
+    },
+    2000
+  );
+
+}
+
+</script>
 
 
 </body>
