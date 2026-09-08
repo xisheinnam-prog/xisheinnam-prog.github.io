@@ -12,7 +12,7 @@
 
 <meta name="theme-color" content="#080808">
 
-<title>Shein | TAP SHEINNEMA.</title>
+<title>Shein Bryan Mati-ong Culi | TAP SHEINNEMA.</title>
 
 <meta
   name="description"
@@ -33,7 +33,6 @@ html{
 
 body{
   background:#080808;
-
   color:#ffffff;
 
   font-family:
@@ -72,9 +71,9 @@ a{
   background:
     linear-gradient(
       to bottom,
-      rgba(0,0,0,.08) 10%,
-      rgba(0,0,0,.2) 45%,
-      rgba(0,0,0,.85) 100%
+      rgba(0,0,0,.05) 10%,
+      rgba(0,0,0,.18) 45%,
+      rgba(0,0,0,.88) 100%
     ),
     url("../hero.jpg");
 
@@ -85,7 +84,6 @@ a{
 
 .hero-content{
   width:100%;
-
   max-width:520px;
 
   margin:
@@ -101,7 +99,7 @@ a{
       76px
     );
 
-  line-height:.95;
+  line-height:.94;
 
   font-weight:600;
 
@@ -123,7 +121,7 @@ a{
 .scroll{
   margin-top:40px;
 
-  color:rgba(255,255,255,.42);
+  color:rgba(255,255,255,.38);
 
   font-size:7px;
 
@@ -134,32 +132,34 @@ a{
 /* PAGE */
 
 .page{
+  width:100%;
+
   max-width:520px;
 
   margin:auto;
 
   padding:
-    100px
+    105px
     24px
-    110px;
+    100px;
 }
 
 
 /* PROFILE */
 
-.eyebrow{
+.profile-eyebrow{
   color:#555;
 
   font-size:8px;
 
   letter-spacing:4px;
 
-  line-height:1.7;
+  line-height:1.8;
 
   margin-bottom:28px;
 }
 
-.headline{
+.profile-headline{
   font-size:
     clamp(
       37px,
@@ -174,7 +174,7 @@ a{
   letter-spacing:-1.5px;
 }
 
-.bio{
+.profile-bio{
   margin-top:32px;
 
   max-width:420px;
@@ -190,7 +190,7 @@ a{
 /* SECTIONS */
 
 .section{
-  margin-top:95px;
+  margin-top:100px;
 }
 
 .section-label{
@@ -200,24 +200,26 @@ a{
 
   letter-spacing:4px;
 
-  margin-bottom:24px;
+  margin-bottom:26px;
 }
 
 
-/* SOCIALS */
+/* SOCIAL LINKS */
 
 .links{
   border-top:1px solid #191919;
 }
 
 .link{
-  min-height:70px;
+  min-height:72px;
 
   display:flex;
 
   align-items:center;
 
   justify-content:space-between;
+
+  gap:20px;
 
   border-bottom:1px solid #191919;
 
@@ -234,32 +236,48 @@ a{
   padding-left:6px;
 }
 
+.link-name{
+  min-width:0;
+}
+
 .link-arrow{
   color:#555;
 
   font-size:18px;
+
+  flex-shrink:0;
 }
 
 
 /* CONTACT */
 
+.contact-details{
+  margin-bottom:34px;
+}
+
 .contact-detail{
+  display:block;
+
+  width:max-content;
+
+  max-width:100%;
+
   color:#888;
 
   font-size:14px;
 
-  line-height:1.8;
-
-  margin-bottom:6px;
+  line-height:1.9;
 
   text-decoration:none;
 
-  display:block;
+  overflow-wrap:anywhere;
+}
+
+.contact-detail:hover{
+  color:#fff;
 }
 
 .contact-actions{
-  margin-top:32px;
-
   display:flex;
 
   flex-direction:column;
@@ -270,14 +288,9 @@ a{
 .action{
   width:100%;
 
-  min-height:58px;
+  min-height:60px;
 
-  padding:
-    19px
-    20px;
-
-  border:
-    1px solid #202020;
+  border:1px solid #202020;
 
   border-radius:17px;
 
@@ -285,13 +298,19 @@ a{
 
   color:#ffffff;
 
-  text-decoration:none;
+  padding:
+    19px
+    20px;
 
   display:flex;
 
   align-items:center;
 
   justify-content:space-between;
+
+  gap:20px;
+
+  text-decoration:none;
 
   font-size:9px;
 
@@ -313,6 +332,14 @@ a{
   background:#121212;
 }
 
+.action-symbol{
+  color:#777;
+
+  font-size:16px;
+
+  letter-spacing:0;
+}
+
 
 /* QUOTE */
 
@@ -320,14 +347,12 @@ a{
   margin-top:110px;
 
   padding:
-    55px
+    58px
     0;
 
-  border-top:
-    1px solid #181818;
+  border-top:1px solid #181818;
 
-  border-bottom:
-    1px solid #181818;
+  border-bottom:1px solid #181818;
 }
 
 .quote-text{
@@ -341,9 +366,11 @@ a{
   font-weight:400;
 
   line-height:1.25;
+
+  letter-spacing:-.5px;
 }
 
-.quote-bottom{
+.quote-caption{
   margin-top:28px;
 
   color:#444;
@@ -354,65 +381,34 @@ a{
 }
 
 
-/* TAP BRAND */
+/* POWERED BY */
 
-.tap-section{
-  margin-top:90px;
+.powered-section{
+  margin-top:115px;
 
   text-align:center;
 }
 
-.tap-button{
-  min-height:58px;
-
-  border:
-    1px solid #222;
-
-  border-radius:17px;
-
-  background:#0d0d0d;
-
-  color:white;
-
-  padding:
-    19px
-    20px;
-
-  display:flex;
-
-  justify-content:space-between;
-
-  align-items:center;
-
-  text-decoration:none;
-
-  font-size:9px;
-
-  letter-spacing:2.5px;
-}
-
-.powered{
-  margin-top:75px;
-
-  color:#383838;
+.powered-label{
+  color:#363636;
 
   font-size:7px;
 
   letter-spacing:4px;
 }
 
-.brand{
-  margin-top:15px;
+.powered-brand{
+  margin-top:16px;
 
-  font-size:15px;
+  font-size:14px;
 
   letter-spacing:5px;
 }
 
-.tagline{
+.powered-tagline{
   margin-top:11px;
 
-  color:#555;
+  color:#505050;
 
   font-size:10px;
 }
@@ -421,18 +417,77 @@ a{
 /* FOOTER */
 
 .footer{
-  text-align:center;
-
-  border-top:
-    1px solid #151515;
-
-  color:#333;
-
-  font-size:9px;
+  margin-top:80px;
 
   padding:
     45px
     24px;
+
+  border-top:1px solid #151515;
+
+  text-align:center;
+
+  color:#303030;
+
+  font-size:9px;
+}
+
+
+/* SAVE CONTACT FEEDBACK */
+
+.save-message{
+  position:fixed;
+
+  left:50%;
+  bottom:28px;
+
+  transform:
+    translateX(-50%)
+    translateY(20px);
+
+  width:
+    calc(100% - 40px);
+
+  max-width:420px;
+
+  padding:15px 20px;
+
+  border:1px solid #252525;
+
+  border-radius:16px;
+
+  background:
+    rgba(15,15,15,.94);
+
+  backdrop-filter:blur(18px);
+
+  -webkit-backdrop-filter:blur(18px);
+
+  color:#aaa;
+
+  font-size:9px;
+
+  letter-spacing:2px;
+
+  text-align:center;
+
+  opacity:0;
+
+  pointer-events:none;
+
+  transition:
+    opacity .3s ease,
+    transform .3s ease;
+
+  z-index:50;
+}
+
+.save-message.show{
+  opacity:1;
+
+  transform:
+    translateX(-50%)
+    translateY(0);
 }
 
 
@@ -440,12 +495,12 @@ a{
 
 @media(max-width:480px){
 
-  .page{
+  .hero{
     padding-left:22px;
     padding-right:22px;
   }
 
-  .hero{
+  .page{
     padding-left:22px;
     padding-right:22px;
   }
@@ -453,22 +508,39 @@ a{
 }
 
 
-/* SMALL PHONE */
+/* SMALL IPHONES */
 
 @media(max-width:390px){
-
-  .page{
-    padding-left:20px;
-    padding-right:20px;
-  }
 
   .hero{
     padding-left:20px;
     padding-right:20px;
   }
 
+  .page{
+    padding-left:20px;
+    padding-right:20px;
+  }
+
   .hero-title{
     font-size:51px;
+  }
+
+}
+
+
+/* REDUCED MOTION */
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  .action,
+  .link,
+  .save-message{
+    transition:none;
   }
 
 }
@@ -481,6 +553,7 @@ a{
 <body>
 
 
+<!-- HERO -->
 
 <section class="hero">
 
@@ -504,21 +577,23 @@ a{
 
 
 
+<!-- PROFILE -->
+
 <main class="page">
 
 
 <section>
 
-  <p class="eyebrow">
+  <p class="profile-eyebrow">
     SHEIN BRYAN MATI-ONG CULI
   </p>
 
-  <h2 class="headline">
+  <h2 class="profile-headline">
     From the ground<br>
     to the skies.
   </h2>
 
-  <p class="bio">
+  <p class="profile-bio">
     Cinematic filmmaking, aerial perspectives,
     and moments worth remembering.
   </p>
@@ -526,6 +601,8 @@ a{
 </section>
 
 
+
+<!-- SOCIALS -->
 
 <section class="section">
 
@@ -544,7 +621,7 @@ a{
   rel="noopener noreferrer"
 >
 
-  <span>
+  <span class="link-name">
     Instagram
   </span>
 
@@ -555,6 +632,7 @@ a{
 </a>
 
 
+
 <a
   class="link"
   href="https://www.facebook.com/Xisheinn/"
@@ -562,7 +640,7 @@ a{
   rel="noopener noreferrer"
 >
 
-  <span>
+  <span class="link-name">
     Facebook
   </span>
 
@@ -573,6 +651,7 @@ a{
 </a>
 
 
+
 <a
   class="link"
   href="https://www.facebook.com/profile.php?id=61570786376664"
@@ -580,7 +659,7 @@ a{
   rel="noopener noreferrer"
 >
 
-  <span>
+  <span class="link-name">
     Sheinnema Page
   </span>
 
@@ -591,6 +670,7 @@ a{
 </a>
 
 
+
 <a
   class="link"
   href="https://www.tiktok.com/@xi_magination"
@@ -598,7 +678,7 @@ a{
   rel="noopener noreferrer"
 >
 
-  <span>
+  <span class="link-name">
     TikTok
   </span>
 
@@ -615,11 +695,16 @@ a{
 
 
 
+<!-- CONTACT -->
+
 <section class="section">
 
   <p class="section-label">
     LET'S CONNECT
   </p>
+
+
+<div class="contact-details">
 
 
 <a
@@ -638,6 +723,10 @@ a{
 </a>
 
 
+</div>
+
+
+
 <div class="contact-actions">
 
 
@@ -650,11 +739,12 @@ a{
     CALL ME
   </span>
 
-  <span>
+  <span class="action-symbol">
     →
   </span>
 
 </a>
+
 
 
 <a
@@ -666,11 +756,12 @@ a{
     EMAIL ME
   </span>
 
-  <span>
+  <span class="action-symbol">
     →
   </span>
 
 </a>
+
 
 
 <button
@@ -683,7 +774,7 @@ a{
     SAVE CONTACT
   </span>
 
-  <span>
+  <span class="action-symbol">
     ↓
   </span>
 
@@ -696,6 +787,8 @@ a{
 
 
 
+<!-- QUOTE -->
+
 <section class="quote">
 
   <p class="quote-text">
@@ -703,7 +796,7 @@ a{
     happen on the ground.
   </p>
 
-  <p class="quote-bottom">
+  <p class="quote-caption">
     LOOK ABOVE
   </p>
 
@@ -711,37 +804,21 @@ a{
 
 
 
-<section class="tap-section">
+<!-- POWERED BY -->
 
+<section class="powered-section">
 
-<a
-  class="tap-button"
-  href="/"
->
+  <p class="powered-label">
+    POWERED BY
+  </p>
 
-  <span>
-    ABOUT TAP SHEINNEMA
-  </span>
+  <div class="powered-brand">
+    TAP SHEINNEMA.
+  </div>
 
-  <span>
-    ↗
-  </span>
-
-</a>
-
-
-<p class="powered">
-  POWERED BY
-</p>
-
-<div class="brand">
-  TAP SHEINNEMA.
-</div>
-
-<div class="tagline">
-  One tap. Everything.
-</div>
-
+  <div class="powered-tagline">
+    One tap. Everything.
+  </div>
 
 </section>
 
@@ -753,6 +830,15 @@ a{
 <footer class="footer">
   © 2026 SHEINNEMA
 </footer>
+
+
+
+<div
+  class="save-message"
+  id="saveMessage"
+>
+  CONTACT READY TO SAVE
+</div>
 
 
 
@@ -772,8 +858,7 @@ END:VCARD`;
     new Blob(
       [vCard],
       {
-        type:
-          "text/vcard;charset=utf-8"
+        type:"text/vcard;charset=utf-8"
       }
     );
 
@@ -799,6 +884,29 @@ END:VCARD`;
     link
   );
 
+
+  const message =
+    document.getElementById(
+      "saveMessage"
+    );
+
+  message.classList.add(
+    "show"
+  );
+
+
+  setTimeout(
+    function(){
+
+      message.classList.remove(
+        "show"
+      );
+
+    },
+    2200
+  );
+
+
   setTimeout(
     function(){
 
@@ -807,7 +915,7 @@ END:VCARD`;
       );
 
     },
-    1000
+    3000
   );
 
 }
