@@ -21,6 +21,10 @@
 
 <style>
 
+/* =========================
+   RESET
+========================= */
+
 *{
   box-sizing:border-box;
   margin:0;
@@ -50,7 +54,9 @@ a{
 }
 
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero{
   position:relative;
@@ -81,7 +87,6 @@ a{
 
 .hero-content{
   width:100%;
-
   max-width:520px;
 
   margin:auto auto 0;
@@ -120,11 +125,12 @@ a{
 }
 
 
-/* PAGE */
+/* =========================
+   PAGE
+========================= */
 
 .page{
   width:100%;
-
   max-width:520px;
 
   margin:auto;
@@ -136,7 +142,9 @@ a{
 }
 
 
-/* PROFILE */
+/* =========================
+   PROFILE
+========================= */
 
 .profile-eyebrow{
   color:#555;
@@ -173,7 +181,9 @@ a{
 }
 
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 
 .section{
   margin-top:100px;
@@ -190,7 +200,9 @@ a{
 }
 
 
-/* LINKS */
+/* =========================
+   SOCIAL LINKS
+========================= */
 
 .links{
   border-top:1px solid #191919;
@@ -212,6 +224,14 @@ a{
   text-decoration:none;
 
   font-size:13px;
+
+  transition:
+    color .2s ease,
+    padding .2s ease;
+}
+
+.link:hover{
+  padding-left:4px;
 }
 
 .link-arrow{
@@ -220,16 +240,27 @@ a{
   font-size:18px;
 
   flex-shrink:0;
+
+  transition:
+    transform .2s ease,
+    color .2s ease;
+}
+
+.link:hover .link-arrow{
+  transform:translate(2px,-2px);
+
+  color:#fff;
 }
 
 
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
 
 .contact-detail{
   display:block;
 
   width:max-content;
-
   max-width:100%;
 
   color:#888;
@@ -241,6 +272,12 @@ a{
   text-decoration:none;
 
   overflow-wrap:anywhere;
+
+  transition:color .2s ease;
+}
+
+.contact-detail:hover{
+  color:#ffffff;
 }
 
 .contact-actions{
@@ -266,7 +303,9 @@ a{
 
   color:#ffffff;
 
-  padding:19px 20px;
+  padding:
+    19px
+    20px;
 
   display:flex;
 
@@ -278,6 +317,8 @@ a{
 
   text-decoration:none;
 
+  font-family:inherit;
+
   font-size:9px;
 
   letter-spacing:2.5px;
@@ -287,8 +328,7 @@ a{
   transition:
     transform .25s ease,
     background .25s ease,
-    border-color .25s ease,
-    color .25s ease;
+    border-color .25s ease;
 }
 
 .action:hover{
@@ -308,12 +348,71 @@ a{
 }
 
 
-/* QUOTE */
+/* =========================
+   SAVE CONTACT MESSAGE
+========================= */
+
+.save-message{
+  position:fixed;
+
+  left:50%;
+  bottom:28px;
+
+  z-index:100;
+
+  transform:
+    translateX(-50%)
+    translateY(20px);
+
+  padding:
+    13px
+    18px;
+
+  border:1px solid #252525;
+
+  border-radius:100px;
+
+  background:rgba(15,15,15,.94);
+
+  color:#ffffff;
+
+  font-size:8px;
+
+  letter-spacing:2px;
+
+  white-space:nowrap;
+
+  opacity:0;
+
+  pointer-events:none;
+
+  transition:
+    opacity .3s ease,
+    transform .3s ease;
+
+  backdrop-filter:blur(15px);
+  -webkit-backdrop-filter:blur(15px);
+}
+
+.save-message.show{
+  opacity:1;
+
+  transform:
+    translateX(-50%)
+    translateY(0);
+}
+
+
+/* =========================
+   QUOTE
+========================= */
 
 .quote{
   margin-top:110px;
 
-  padding:58px 0;
+  padding:
+    58px
+    0;
 
   border-top:1px solid #181818;
 
@@ -341,7 +440,9 @@ a{
 }
 
 
-/* POWERED */
+/* =========================
+   POWERED BY
+========================= */
 
 .powered-section{
   margin-top:115px;
@@ -374,7 +475,9 @@ a{
 }
 
 
-/* ABOUT US BUTTON */
+/* =========================
+   ABOUT US
+========================= */
 
 .about-section{
   margin-top:45px;
@@ -385,6 +488,10 @@ a{
 
   min-height:60px;
 
+  padding:
+    19px
+    20px;
+
   border:1px solid #202020;
 
   border-radius:17px;
@@ -392,8 +499,6 @@ a{
   background:#0d0d0d;
 
   color:#ffffff;
-
-  padding:19px 20px;
 
   display:flex;
 
@@ -429,15 +534,29 @@ a{
   font-size:17px;
 
   letter-spacing:0;
+
+  transition:
+    transform .25s ease,
+    color .25s ease;
+}
+
+.about-button:hover .about-arrow{
+  transform:translate(2px,-2px);
+
+  color:#ffffff;
 }
 
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 .footer{
   margin-top:80px;
 
-  padding:45px 24px;
+  padding:
+    45px
+    24px;
 
   border-top:1px solid #151515;
 
@@ -449,14 +568,49 @@ a{
 }
 
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:480px){
 
   .hero,
   .page{
     padding-left:22px;
+
     padding-right:22px;
+  }
+
+}
+
+
+@media(max-width:390px){
+
+  .hero,
+  .page{
+    padding-left:20px;
+
+    padding-right:20px;
+  }
+
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  .action,
+  .about-button,
+  .link,
+  .link-arrow{
+    transition:none;
   }
 
 }
@@ -470,52 +624,75 @@ a{
 
 
 
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero">
+
 
 <div class="hero-content">
 
-  <h1 class="hero-title">
-    SHEINNEMA.
-  </h1>
 
-  <p class="hero-role">
-    VISUAL STORYTELLER · FILMMAKER · DRONE / FPV PILOT
-  </p>
+<h1 class="hero-title">
+  SHEINNEMA.
+</h1>
 
-  <p class="scroll">
-    SCROLL TO CONNECT ↓
-  </p>
+
+<p class="hero-role">
+  VISUAL STORYTELLER · FILMMAKER · DRONE / FPV PILOT
+</p>
+
+
+<p class="scroll">
+  SCROLL TO CONNECT ↓
+</p>
+
 
 </div>
+
 
 </section>
 
 
+
+<!-- =========================
+     PROFILE
+========================= -->
 
 <main class="page">
 
 
 <section>
 
-  <p class="profile-eyebrow">
-    SHEIN BRYAN MATI-ONG CULI
-  </p>
 
-  <h2 class="profile-headline">
-    From the ground<br>
-    to the skies.
-  </h2>
+<p class="profile-eyebrow">
+  SHEIN BRYAN MATI-ONG CULI
+</p>
 
-  <p class="profile-bio">
-    Cinematic filmmaking, aerial perspectives,
-    and moments worth remembering.
-  </p>
+
+<h2 class="profile-headline">
+  From the ground<br>
+  to the skies.
+</h2>
+
+
+<p class="profile-bio">
+  Cinematic filmmaking, aerial perspectives,
+  and moments worth remembering.
+</p>
+
 
 </section>
 
 
 
+<!-- =========================
+     SOCIALS
+========================= -->
+
 <section class="section">
+
 
 <p class="section-label">
   FIND ME
@@ -529,6 +706,7 @@ a{
   class="link"
   href="https://www.instagram.com/sheinnema/"
   target="_blank"
+  rel="noopener noreferrer"
 >
 
 <span>
@@ -542,10 +720,12 @@ a{
 </a>
 
 
+
 <a
   class="link"
   href="https://www.facebook.com/Xisheinn/"
   target="_blank"
+  rel="noopener noreferrer"
 >
 
 <span>
@@ -559,10 +739,12 @@ a{
 </a>
 
 
+
 <a
   class="link"
   href="https://www.facebook.com/profile.php?id=61570786376664"
   target="_blank"
+  rel="noopener noreferrer"
 >
 
 <span>
@@ -576,10 +758,12 @@ a{
 </a>
 
 
+
 <a
   class="link"
   href="https://www.tiktok.com/@xi_magination"
   target="_blank"
+  rel="noopener noreferrer"
 >
 
 <span>
@@ -595,11 +779,17 @@ a{
 
 </div>
 
+
 </section>
 
 
 
+<!-- =========================
+     CONTACT
+========================= -->
+
 <section class="section">
+
 
 <p class="section-label">
   LET'S CONNECT
@@ -642,6 +832,7 @@ a{
 </a>
 
 
+
 <a
   class="action"
   href="mailto:xisheinn.am@gmail.com"
@@ -656,6 +847,7 @@ a{
 </span>
 
 </a>
+
 
 
 <button
@@ -677,59 +869,81 @@ a{
 
 </div>
 
+
 </section>
 
 
+
+<!-- =========================
+     QUOTE
+========================= -->
 
 <section class="quote">
 
-  <p class="quote-text">
-    Stories don't just<br>
-    happen on the ground.
-  </p>
 
-  <p class="quote-caption">
-    LOOK ABOVE
-  </p>
+<p class="quote-text">
+  Stories don't just<br>
+  happen on the ground.
+</p>
+
+
+<p class="quote-caption">
+  LOOK ABOVE
+</p>
+
 
 </section>
 
 
+
+<!-- =========================
+     POWERED BY
+========================= -->
 
 <section class="powered-section">
 
-  <p class="powered-label">
-    POWERED BY
-  </p>
 
-  <div class="powered-brand">
-    TAP SHEINNEMA.
-  </div>
+<p class="powered-label">
+  POWERED BY
+</p>
 
-  <div class="powered-tagline">
-    One tap. Everything.
-  </div>
+
+<div class="powered-brand">
+  TAP SHEINNEMA.
+</div>
+
+
+<div class="powered-tagline">
+  One tap. Everything.
+</div>
+
 
 </section>
 
 
 
+<!-- =========================
+     ABOUT US BUTTON
+========================= -->
+
 <section class="about-section">
+
 
 <a
   class="about-button"
-  href="/"
+  href="/about.html?from=/shein/"
 >
 
-  <span>
-    ABOUT US
-  </span>
+<span>
+  ABOUT US
+</span>
 
-  <span class="about-arrow">
-    ↗
-  </span>
+<span class="about-arrow">
+  ↗
+</span>
 
 </a>
+
 
 </section>
 
@@ -738,13 +952,32 @@ a{
 
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer class="footer">
   © 2026 SHEINNEMA
 </footer>
 
 
 
+<!-- SAVE CONTACT MESSAGE -->
+
+<div
+  class="save-message"
+  id="saveMessage"
+>
+  CONTACT READY TO SAVE
+</div>
+
+
+
 <script>
+
+/* =========================
+   SAVE CONTACT
+========================= */
 
 function saveContact(){
 
@@ -776,17 +1009,52 @@ END:VCARD`;
   link.download =
     "Shein-Bryan-Mati-ong.vcf";
 
-  document.body.appendChild(link);
+  document.body.appendChild(
+    link
+  );
 
   link.click();
 
-  document.body.removeChild(link);
+  document.body.removeChild(
+    link
+  );
+
+
+  /* SHOW MESSAGE */
+
+  const message =
+    document.getElementById(
+      "saveMessage"
+    );
+
+  message.classList.add(
+    "show"
+  );
+
 
   setTimeout(
     function(){
-      URL.revokeObjectURL(url);
+
+      message.classList.remove(
+        "show"
+      );
+
     },
-    2000
+    2200
+  );
+
+
+  /* CLEAN UP */
+
+  setTimeout(
+    function(){
+
+      URL.revokeObjectURL(
+        url
+      );
+
+    },
+    3000
   );
 
 }
