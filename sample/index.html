@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<meta name="theme-color" content="#080808">
+
+<title>Sample Profile | TAP SHEINNEMA.</title>
+
+<style>
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#080808;
+  color:#ffffff;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+}
+
+
+/* BACK BUTTON */
+
+.back-home{
+  position:absolute;
+
+  top:28px;
+  left:24px;
+
+  z-index:20;
+
+  color:rgba(255,255,255,.55);
+
+  text-decoration:none;
+
+  font-size:7px;
+
+  letter-spacing:3px;
+
+  transition:color .2s ease;
+}
+
+.back-home:hover{
+  color:#fff;
+}
+
+
+/* DEMO LABEL */
+
+.demo-label{
+  position:absolute;
+
+  top:28px;
+  right:24px;
+
+  z-index:20;
+
+  color:rgba(255,255,255,.4);
+
+  font-size:7px;
+
+  letter-spacing:3px;
+}
+
+
+/* HERO */
+
+.hero{
+  position:relative;
+
+  min-height:100svh;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:flex-end;
+
+  padding:
+    40px
+    24px
+    48px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,.05),
+      rgba(0,0,0,.25) 45%,
+      rgba(0,0,0,.9) 100%
+    ),
+    url("../hero.jpg");
+
+  background-size:cover;
+
+  background-position:center;
+}
+
+.hero-content{
+  width:100%;
+  max-width:520px;
+
+  margin:auto auto 0;
+}
+
+.hero-title{
+  font-size:clamp(50px,14vw,74px);
+
+  line-height:.95;
+
+  font-weight:600;
+
+  letter-spacing:-3px;
+}
+
+.hero-role{
+  margin-top:22px;
+
+  color:rgba(255,255,255,.7);
+
+  font-size:9px;
+
+  letter-spacing:2px;
+
+  line-height:1.7;
+}
+
+.scroll{
+  margin-top:40px;
+
+  color:rgba(255,255,255,.38);
+
+  font-size:7px;
+
+  letter-spacing:4px;
+}
+
+
+/* PAGE */
+
+.page{
+  max-width:520px;
+
+  margin:auto;
+
+  padding:
+    105px
+    24px
+    100px;
+}
+
+
+/* PROFILE */
+
+.eyebrow{
+  color:#555;
+
+  font-size:8px;
+
+  letter-spacing:4px;
+
+  margin-bottom:28px;
+}
+
+.headline{
+  font-size:clamp(37px,10vw,51px);
+
+  font-weight:400;
+
+  line-height:1.07;
+
+  letter-spacing:-1.5px;
+}
+
+.bio{
+  margin-top:32px;
+
+  color:#858585;
+
+  font-size:14px;
+
+  line-height:1.9;
+
+  max-width:420px;
+}
+
+
+/* SECTIONS */
+
+.section{
+  margin-top:100px;
+}
+
+.section-label{
+  color:#444;
+
+  font-size:8px;
+
+  letter-spacing:4px;
+
+  margin-bottom:26px;
+}
+
+
+/* LINKS */
+
+.links{
+  border-top:1px solid #191919;
+}
+
+.link{
+  min-height:72px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  border-bottom:1px solid #191919;
+
+  text-decoration:none;
+
+  font-size:13px;
+}
+
+.link-arrow{
+  color:#555;
+
+  font-size:18px;
+}
+
+
+/* CONTACT */
+
+.contact-detail{
+  display:block;
+
+  color:#888;
+
+  text-decoration:none;
+
+  font-size:14px;
+
+  line-height:1.9;
+}
+
+.contact-actions{
+  margin-top:32px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:10px;
+}
+
+.action{
+  width:100%;
+
+  min-height:60px;
+
+  border:1px solid #202020;
+
+  border-radius:17px;
+
+  background:#0d0d0d;
+
+  color:#fff;
+
+  padding:19px 20px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  text-decoration:none;
+
+  font-size:9px;
+
+  letter-spacing:2.5px;
+}
+
+
+/* QUOTE */
+
+.quote{
+  margin-top:110px;
+
+  padding:58px 0;
+
+  border-top:1px solid #181818;
+
+  border-bottom:1px solid #181818;
+}
+
+.quote-text{
+  font-size:clamp(29px,8vw,39px);
+
+  font-weight:400;
+
+  line-height:1.25;
+}
+
+.quote-caption{
+  margin-top:28px;
+
+  color:#444;
+
+  font-size:7px;
+
+  letter-spacing:4px;
+}
+
+
+/* POWERED */
+
+.powered{
+  margin-top:115px;
+
+  text-align:center;
+}
+
+.powered-label{
+  color:#363636;
+
+  font-size:7px;
+
+  letter-spacing:4px;
+}
+
+.powered-brand{
+  margin-top:16px;
+
+  font-size:14px;
+
+  letter-spacing:5px;
+}
+
+.powered-tagline{
+  margin-top:11px;
+
+  color:#505050;
+
+  font-size:10px;
+}
+
+
+/* FOOTER */
+
+.footer{
+  margin-top:80px;
+
+  padding:45px 24px;
+
+  border-top:1px solid #151515;
+
+  text-align:center;
+
+  color:#303030;
+
+  font-size:9px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:480px){
+
+  .hero,
+  .page{
+    padding-left:22px;
+    padding-right:22px;
+  }
+
+  .back-home{
+    left:22px;
+  }
+
+  .demo-label{
+    right:22px;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<a
+  class="back-home"
+  href="/"
+>
+  ← TAP SHEINNEMA
+</a>
+
+
+<div class="demo-label">
+  SAMPLE PROFILE
+</div>
+
+
+
+<section class="hero">
+
+<div class="hero-content">
+
+  <h1 class="hero-title">
+    ALEX.
+  </h1>
+
+  <p class="hero-role">
+    CREATIVE DIRECTOR · PHOTOGRAPHER · STORYTELLER
+  </p>
+
+  <p class="scroll">
+    SCROLL TO CONNECT ↓
+  </p>
+
+</div>
+
+</section>
+
+
+
+<main class="page">
+
+
+<section>
+
+  <p class="eyebrow">
+    ALEX RIVERA
+  </p>
+
+  <h2 class="headline">
+    Creating things<br>
+    worth remembering.
+  </h2>
+
+  <p class="bio">
+    Visual storytelling, creative direction,
+    photography, and meaningful work built
+    around people and ideas.
+  </p>
+
+</section>
+
+
+
+<section class="section">
+
+<p class="section-label">
+  FIND ME
+</p>
+
+
+<div class="links">
+
+
+<a class="link" href="#">
+
+<span>
+  Instagram
+</span>
+
+<span class="link-arrow">
+  ↗
+</span>
+
+</a>
+
+
+<a class="link" href="#">
+
+<span>
+  Facebook
+</span>
+
+<span class="link-arrow">
+  ↗
+</span>
+
+</a>
+
+
+<a class="link" href="#">
+
+<span>
+  Portfolio
+</span>
+
+<span class="link-arrow">
+  ↗
+</span>
+
+</a>
+
+
+<a class="link" href="#">
+
+<span>
+  TikTok
+</span>
+
+<span class="link-arrow">
+  ↗
+</span>
+
+</a>
+
+
+</div>
+
+</section>
+
+
+
+<section class="section">
+
+<p class="section-label">
+  LET'S CONNECT
+</p>
+
+
+<a
+  class="contact-detail"
+  href="#"
+>
+  +63 900 000 0000
+</a>
+
+
+<a
+  class="contact-detail"
+  href="#"
+>
+  hello@example.com
+</a>
+
+
+<div class="contact-actions">
+
+
+<a
+  class="action"
+  href="#"
+>
+
+<span>
+  CALL ME
+</span>
+
+<span>
+  →
+</span>
+
+</a>
+
+
+<a
+  class="action"
+  href="#"
+>
+
+<span>
+  EMAIL ME
+</span>
+
+<span>
+  →
+</span>
+
+</a>
+
+
+<a
+  class="action"
+  href="#"
+>
+
+<span>
+  SAVE CONTACT
+</span>
+
+<span>
+  ↓
+</span>
+
+</a>
+
+
+</div>
+
+</section>
+
+
+
+<section class="quote">
+
+  <p class="quote-text">
+    Make your first<br>
+    impression count.
+  </p>
+
+  <p class="quote-caption">
+    ONE TAP AWAY
+  </p>
+
+</section>
+
+
+
+<section class="powered">
+
+  <p class="powered-label">
+    POWERED BY
+  </p>
+
+  <div class="powered-brand">
+    TAP SHEINNEMA.
+  </div>
+
+  <div class="powered-tagline">
+    One tap. Everything.
+  </div>
+
+</section>
+
+
+</main>
+
+
+
+<footer class="footer">
+  © 2026 TAP SHEINNEMA
+</footer>
+
+
+</body>
+
+</html>
