@@ -12,14 +12,18 @@
 
 <meta name="theme-color" content="#080808">
 
-<title>TAP SHEINNEMA. | One tap. Everything.</title>
+<title>About Us | TAP SHEINNEMA.</title>
 
 <meta
   name="description"
-  content="TAP SHEINNEMA transforms the traditional business card into a smarter digital identity."
+  content="TAP SHEINNEMA. Your identity, one tap away."
 >
 
 <style>
+
+/* =========================
+   RESET
+========================= */
 
 *{
   margin:0;
@@ -50,7 +54,9 @@ a{
 }
 
 
-/* PAGE */
+/* =========================
+   PAGE
+========================= */
 
 .page{
   width:100%;
@@ -61,44 +67,37 @@ a{
   padding:
     42px
     24px
-    100px;
+    110px;
 }
 
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero{
-  min-height:62vh;
+  min-height:72svh;
 
   display:flex;
-
   flex-direction:column;
-
   justify-content:center;
 }
 
-.intro-label{
+.hero-label{
   color:#555;
 
-  font-size:9px;
-
+  font-size:8px;
   letter-spacing:5px;
 
   margin-bottom:30px;
 }
 
 .hero-title{
-  font-size:
-    clamp(
-      47px,
-      13vw,
-      72px
-    );
+  font-size:clamp(48px,13vw,72px);
 
   font-weight:400;
 
   letter-spacing:-2px;
-
   line-height:.96;
 }
 
@@ -112,35 +111,43 @@ a{
   color:#777;
 
   font-size:13px;
-
   letter-spacing:1px;
 }
 
+.hero-scroll{
+  margin-top:55px;
 
-/* CARD AREA */
+  color:#3f3f3f;
 
-.card-area{
+  font-size:7px;
+  letter-spacing:4px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card-section{
   padding:
-    30px
+    25px
     0
-    100px;
+    110px;
 
   display:flex;
-
   flex-direction:column;
-
   align-items:center;
 }
 
 .card-float{
   animation:
-    floatCard
+    cardFloat
     5s
     ease-in-out
     infinite;
 }
 
-@keyframes floatCard{
+@keyframes cardFloat{
 
   0%,
   100%{
@@ -157,14 +164,16 @@ a{
   width:320px;
   max-width:88vw;
 
-  aspect-ratio:1.6/1;
+  aspect-ratio:1.6 / 1;
 
   perspective:1200px;
 
   cursor:pointer;
+
+  outline:none;
 }
 
-.card-flip{
+.card{
   width:100%;
   height:100%;
 
@@ -178,13 +187,12 @@ a{
     cubic-bezier(.2,.7,.2,1);
 }
 
-.card-flip.flipped{
+.card.flipped{
   transform:rotateY(180deg);
 }
 
 .card-face{
   position:absolute;
-
   inset:0;
 
   border-radius:22px;
@@ -200,11 +208,10 @@ a{
 
   padding:25px;
 
-  backface-visibility:hidden;
-
-  -webkit-backface-visibility:hidden;
-
   overflow:hidden;
+
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
 
   box-shadow:
     0
@@ -218,18 +225,14 @@ a{
 
 .card-front{
   display:flex;
-
   flex-direction:column;
-
   justify-content:space-between;
 }
 
 .card-top{
   display:flex;
-
-  justify-content:space-between;
-
   align-items:flex-start;
+  justify-content:space-between;
 }
 
 .card-brand{
@@ -248,18 +251,14 @@ a{
 
 .card-bottom{
   display:flex;
-
   align-items:flex-end;
-
   justify-content:space-between;
 }
 
-.card-tag{
+.card-tagline{
   color:#777;
 
   font-size:8px;
-
-  letter-spacing:1px;
 }
 
 .card-type{
@@ -277,48 +276,39 @@ a{
   transform:rotateY(180deg);
 
   display:flex;
-
   flex-direction:column;
-
-  justify-content:center;
-
   align-items:center;
+  justify-content:center;
 
   text-align:center;
 }
 
-.back-small{
+.card-back-label{
+  color:#444;
+
   font-size:6px;
 
   letter-spacing:4px;
 
-  color:#444;
-
-  margin-bottom:12px;
-
-  font-weight:500;
+  margin-bottom:13px;
 }
 
-.back-brand{
+.card-back-brand{
+  color:#e8e8e8;
+
   font-size:15px;
 
   letter-spacing:3.5px;
-
-  font-weight:500;
-
-  line-height:1.2;
-
-  color:#e8e8e8;
 }
 
-.back-tagline{
+.card-back-tagline{
   margin-top:14px;
+
+  color:#4d4d4d;
 
   font-size:8px;
 
-  letter-spacing:1.5px;
-
-  color:#4d4d4d;
+  letter-spacing:1px;
 }
 
 .card-hint{
@@ -332,10 +322,12 @@ a{
 }
 
 
-/* CONTENT */
+/* =========================
+   ABOUT
+========================= */
 
-.content{
-  padding-top:30px;
+.about{
+  padding-top:25px;
 }
 
 .section-label{
@@ -348,24 +340,19 @@ a{
   margin-bottom:25px;
 }
 
-.content-title{
-  font-size:
-    clamp(
-      34px,
-      9vw,
-      48px
-    );
+.section-title{
+  font-size:clamp(35px,9vw,49px);
 
   font-weight:400;
 
   line-height:1.08;
 
   letter-spacing:-1px;
-
-  margin-bottom:32px;
 }
 
 .copy{
+  margin-top:34px;
+
   color:#888;
 
   font-size:14px;
@@ -374,139 +361,230 @@ a{
 }
 
 .copy p + p{
-  margin-top:22px;
+  margin-top:23px;
 }
 
 
-/* FEATURE */
+/* =========================
+   PROMISE
+========================= */
 
-.feature{
-  margin-top:75px;
+.promise{
+  margin-top:80px;
 
   padding:
-    32px
+    42px
     0;
 
-  border-top:
-    1px solid #181818;
-
-  border-bottom:
-    1px solid #181818;
+  border-top:1px solid #181818;
+  border-bottom:1px solid #181818;
 }
 
-.feature-label{
+.promise-label{
   color:#444;
 
   font-size:7px;
 
   letter-spacing:4px;
 
-  margin-bottom:20px;
+  margin-bottom:22px;
 }
 
-.feature-line{
-  font-size:
-    clamp(
-      24px,
-      7vw,
-      34px
-    );
+.promise-text{
+  font-size:clamp(27px,7vw,36px);
+
+  font-weight:400;
+
+  line-height:1.28;
+}
+
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.how{
+  margin-top:90px;
+}
+
+.steps{
+  margin-top:38px;
+
+  border-top:1px solid #181818;
+}
+
+.step{
+  display:grid;
+
+  grid-template-columns:
+    45px
+    1fr;
+
+  gap:15px;
+
+  padding:
+    28px
+    0;
+
+  border-bottom:1px solid #181818;
+}
+
+.step-number{
+  color:#444;
+
+  font-size:8px;
+
+  letter-spacing:2px;
+}
+
+.step-title{
+  font-size:14px;
+
+  font-weight:400;
+}
+
+.step-copy{
+  margin-top:10px;
+
+  color:#777;
+
+  font-size:12px;
+
+  line-height:1.7;
+}
+
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience{
+  margin-top:95px;
+}
+
+.experience-box{
+  margin-top:30px;
+
+  padding:
+    35px
+    0;
+
+  border-top:1px solid #181818;
+  border-bottom:1px solid #181818;
+}
+
+.experience-text{
+  font-size:clamp(24px,7vw,34px);
 
   font-weight:400;
 
   line-height:1.3;
 }
 
+.experience-small{
+  margin-top:25px;
 
-/* IDEA */
+  color:#666;
 
-.idea{
-  margin-top:75px;
+  font-size:12px;
+
+  line-height:1.8;
 }
 
-.idea-title{
-  color:#555;
 
-  font-size:8px;
+/* =========================
+   CTA
+========================= */
+
+.cta{
+  margin-top:110px;
+
+  padding-top:20px;
+}
+
+.cta-label{
+  color:#444;
+
+  font-size:7px;
 
   letter-spacing:4px;
 
-  margin-bottom:25px;
+  margin-bottom:22px;
 }
 
+.cta-title{
+  font-size:clamp(35px,9vw,49px);
 
-/* BUTTONS */
+  font-weight:400;
 
-.actions{
-  display:flex;
-
-  flex-direction:column;
-
-  gap:12px;
-
-  margin-top:65px;
+  line-height:1.08;
 }
 
-.button{
-  min-height:60px;
+.cta-copy{
+  margin-top:25px;
 
-  border-radius:18px;
+  color:#777;
+
+  font-size:13px;
+
+  line-height:1.8;
+}
+
+.get-yours{
+  width:100%;
+
+  min-height:64px;
+
+  margin-top:40px;
 
   padding:
     20px
     22px;
 
-  text-decoration:none;
+  border-radius:18px;
+
+  background:#ffffff;
+
+  color:#080808;
 
   display:flex;
-
+  align-items:center;
   justify-content:space-between;
 
-  align-items:center;
+  text-decoration:none;
 
   font-size:10px;
 
   letter-spacing:2.5px;
 
   transition:
-    transform .2s ease,
-    background .2s ease,
-    border-color .2s ease;
+    transform .25s ease,
+    opacity .25s ease;
 }
 
-.button:hover{
+.get-yours:hover{
   transform:translateY(-2px);
-}
 
-.primary{
-  background:#ffffff;
-  color:#080808;
-}
-
-.secondary{
-  background:#0d0d0d;
-  color:#fff;
-
-  border:1px solid #222;
-}
-
-.secondary:hover{
-  background:#151515;
-  border-color:#444;
+  opacity:.9;
 }
 
 .arrow{
   font-size:18px;
+
+  letter-spacing:0;
 }
 
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 .footer{
+  margin-top:120px;
+
   padding:
-    85px
-    24px
-    50px;
+    55px
+    24px;
 
   border-top:1px solid #161616;
 
@@ -514,39 +592,41 @@ a{
 }
 
 .footer-label{
-  color:#3d3d3d;
+  color:#393939;
 
   font-size:7px;
 
   letter-spacing:4px;
-
-  margin-bottom:14px;
 }
 
 .footer-brand{
+  margin-top:16px;
+
   font-size:14px;
 
   letter-spacing:5px;
 }
 
-.footer-tag{
-  color:#555;
+.footer-tagline{
+  margin-top:11px;
+
+  color:#505050;
 
   font-size:10px;
-
-  margin-top:12px;
 }
 
 .copyright{
+  margin-top:48px;
+
   color:#303030;
 
   font-size:9px;
-
-  margin-top:50px;
 }
 
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:480px){
 
@@ -556,17 +636,11 @@ a{
   }
 
   .hero{
-    min-height:58vh;
-  }
-
-  .card-area{
-    padding-bottom:85px;
+    min-height:68svh;
   }
 
 }
 
-
-/* SMALL PHONES */
 
 @media(max-width:390px){
 
@@ -575,24 +649,12 @@ a{
     padding-right:20px;
   }
 
-  .back-brand{
-    font-size:13px;
-
-    letter-spacing:3px;
-  }
-
-  .back-small{
-    font-size:5px;
-  }
-
-  .back-tagline{
-    font-size:7px;
-  }
-
 }
 
 
-/* REDUCED MOTION */
+/* =========================
+   REDUCED MOTION
+========================= */
 
 @media(prefers-reduced-motion:reduce){
 
@@ -604,7 +666,7 @@ a{
     animation:none;
   }
 
-  .card-flip{
+  .card{
     transition:none;
   }
 
@@ -621,10 +683,12 @@ a{
 <main class="page">
 
 
+<!-- HERO -->
+
 <section class="hero">
 
-  <p class="intro-label">
-    INTRODUCING
+  <p class="hero-label">
+    ABOUT US
   </p>
 
   <h1 class="hero-title">
@@ -643,11 +707,17 @@ a{
     One tap. Everything.
   </p>
 
+  <p class="hero-scroll">
+    DISCOVER ↓
+  </p>
+
 </section>
 
 
 
-<section class="card-area">
+<!-- CARD -->
+
+<section class="card-section">
 
 
 <div class="card-float">
@@ -663,8 +733,8 @@ a{
 
 
 <div
-  class="card-flip"
-  id="cardFlip"
+  class="card"
+  id="card"
 >
 
 
@@ -686,7 +756,7 @@ a{
 
 <div class="card-bottom">
 
-  <div class="card-tag">
+  <div class="card-tagline">
     One tap. Everything.
   </div>
 
@@ -703,17 +773,17 @@ a{
 
 <div class="card-face card-back">
 
-  <div class="back-small">
+  <p class="card-back-label">
     POWERED BY
-  </div>
+  </p>
 
-  <div class="back-brand">
+  <p class="card-back-brand">
     TAP SHEINNEMA.
-  </div>
+  </p>
 
-  <div class="back-tagline">
+  <p class="card-back-tagline">
     One tap. Everything.
-  </div>
+  </p>
 
 </div>
 
@@ -736,69 +806,111 @@ a{
 
 
 
-<section class="content">
+<!-- ABOUT -->
 
-  <p class="section-label">
-    ABOUT TAP SHEINNEMA
-  </p>
-
-  <h2 class="content-title">
-    Your identity.<br>
-    One tap away.
-  </h2>
-
-  <div class="copy">
-
-    <p>
-      TAP SHEINNEMA transforms the traditional
-      business card into a smarter and more
-      meaningful way to connect.
-    </p>
-
-    <p>
-      One tap brings your socials, portfolio,
-      contact information, work, and digital
-      presence together, all in one place.
-    </p>
-
-    <p>
-      Instead of handing someone a card they
-      may forget, TAP SHEINNEMA gives them
-      instant access to the things that
-      represent you.
-    </p>
-
-  </div>
+<section class="about">
 
 
-<div class="feature">
+<p class="section-label">
+  WHAT IS TAP SHEINNEMA?
+</p>
 
-  <p class="feature-label">
-    THE PROMISE
-  </p>
 
-  <p class="feature-line">
-    Your information changes.<br>
-    Your card doesn't.
-  </p>
+<h2 class="section-title">
+  Your identity.<br>
+  One tap away.
+</h2>
+
+
+<div class="copy">
+
+
+<p>
+  TAP SHEINNEMA transforms the traditional
+  business card into a smarter and more
+  meaningful way to connect.
+</p>
+
+
+<p>
+  Your profile brings your socials, portfolio,
+  contact information, work, and digital
+  presence together in one place.
+</p>
+
+
+<p>
+  No searching usernames. No typing links.
+  No handing someone a card they may
+  eventually forget.
+</p>
+
+
+<p>
+  Just tap.
+</p>
+
 
 </div>
 
 
-<div class="idea">
+</section>
 
-  <p class="idea-title">
-    THE IDEA
-  </p>
 
-  <div class="copy">
 
-    <p>
-      Your card is only the beginning.
-      TAP SHEINNEMA is designed to become
-      your digital identity, a simple connection
-      between the physical world and everything
-      you want people to discover about you.
+<!-- PROMISE -->
+
+<section class="promise">
+
+
+<p class="promise-label">
+  THE PROMISE
+</p>
+
+
+<h3 class="promise-text">
+  Your information changes.<br>
+  Your card doesn't.
+</h3>
+
+
+</section>
+
+
+
+<!-- HOW IT WORKS -->
+
+<section class="how">
+
+
+<p class="section-label">
+  HOW IT WORKS
+</p>
+
+
+<h2 class="section-title">
+  Simple by design.
+</h2>
+
+
+<div class="steps">
+
+
+<div class="step">
+
+  <div class="step-number">
+    01
+  </div>
+
+  <div>
+
+    <h3 class="step-title">
+      TAP
+    </h3>
+
+    <p class="step-copy">
+      Hold the TAP SHEINNEMA card
+      near a compatible smartphone.
     </p>
 
   </div>
@@ -807,11 +919,118 @@ a{
 
 
 
-<div class="actions">
+<div class="step">
+
+  <div class="step-number">
+    02
+  </div>
+
+  <div>
+
+    <h3 class="step-title">
+      CONNECT
+    </h3>
+
+    <p class="step-copy">
+      Your personal digital profile
+      opens instantly in the browser.
+    </p>
+
+  </div>
+
+</div>
+
+
+
+<div class="step">
+
+  <div class="step-number">
+    03
+  </div>
+
+  <div>
+
+    <h3 class="step-title">
+      DISCOVER
+    </h3>
+
+    <p class="step-copy">
+      Socials, contact information,
+      portfolio, work, and everything
+      you want people to discover.
+    </p>
+
+  </div>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- EXPERIENCE -->
+
+<section class="experience">
+
+
+<p class="section-label">
+  MORE THAN A CARD
+</p>
+
+
+<div class="experience-box">
+
+
+<p class="experience-text">
+  The card is only<br>
+  the beginning.
+</p>
+
+
+<p class="experience-small">
+  TAP SHEINNEMA connects the physical
+  world to your digital identity, creating
+  a simple way for people to remember,
+  discover, and connect with you.
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+<!-- GET YOURS -->
+
+<section class="cta">
+
+
+<p class="cta-label">
+  READY?
+</p>
+
+
+<h2 class="cta-title">
+  Make your first<br>
+  tap yours.
+</h2>
+
+
+<p class="cta-copy">
+  Build your own TAP SHEINNEMA profile
+  and turn one simple tap into everything
+  you want people to know about you.
+</p>
 
 
 <a
-  class="button primary"
+  class="get-yours"
   href="get-yours.html"
 >
 
@@ -826,25 +1045,6 @@ a{
 </a>
 
 
-<a
-  class="button secondary"
-  href="sample/"
->
-
-  <span>
-    VIEW SAMPLE PROFILE
-  </span>
-
-  <span class="arrow">
-    ↗
-  </span>
-
-</a>
-
-
-</div>
-
-
 </section>
 
 
@@ -854,21 +1054,26 @@ a{
 
 <footer class="footer">
 
-  <p class="footer-label">
-    POWERED BY
-  </p>
 
-  <div class="footer-brand">
-    TAP SHEINNEMA.
-  </div>
+<p class="footer-label">
+  POWERED BY
+</p>
 
-  <div class="footer-tag">
-    One tap. Everything.
-  </div>
 
-  <div class="copyright">
-    © 2026 SHEINNEMA
-  </div>
+<div class="footer-brand">
+  TAP SHEINNEMA.
+</div>
+
+
+<div class="footer-tagline">
+  One tap. Everything.
+</div>
+
+
+<div class="copyright">
+  © 2026 SHEINNEMA
+</div>
+
 
 </footer>
 
@@ -877,21 +1082,15 @@ a{
 <script>
 
 const cardScene =
-  document.getElementById(
-    "cardScene"
-  );
+  document.getElementById("cardScene");
 
-const cardFlip =
-  document.getElementById(
-    "cardFlip"
-  );
+const card =
+  document.getElementById("card");
 
 
 function flipCard(){
 
-  cardFlip.classList.toggle(
-    "flipped"
-  );
+  card.classList.toggle("flipped");
 
 }
 
