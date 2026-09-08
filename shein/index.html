@@ -16,15 +16,15 @@
 
 <meta
   name="description"
-  content="Shein Bryan Mati-ong Culi. Visual Storyteller, Filmmaker, Drone and FPV Pilot."
+  content="Sheinnema. Visual Storyteller, Filmmaker, Drone and FPV Pilot."
 >
 
 <style>
 
 *{
-  box-sizing:border-box;
   margin:0;
   padding:0;
+  box-sizing:border-box;
 }
 
 html{
@@ -50,29 +50,26 @@ a{
 }
 
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero{
   position:relative;
+
+  width:100%;
 
   min-height:100svh;
 
   display:flex;
 
-  flex-direction:column;
+  align-items:flex-end;
 
-  justify-content:flex-end;
-
-  padding:
-    40px
-    24px
-    48px;
-
-  background:
+  background-image:
     linear-gradient(
       to bottom,
-      rgba(0,0,0,.05) 10%,
-      rgba(0,0,0,.18) 45%,
+      rgba(0,0,0,.05) 0%,
+      rgba(0,0,0,.15) 45%,
       rgba(0,0,0,.88) 100%
     ),
     url("../hero.jpg");
@@ -80,42 +77,55 @@ a{
   background-size:cover;
 
   background-position:center;
+
+  overflow:hidden;
 }
 
 .hero-content{
+  position:relative;
+
+  z-index:2;
+
   width:100%;
 
-  max-width:520px;
+  max-width:900px;
 
-  margin:auto auto 0;
+  margin:0 auto;
+
+  padding:
+    60px
+    28px
+    70px;
 }
 
 .hero-title{
-  font-size:clamp(52px,15vw,76px);
+  font-size:clamp(52px,14vw,100px);
 
-  line-height:.94;
+  font-weight:400;
 
-  font-weight:600;
+  line-height:.95;
 
   letter-spacing:-3px;
 }
 
 .hero-role{
-  margin-top:22px;
+  margin-top:25px;
 
   color:rgba(255,255,255,.72);
 
   font-size:9px;
 
-  letter-spacing:2px;
+  letter-spacing:3px;
 
-  line-height:1.7;
+  line-height:1.8;
+
+  text-transform:uppercase;
 }
 
-.scroll{
-  margin-top:40px;
+.hero-scroll{
+  margin-top:45px;
 
-  color:rgba(255,255,255,.38);
+  color:rgba(255,255,255,.45);
 
   font-size:7px;
 
@@ -123,52 +133,66 @@ a{
 }
 
 
-/* PAGE */
+/* =========================
+   MAIN PAGE
+========================= */
 
 .page{
   width:100%;
 
-  max-width:520px;
+  max-width:900px;
 
   margin:auto;
 
   padding:
-    105px
-    24px
-    100px;
+    100px
+    28px
+    120px;
 }
 
 
-/* PROFILE */
+/* =========================
+   PROFILE
+========================= */
 
-.profile-eyebrow{
+.profile-label{
   color:#555;
 
   font-size:8px;
 
   letter-spacing:4px;
 
-  line-height:1.8;
-
   margin-bottom:28px;
 }
 
-.profile-headline{
-  font-size:clamp(37px,10vw,51px);
+.profile-name{
+  font-size:clamp(13px,3vw,17px);
 
   font-weight:400;
 
-  line-height:1.07;
+  letter-spacing:4px;
 
-  letter-spacing:-1.5px;
+  line-height:1.6;
 }
 
-.profile-bio{
-  margin-top:32px;
+.profile-headline{
+  margin-top:55px;
 
-  max-width:420px;
+  font-size:clamp(42px,10vw,72px);
 
-  color:#858585;
+  font-weight:400;
+
+  letter-spacing:-2px;
+
+  line-height:1.05;
+}
+
+.profile-copy{
+  max-width:550px;
+
+  margin-top:35px;
+
+  color:#777;
 
   font-size:14px;
 
@@ -176,31 +200,43 @@ a{
 }
 
 
-/* SECTIONS */
+/* =========================
+   SECTION
+========================= */
 
 .section{
-  margin-top:100px;
+  margin-top:120px;
 }
 
 .section-label{
-  color:#444;
+  color:#555;
 
   font-size:8px;
 
   letter-spacing:4px;
 
-  margin-bottom:26px;
+  margin-bottom:30px;
 }
 
 
-/* SOCIALS */
+/* =========================
+   SOCIAL LINKS
+========================= */
 
 .links{
-  border-top:1px solid #191919;
+  border-top:1px solid #1b1b1b;
 }
 
 .link{
-  min-height:72px;
+  width:100%;
+
+  min-height:75px;
+
+  padding:
+    20px
+    5px;
+
+  border-bottom:1px solid #1b1b1b;
 
   display:flex;
 
@@ -208,253 +244,206 @@ a{
 
   justify-content:space-between;
 
-  gap:20px;
-
-  border-bottom:1px solid #191919;
+  color:#ddd;
 
   text-decoration:none;
 
-  font-size:13px;
+  font-size:12px;
+
+  letter-spacing:2px;
+
+  transition:
+    color .2s ease,
+    padding .25s ease;
+}
+
+.link:hover{
+  color:#ffffff;
+
+  padding-left:10px;
 }
 
 .link-arrow{
   color:#555;
 
-  font-size:18px;
-
-  flex-shrink:0;
-}
-
-
-/* CONTACT */
-
-.contact-detail{
-  display:block;
-
-  width:max-content;
-
-  max-width:100%;
-
-  color:#888;
-
-  font-size:14px;
-
-  line-height:1.9;
-
-  text-decoration:none;
-
-  overflow-wrap:anywhere;
-}
-
-.contact-actions{
-  margin-top:34px;
-
-  display:flex;
-
-  flex-direction:column;
-
-  gap:10px;
-}
-
-.action{
-  width:100%;
-
-  min-height:60px;
-
-  border:1px solid #202020;
-
-  border-radius:17px;
-
-  background:#0d0d0d;
-
-  color:#ffffff;
-
-  padding:
-    19px
-    20px;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:space-between;
-
-  gap:20px;
-
-  text-decoration:none;
-
-  font-family:inherit;
-
-  font-size:9px;
-
-  letter-spacing:2.5px;
-
-  cursor:pointer;
-
-  transition:
-    transform .25s ease,
-    background .25s ease,
-    border-color .25s ease;
-}
-
-.action:hover{
-  transform:translateY(-2px);
-
-  background:#141414;
-
-  border-color:#444;
-}
-
-.action-symbol{
-  color:#777;
-
-  font-size:16px;
+  font-size:17px;
 
   letter-spacing:0;
 }
 
 
-/* SAVE MESSAGE */
+/* =========================
+   CONTACT
+========================= */
 
-.save-message{
-  position:fixed;
-
-  left:50%;
-
-  bottom:28px;
-
-  z-index:100;
-
-  transform:
-    translateX(-50%)
-    translateY(20px);
+.contact-info{
+  margin-top:10px;
 
   padding:
-    13px
-    18px;
+    30px
+    0;
 
-  border:1px solid #252525;
+  border-top:1px solid #1b1b1b;
 
-  border-radius:100px;
+  border-bottom:1px solid #1b1b1b;
+}
 
-  background:rgba(15,15,15,.94);
+.contact-item{
+  color:#888;
 
-  color:#ffffff;
+  font-size:13px;
+
+  line-height:2;
+}
+
+.contact-actions{
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:10px;
+
+  margin-top:28px;
+}
+
+.contact-button{
+  min-height:58px;
+
+  padding:
+    17px
+    14px;
+
+  border:1px solid #222;
+
+  border-radius:15px;
+
+  background:#0d0d0d;
+
+  color:#aaa;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-align:center;
+
+  text-decoration:none;
 
   font-size:8px;
 
   letter-spacing:2px;
 
-  white-space:nowrap;
+  cursor:pointer;
 
+  transition:
+    background .25s ease,
+    border-color .25s ease,
+    color .25s ease,
+    transform .25s ease;
+}
+
+.contact-button:hover{
+  background:#141414;
+
+  border-color:#444;
+
+  color:#ffffff;
+
+  transform:translateY(-2px);
+}
+
+
+/* =========================
+   SAVE MESSAGE
+========================= */
+
+.save-message{
   opacity:0;
 
-  pointer-events:none;
+  transform:translateY(5px);
+
+  margin-top:15px;
+
+  color:#555;
+
+  font-size:9px;
+
+  letter-spacing:2px;
 
   transition:
     opacity .3s ease,
     transform .3s ease;
-
-  backdrop-filter:blur(15px);
-
-  -webkit-backdrop-filter:blur(15px);
 }
 
 .save-message.show{
   opacity:1;
 
-  transform:
-    translateX(-50%)
-    translateY(0);
+  transform:translateY(0);
 }
 
 
-/* QUOTE */
+/* =========================
+   QUOTE
+========================= */
 
 .quote{
-  margin-top:110px;
+  margin-top:140px;
 
   padding:
-    58px
+    80px
     0;
 
-  border-top:1px solid #181818;
+  border-top:1px solid #1b1b1b;
 
-  border-bottom:1px solid #181818;
+  border-bottom:1px solid #1b1b1b;
 }
 
 .quote-text{
-  font-size:clamp(29px,8vw,39px);
+  max-width:750px;
+
+  font-size:clamp(40px,9vw,68px);
 
   font-weight:400;
 
-  line-height:1.25;
+  line-height:1.2;
 
-  letter-spacing:-.5px;
+  letter-spacing:-2px;
 }
 
-.quote-caption{
-  margin-top:28px;
+.quote-small{
+  margin-top:45px;
 
   color:#444;
 
   font-size:7px;
 
-  letter-spacing:4px;
-}
-
-
-/* POWERED */
-
-.powered-section{
-  margin-top:115px;
-
-  text-align:center;
-}
-
-.powered-label{
-  color:#363636;
-
-  font-size:7px;
-
-  letter-spacing:4px;
-}
-
-.powered-brand{
-  margin-top:16px;
-
-  font-size:14px;
-
   letter-spacing:5px;
 }
 
-.powered-tagline{
-  margin-top:11px;
 
-  color:#505050;
-
-  font-size:10px;
-}
-
-
-/* ABOUT US */
+/* =========================
+   ABOUT US
+========================= */
 
 .about-section{
-  margin-top:45px;
+  margin-top:90px;
 }
 
 .about-button{
   width:100%;
 
-  min-height:60px;
+  min-height:70px;
 
   padding:
-    19px
-    20px;
+    20px
+    28px;
 
-  border:1px solid #202020;
+  border:1px solid #252525;
 
-  border-radius:17px;
+  border-radius:22px;
 
   background:#0d0d0d;
 
@@ -466,13 +455,11 @@ a{
 
   justify-content:space-between;
 
-  gap:20px;
-
   text-decoration:none;
 
   font-size:9px;
 
-  letter-spacing:2.5px;
+  letter-spacing:4px;
 
   transition:
     transform .25s ease,
@@ -483,59 +470,118 @@ a{
 .about-button:hover{
   transform:translateY(-2px);
 
-  background:#141414;
+  background:#131313;
 
   border-color:#444;
 }
 
 .about-arrow{
-  color:#777;
+  color:#666;
 
-  font-size:17px;
+  font-size:21px;
 
   letter-spacing:0;
 }
 
 
-/* FOOTER */
+/* =========================
+   POWERED BY
+========================= */
 
-.footer{
-  margin-top:80px;
-
-  padding:
-    45px
-    24px;
-
-  border-top:1px solid #151515;
+.powered{
+  margin-top:100px;
 
   text-align:center;
+}
 
-  color:#303030;
+.powered-label{
+  color:#3e3e3e;
 
-  font-size:9px;
+  font-size:7px;
+
+  letter-spacing:5px;
+}
+
+.powered-brand{
+  margin-top:22px;
+
+  font-size:15px;
+
+  letter-spacing:7px;
+}
+
+.powered-tagline{
+  margin-top:15px;
+
+  color:#454545;
+
+  font-size:10px;
 }
 
 
-/* MOBILE */
+/* =========================
+   COPYRIGHT
+========================= */
 
-@media(max-width:480px){
+.copyright{
+  margin-top:75px;
 
-  .hero,
+  color:#303030;
+
+  text-align:center;
+
+  font-size:8px;
+
+  letter-spacing:1px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+  .hero-content{
+    padding-left:22px;
+    padding-right:22px;
+  }
+
   .page{
     padding-left:22px;
-
     padding-right:22px;
+  }
+
+  .contact-actions{
+    grid-template-columns:1fr;
   }
 
 }
 
+
 @media(max-width:390px){
 
-  .hero,
+  .hero-content{
+    padding-left:20px;
+    padding-right:20px;
+  }
+
   .page{
     padding-left:20px;
-
     padding-right:20px;
+  }
+
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
   }
 
 }
@@ -545,11 +591,13 @@ a{
 </head>
 
 
+
 <body>
 
 
-
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
@@ -567,7 +615,7 @@ a{
 </p>
 
 
-<p class="scroll">
+<p class="hero-scroll">
   SCROLL TO CONNECT ↓
 </p>
 
@@ -579,6 +627,10 @@ a{
 
 
 
+<!-- =========================
+     CONTENT
+========================= -->
+
 <main class="page">
 
 
@@ -588,7 +640,7 @@ a{
 <section>
 
 
-<p class="profile-eyebrow">
+<p class="profile-label">
   SHEIN BRYAN MATI-ONG CULI
 </p>
 
@@ -599,7 +651,7 @@ a{
 </h2>
 
 
-<p class="profile-bio">
+<p class="profile-copy">
   Cinematic filmmaking, aerial perspectives,
   and moments worth remembering.
 </p>
@@ -609,7 +661,7 @@ a{
 
 
 
-<!-- SOCIALS -->
+<!-- FIND ME -->
 
 <section class="section">
 
@@ -630,7 +682,7 @@ a{
 >
 
 <span>
-  Instagram
+  INSTAGRAM
 </span>
 
 <span class="link-arrow">
@@ -649,7 +701,7 @@ a{
 >
 
 <span>
-  Facebook
+  FACEBOOK
 </span>
 
 <span class="link-arrow">
@@ -668,7 +720,7 @@ a{
 >
 
 <span>
-  Sheinnema Page
+  SHEINNEMA PAGE
 </span>
 
 <span class="link-arrow">
@@ -687,7 +739,7 @@ a{
 >
 
 <span>
-  TikTok
+  TIKTOK
 </span>
 
 <span class="link-arrow">
@@ -704,7 +756,7 @@ a{
 
 
 
-<!-- CONTACT -->
+<!-- LET'S CONNECT -->
 
 <section class="section">
 
@@ -714,20 +766,20 @@ a{
 </p>
 
 
-<a
-  class="contact-detail"
-  href="tel:+639505174579"
->
+<div class="contact-info">
+
+
+<p class="contact-item">
   +63 950 517 4579
-</a>
+</p>
 
 
-<a
-  class="contact-detail"
-  href="mailto:xisheinn.am@gmail.com"
->
+<p class="contact-item">
   xisheinn.am@gmail.com
-</a>
+</p>
+
+
+</div>
 
 
 
@@ -735,57 +787,39 @@ a{
 
 
 <a
-  class="action"
+  class="contact-button"
   href="tel:+639505174579"
 >
-
-<span>
   CALL ME
-</span>
-
-<span class="action-symbol">
-  →
-</span>
-
 </a>
-
 
 
 <a
-  class="action"
+  class="contact-button"
   href="mailto:xisheinn.am@gmail.com"
 >
-
-<span>
   EMAIL ME
-</span>
-
-<span class="action-symbol">
-  →
-</span>
-
 </a>
 
 
-
 <button
-  class="action"
+  class="contact-button"
   type="button"
   onclick="saveContact()"
 >
-
-<span>
   SAVE CONTACT
-</span>
-
-<span class="action-symbol">
-  ↓
-</span>
-
 </button>
 
 
 </div>
+
+
+<p
+  class="save-message"
+  id="saveMessage"
+>
+  CONTACT READY TO SAVE
+</p>
 
 
 </section>
@@ -797,13 +831,13 @@ a{
 <section class="quote">
 
 
-<p class="quote-text">
+<h2 class="quote-text">
   Stories don't just<br>
   happen on the ground.
-</p>
+</h2>
 
 
-<p class="quote-caption">
+<p class="quote-small">
   LOOK ABOVE
 </p>
 
@@ -812,31 +846,10 @@ a{
 
 
 
-<!-- POWERED -->
-
-<section class="powered-section">
-
-
-<p class="powered-label">
-  POWERED BY
-</p>
-
-
-<div class="powered-brand">
-  TAP SHEINNEMA.
-</div>
-
-
-<div class="powered-tagline">
-  One tap. Everything.
-</div>
-
-
-</section>
-
-
-
-<!-- ABOUT US -->
+<!-- =========================
+     ABOUT US
+     MOVED ABOVE POWERED BY
+========================= -->
 
 <section class="about-section">
 
@@ -860,28 +873,52 @@ a{
 </section>
 
 
-</main>
+
+<!-- =========================
+     POWERED BY
+========================= -->
+
+<section class="powered">
+
+
+<p class="powered-label">
+  POWERED BY
+</p>
+
+
+<p class="powered-brand">
+  TAP SHEINNEMA.
+</p>
+
+
+<p class="powered-tagline">
+  One tap. Everything.
+</p>
+
+
+</section>
 
 
 
-<footer class="footer">
+<!-- COPYRIGHT -->
+
+<p class="copyright">
   © 2026 SHEINNEMA
-</footer>
+</p>
 
 
-
-<div
-  class="save-message"
-  id="saveMessage"
->
-  CONTACT READY TO SAVE
-</div>
+</main>
 
 
 
 <script>
 
+/* =========================
+   SAVE CONTACT
+========================= */
+
 function saveContact(){
+
 
   const vCard = `BEGIN:VCARD
 VERSION:3.0
@@ -891,6 +928,7 @@ TEL;TYPE=CELL:+639505174579
 EMAIL;TYPE=INTERNET:xisheinn.am@gmail.com
 END:VCARD`;
 
+
   const blob =
     new Blob(
       [vCard],
@@ -899,27 +937,34 @@ END:VCARD`;
       }
     );
 
+
   const url =
     URL.createObjectURL(
       blob
     );
+
 
   const link =
     document.createElement(
       "a"
     );
 
+
   link.href =
     url;
 
+
   link.download =
     "Shein-Bryan-Mati-ong.vcf";
+
 
   document.body.appendChild(
     link
   );
 
+
   link.click();
+
 
   document.body.removeChild(
     link
@@ -959,6 +1004,7 @@ END:VCARD`;
     },
     3000
   );
+
 
 }
 
