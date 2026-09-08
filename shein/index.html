@@ -21,10 +21,6 @@
 
 <style>
 
-/* =========================
-   RESET
-========================= */
-
 *{
   box-sizing:border-box;
   margin:0;
@@ -54,9 +50,7 @@ a{
 }
 
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero{
   position:relative;
@@ -64,7 +58,9 @@ a{
   min-height:100svh;
 
   display:flex;
+
   flex-direction:column;
+
   justify-content:flex-end;
 
   padding:
@@ -82,11 +78,13 @@ a{
     url("../hero.jpg");
 
   background-size:cover;
+
   background-position:center;
 }
 
 .hero-content{
   width:100%;
+
   max-width:520px;
 
   margin:auto auto 0;
@@ -125,12 +123,11 @@ a{
 }
 
 
-/* =========================
-   PAGE
-========================= */
+/* PAGE */
 
 .page{
   width:100%;
+
   max-width:520px;
 
   margin:auto;
@@ -142,9 +139,7 @@ a{
 }
 
 
-/* =========================
-   PROFILE
-========================= */
+/* PROFILE */
 
 .profile-eyebrow{
   color:#555;
@@ -181,9 +176,7 @@ a{
 }
 
 
-/* =========================
-   SECTIONS
-========================= */
+/* SECTIONS */
 
 .section{
   margin-top:100px;
@@ -200,9 +193,7 @@ a{
 }
 
 
-/* =========================
-   SOCIAL LINKS
-========================= */
+/* SOCIALS */
 
 .links{
   border-top:1px solid #191919;
@@ -224,14 +215,6 @@ a{
   text-decoration:none;
 
   font-size:13px;
-
-  transition:
-    color .2s ease,
-    padding .2s ease;
-}
-
-.link:hover{
-  padding-left:4px;
 }
 
 .link-arrow{
@@ -240,27 +223,16 @@ a{
   font-size:18px;
 
   flex-shrink:0;
-
-  transition:
-    transform .2s ease,
-    color .2s ease;
-}
-
-.link:hover .link-arrow{
-  transform:translate(2px,-2px);
-
-  color:#fff;
 }
 
 
-/* =========================
-   CONTACT
-========================= */
+/* CONTACT */
 
 .contact-detail{
   display:block;
 
   width:max-content;
+
   max-width:100%;
 
   color:#888;
@@ -272,12 +244,6 @@ a{
   text-decoration:none;
 
   overflow-wrap:anywhere;
-
-  transition:color .2s ease;
-}
-
-.contact-detail:hover{
-  color:#ffffff;
 }
 
 .contact-actions{
@@ -348,14 +314,13 @@ a{
 }
 
 
-/* =========================
-   SAVE CONTACT MESSAGE
-========================= */
+/* SAVE MESSAGE */
 
 .save-message{
   position:fixed;
 
   left:50%;
+
   bottom:28px;
 
   z-index:100;
@@ -391,6 +356,7 @@ a{
     transform .3s ease;
 
   backdrop-filter:blur(15px);
+
   -webkit-backdrop-filter:blur(15px);
 }
 
@@ -403,9 +369,7 @@ a{
 }
 
 
-/* =========================
-   QUOTE
-========================= */
+/* QUOTE */
 
 .quote{
   margin-top:110px;
@@ -440,9 +404,7 @@ a{
 }
 
 
-/* =========================
-   POWERED BY
-========================= */
+/* POWERED */
 
 .powered-section{
   margin-top:115px;
@@ -475,9 +437,7 @@ a{
 }
 
 
-/* =========================
-   ABOUT US
-========================= */
+/* ABOUT US */
 
 .about-section{
   margin-top:45px;
@@ -534,22 +494,10 @@ a{
   font-size:17px;
 
   letter-spacing:0;
-
-  transition:
-    transform .25s ease,
-    color .25s ease;
-}
-
-.about-button:hover .about-arrow{
-  transform:translate(2px,-2px);
-
-  color:#ffffff;
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 .footer{
   margin-top:80px;
@@ -568,9 +516,7 @@ a{
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:480px){
 
@@ -583,7 +529,6 @@ a{
 
 }
 
-
 @media(max-width:390px){
 
   .hero,
@@ -591,26 +536,6 @@ a{
     padding-left:20px;
 
     padding-right:20px;
-  }
-
-}
-
-
-/* =========================
-   REDUCED MOTION
-========================= */
-
-@media(prefers-reduced-motion:reduce){
-
-  html{
-    scroll-behavior:auto;
-  }
-
-  .action,
-  .about-button,
-  .link,
-  .link-arrow{
-    transition:none;
   }
 
 }
@@ -624,9 +549,7 @@ a{
 
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <section class="hero">
 
@@ -656,12 +579,11 @@ a{
 
 
 
-<!-- =========================
-     PROFILE
-========================= -->
-
 <main class="page">
 
+
+
+<!-- PROFILE -->
 
 <section>
 
@@ -687,9 +609,7 @@ a{
 
 
 
-<!-- =========================
-     SOCIALS
-========================= -->
+<!-- SOCIALS -->
 
 <section class="section">
 
@@ -784,9 +704,7 @@ a{
 
 
 
-<!-- =========================
-     CONTACT
-========================= -->
+<!-- CONTACT -->
 
 <section class="section">
 
@@ -874,9 +792,7 @@ a{
 
 
 
-<!-- =========================
-     QUOTE
-========================= -->
+<!-- QUOTE -->
 
 <section class="quote">
 
@@ -896,9 +812,7 @@ a{
 
 
 
-<!-- =========================
-     POWERED BY
-========================= -->
+<!-- POWERED -->
 
 <section class="powered-section">
 
@@ -922,9 +836,7 @@ a{
 
 
 
-<!-- =========================
-     ABOUT US BUTTON
-========================= -->
+<!-- ABOUT US -->
 
 <section class="about-section">
 
@@ -952,17 +864,11 @@ a{
 
 
 
-<!-- =========================
-     FOOTER
-========================= -->
-
 <footer class="footer">
   © 2026 SHEINNEMA
 </footer>
 
 
-
-<!-- SAVE CONTACT MESSAGE -->
 
 <div
   class="save-message"
@@ -974,10 +880,6 @@ a{
 
 
 <script>
-
-/* =========================
-   SAVE CONTACT
-========================= */
 
 function saveContact(){
 
@@ -998,10 +900,14 @@ END:VCARD`;
     );
 
   const url =
-    URL.createObjectURL(blob);
+    URL.createObjectURL(
+      blob
+    );
 
   const link =
-    document.createElement("a");
+    document.createElement(
+      "a"
+    );
 
   link.href =
     url;
@@ -1020,12 +926,11 @@ END:VCARD`;
   );
 
 
-  /* SHOW MESSAGE */
-
   const message =
     document.getElementById(
       "saveMessage"
     );
+
 
   message.classList.add(
     "show"
@@ -1043,8 +948,6 @@ END:VCARD`;
     2200
   );
 
-
-  /* CLEAN UP */
 
   setTimeout(
     function(){
