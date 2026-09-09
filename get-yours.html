@@ -16,15 +16,15 @@
 
 <meta
   name="description"
-  content="Create your TAP SHEINNEMA digital profile."
+  content="TAP SHEINNEMA profile requests are temporarily unavailable."
 >
 
 <style>
 
 *{
-  box-sizing:border-box;
   margin:0;
   padding:0;
+  box-sizing:border-box;
 }
 
 html{
@@ -45,23 +45,21 @@ body{
   overflow-x:hidden;
 }
 
-button,
-input,
-textarea,
-select{
-  font:inherit;
-}
-
 a{
   color:inherit;
 }
 
 
-/* PAGE */
+/* =========================
+   PAGE
+========================= */
 
 .page{
   width:100%;
+
   max-width:620px;
+
+  min-height:100svh;
 
   margin:auto;
 
@@ -69,16 +67,25 @@ a{
     42px
     24px
     110px;
+
+  display:flex;
+
+  flex-direction:column;
 }
 
 
-/* BACK */
+/* =========================
+   BACK
+========================= */
 
 .back{
   display:inline-flex;
 
   align-items:center;
+
   justify-content:center;
+
+  width:max-content;
 
   color:#666;
 
@@ -100,12 +107,12 @@ a{
 }
 
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .top{
   margin-top:110px;
-
-  margin-bottom:110px;
 }
 
 .eyebrow{
@@ -115,430 +122,26 @@ a{
 
   letter-spacing:5px;
 
-  margin-bottom:26px;
+  margin-bottom:28px;
 }
 
 .title{
-  font-size:clamp(44px,12vw,68px);
+  font-size:clamp(
+    44px,
+    12vw,
+    68px
+  );
 
   font-weight:400;
 
+  line-height:1.02;
+
   letter-spacing:-2px;
-
-  line-height:.98;
-}
-
-.title span{
-  display:block;
 }
 
 .subtitle{
-  margin-top:30px;
+  max-width:440px;
 
-  color:#777;
-
-  font-size:13px;
-
-  line-height:1.8;
-}
-
-
-/* FORM */
-
-.form-section{
-  margin-top:80px;
-}
-
-.section-label{
-  padding-bottom:18px;
-
-  border-bottom:1px solid #1c1c1c;
-
-  color:#555;
-
-  font-size:8px;
-
-  letter-spacing:4px;
-}
-
-.fields{
-  margin-top:28px;
-
-  display:flex;
-
-  flex-direction:column;
-
-  gap:22px;
-}
-
-.row{
-  display:grid;
-
-  grid-template-columns:
-    1fr
-    1fr;
-
-  gap:14px;
-}
-
-.field{
-  min-width:0;
-}
-
-.field label{
-  display:block;
-
-  margin-bottom:10px;
-
-  color:#666;
-
-  font-size:8px;
-
-  letter-spacing:2px;
-
-  line-height:1.5;
-}
-
-.field input,
-.field textarea,
-.field select{
-  width:100%;
-
-  min-width:0;
-
-  border:1px solid #222;
-
-  border-radius:14px;
-
-  background:#0d0d0d;
-
-  color:#ffffff;
-
-  outline:none;
-
-  padding:
-    16px
-    16px;
-
-  font-size:13px;
-
-  transition:
-    border-color .2s ease,
-    background .2s ease;
-}
-
-.field input,
-.field select{
-  min-height:54px;
-}
-
-.field textarea{
-  min-height:130px;
-
-  resize:vertical;
-
-  line-height:1.6;
-}
-
-.field input:focus,
-.field textarea:focus,
-.field select:focus{
-  border-color:#555;
-
-  background:#101010;
-}
-
-.field input::placeholder,
-.field textarea::placeholder{
-  color:#3d3d3d;
-}
-
-.field select{
-  appearance:none;
-
-  -webkit-appearance:none;
-
-  background-image:
-    linear-gradient(
-      45deg,
-      transparent 50%,
-      #666 50%
-    ),
-    linear-gradient(
-      135deg,
-      #666 50%,
-      transparent 50%
-    );
-
-  background-position:
-    calc(100% - 20px) 23px,
-    calc(100% - 15px) 23px;
-
-  background-size:
-    5px
-    5px,
-    5px
-    5px;
-
-  background-repeat:no-repeat;
-}
-
-
-/* CONTACT OPTIONS */
-
-.options{
-  display:grid;
-
-  grid-template-columns:
-    1fr
-    1fr;
-
-  gap:10px;
-
-  width:100%;
-}
-
-.option{
-  width:100%;
-
-  min-width:0;
-
-  display:flex;
-
-  align-items:center;
-
-  gap:12px;
-
-  padding:
-    15px
-    16px;
-
-  border:1px solid #222;
-
-  border-radius:14px;
-
-  background:#0d0d0d;
-
-  color:#888;
-
-  font-size:11px;
-
-  line-height:1.4;
-
-  cursor:pointer;
-
-  overflow:hidden;
-}
-
-.option input{
-  appearance:auto;
-
-  -webkit-appearance:auto;
-
-  width:18px !important;
-
-  height:18px !important;
-
-  min-width:18px !important;
-
-  max-width:18px !important;
-
-  flex:0 0 18px;
-
-  margin:0;
-
-  padding:0;
-
-  accent-color:#ffffff;
-}
-
-.option span{
-  min-width:0;
-
-  overflow-wrap:anywhere;
-}
-
-
-/* NOTE */
-
-.note{
-  padding:
-    20px
-    20px;
-
-  border:1px solid #202020;
-
-  border-radius:16px;
-
-  background:#0c0c0c;
-
-  color:#666;
-
-  font-size:11px;
-
-  line-height:1.8;
-}
-
-.note strong{
-  color:#aaa;
-
-  font-weight:400;
-}
-
-
-/* SUBMIT */
-
-.submit-wrap{
-  margin-top:65px;
-}
-
-.submit{
-  width:100%;
-
-  min-height:66px;
-
-  border:0;
-
-  border-radius:18px;
-
-  background:#ffffff;
-
-  color:#080808;
-
-  padding:
-    20px
-    22px;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:space-between;
-
-  cursor:pointer;
-
-  font-size:10px;
-
-  letter-spacing:2.5px;
-
-  transition:
-    transform .25s ease,
-    opacity .25s ease;
-}
-
-.submit:hover{
-  transform:translateY(-2px);
-
-  opacity:.9;
-}
-
-.submit:disabled{
-  opacity:.45;
-
-  cursor:not-allowed;
-
-  transform:none;
-}
-
-.submit-arrow{
-  font-size:18px;
-
-  letter-spacing:0;
-}
-
-
-/* STATUS */
-
-.status{
-  display:none;
-
-  margin-top:20px;
-
-  padding:
-    17px
-    18px;
-
-  border-radius:14px;
-
-  background:#0d0d0d;
-
-  border:1px solid #222;
-
-  color:#888;
-
-  font-size:11px;
-
-  line-height:1.7;
-}
-
-.status.error{
-  display:block;
-}
-
-.status.show{
-  display:block;
-}
-
-
-/* SUCCESS */
-
-.success{
-  display:none;
-
-  min-height:75svh;
-
-  flex-direction:column;
-
-  justify-content:center;
-
-  text-align:left;
-}
-
-.success.show{
-  display:flex;
-}
-
-.success-symbol{
-  width:55px;
-
-  height:55px;
-
-  border:1px solid #333;
-
-  border-radius:100%;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  font-size:20px;
-
-  margin-bottom:38px;
-}
-
-.success-label{
-  color:#555;
-
-  font-size:8px;
-
-  letter-spacing:4px;
-
-  margin-bottom:25px;
-}
-
-.success-title{
-  font-size:clamp(38px,10vw,56px);
-
-  font-weight:400;
-
-  letter-spacing:-1px;
-
-  line-height:1.05;
-}
-
-.success-copy{
   margin-top:30px;
 
   color:#777;
@@ -548,58 +151,153 @@ a{
   line-height:1.9;
 }
 
-.success-brand{
-  margin-top:70px;
 
-  padding-top:30px;
+/* =========================
+   STATUS
+========================= */
 
-  border-top:1px solid #191919;
+.status-section{
+  margin-top:90px;
+
+  padding:
+    45px
+    0;
+
+  border-top:1px solid #181818;
+
+  border-bottom:1px solid #181818;
 }
 
-.success-brand-small{
+.status-label{
   color:#444;
+
+  font-size:7px;
+
+  letter-spacing:4px;
+
+  margin-bottom:22px;
+}
+
+.status-title{
+  font-size:clamp(
+    28px,
+    7vw,
+    38px
+  );
+
+  font-weight:400;
+
+  line-height:1.25;
+
+  letter-spacing:-.5px;
+}
+
+.status-copy{
+  max-width:460px;
+
+  margin-top:25px;
+
+  color:#707070;
+
+  font-size:13px;
+
+  line-height:1.9;
+}
+
+
+/* =========================
+   MESSAGE CARD
+========================= */
+
+.message-card{
+  margin-top:60px;
+
+  padding:
+    34px
+    28px;
+
+  border:1px solid #222;
+
+  border-radius:22px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #111111,
+      #0a0a0a
+    );
+}
+
+.message-icon{
+  width:40px;
+
+  height:40px;
+
+  border:1px solid #282828;
+
+  border-radius:50%;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  color:#777;
+
+  font-size:18px;
+}
+
+.message-title{
+  margin-top:30px;
+
+  font-size:17px;
+
+  font-weight:400;
+
+  letter-spacing:.2px;
+}
+
+.message-copy{
+  margin-top:17px;
+
+  color:#696969;
+
+  font-size:12px;
+
+  line-height:1.8;
+}
+
+
+/* =========================
+   BRAND
+========================= */
+
+.brand-block{
+  margin-top:auto;
+
+  padding-top:120px;
+
+  text-align:center;
+}
+
+.brand-label{
+  color:#393939;
 
   font-size:7px;
 
   letter-spacing:4px;
 }
 
-.success-brand-name{
-  margin-top:14px;
+.brand-name{
+  margin-top:18px;
 
-  font-size:13px;
-
-  letter-spacing:4px;
-}
-
-.success-brand-tagline{
-  margin-top:9px;
-
-  color:#555;
-
-  font-size:9px;
-}
-
-
-/* FOOTER */
-
-.footer{
-  margin-top:120px;
-
-  padding-top:55px;
-
-  border-top:1px solid #161616;
-
-  text-align:center;
-}
-
-.footer-brand{
-  font-size:13px;
+  font-size:14px;
 
   letter-spacing:5px;
 }
 
-.footer-tagline{
+.brand-tagline{
   margin-top:11px;
 
   color:#505050;
@@ -616,7 +314,9 @@ a{
 }
 
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:480px){
 
@@ -625,22 +325,12 @@ a{
     padding-right:22px;
   }
 
-  .row{
-    grid-template-columns:1fr;
-  }
-
-  .options{
-    grid-template-columns:1fr;
-  }
-
   .top{
-    margin-bottom:90px;
+    margin-top:90px;
   }
 
-  .option{
-    padding:16px;
-
-    font-size:11px;
+  .status-section{
+    margin-top:75px;
   }
 
 }
@@ -657,8 +347,23 @@ a{
     font-size:39px;
   }
 
-  .option{
-    gap:11px;
+  .message-card{
+    padding:
+      30px
+      24px;
+  }
+
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
   }
 
 }
@@ -668,13 +373,17 @@ a{
 </head>
 
 
+
 <body>
+
 
 
 <main class="page">
 
 
-<!-- SMART BACK ARROW -->
+<!-- =========================
+     SMART BACK
+========================= -->
 
 <a
   class="back"
@@ -687,753 +396,119 @@ a{
 
 
 
-<div id="formContent">
-
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="top">
+
 
 <p class="eyebrow">
   GET YOURS
 </p>
 
+
 <h1 class="title">
-
-<span>
-  Your identity
-</span>
-
-<span>
+  Your identity<br>
   starts here.
-</span>
-
 </h1>
 
+
 <p class="subtitle">
-  Tell us about you, your brand, and what
-  you want people to discover when they tap.
+  TAP SHEINNEMA profile requests
+  are taking a short break while
+  we prepare what comes next.
 </p>
+
 
 </section>
 
 
 
-<form
-  id="profileForm"
-  action="https://formspree.io/f/xqpkyyre"
-  method="POST"
->
+<!-- =========================
+     STATUS
+========================= -->
 
+<section class="status-section">
 
-<input
-  type="hidden"
-  name="_subject"
-  value="New TAP SHEINNEMA Profile Request"
->
 
-
-<input
-  type="text"
-  name="_gotcha"
-  style="display:none"
-  tabindex="-1"
-  autocomplete="off"
->
-
-
-
-<!-- ABOUT YOU -->
-
-<section class="form-section">
-
-<p class="section-label">
-  ABOUT YOU
-</p>
-
-<div class="fields">
-
-
-<div class="field">
-
-<label>
-  FULL NAME *
-</label>
-
-<input
-  type="text"
-  name="Full Name"
-  placeholder="Your full name"
-  required
->
-
-</div>
-
-
-
-<div class="field">
-
-<label>
-  BRAND / BUSINESS NAME
-</label>
-
-<input
-  type="text"
-  name="Brand / Business Name"
-  placeholder="Your brand or business"
->
-
-</div>
-
-
-
-<div class="field">
-
-<label>
-  TITLE / ROLE
-</label>
-
-<input
-  type="text"
-  name="Title / Role"
-  placeholder="Photographer, Owner, Realtor..."
->
-
-</div>
-
-
-
-<div class="row">
-
-
-<div class="field">
-
-<label>
-  EMAIL *
-</label>
-
-<input
-  type="email"
-  name="Email"
-  placeholder="you@email.com"
-  required
->
-
-</div>
-
-
-<div class="field">
-
-<label>
-  PHONE
-</label>
-
-<input
-  type="tel"
-  name="Phone"
-  placeholder="+63..."
->
-
-</div>
-
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- SOCIALS -->
-
-<section class="form-section">
-
-<p class="section-label">
-  SOCIALS
-</p>
-
-<div class="fields">
-
-
-<div class="field">
-
-<label>
-  INSTAGRAM
-</label>
-
-<input
-  type="url"
-  name="Instagram"
-  placeholder="https://instagram.com/..."
->
-
-</div>
-
-
-<div class="field">
-
-<label>
-  FACEBOOK
-</label>
-
-<input
-  type="url"
-  name="Facebook"
-  placeholder="https://facebook.com/..."
->
-
-</div>
-
-
-<div class="field">
-
-<label>
-  FACEBOOK PAGE
-</label>
-
-<input
-  type="url"
-  name="Facebook Page"
-  placeholder="https://facebook.com/..."
->
-
-</div>
-
-
-<div class="field">
-
-<label>
-  TIKTOK
-</label>
-
-<input
-  type="url"
-  name="TikTok"
-  placeholder="https://tiktok.com/@..."
->
-
-</div>
-
-
-<div class="field">
-
-<label>
-  YOUTUBE
-</label>
-
-<input
-  type="url"
-  name="YouTube"
-  placeholder="https://youtube.com/..."
->
-
-</div>
-
-
-<div class="field">
-
-<label>
-  WEBSITE / PORTFOLIO
-</label>
-
-<input
-  type="url"
-  name="Website / Portfolio"
-  placeholder="https://..."
->
-
-</div>
-
-
-<div class="field">
-
-<label>
-  OTHER LINK
-</label>
-
-<input
-  type="url"
-  name="Other Link"
-  placeholder="https://..."
->
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- PROFILE -->
-
-<section class="form-section">
-
-<p class="section-label">
-  YOUR PROFILE
-</p>
-
-<div class="fields">
-
-
-<div class="field">
-
-<label>
-  MAIN DISPLAY NAME
-</label>
-
-<input
-  type="text"
-  name="Main Display Name"
-  placeholder="The name shown most prominently"
->
-
-</div>
-
-
-<div class="field">
-
-<label>
-  MAIN HEADLINE
-</label>
-
-<input
-  type="text"
-  name="Main Headline"
-  placeholder="Example: From the ground to the skies."
->
-
-</div>
-
-
-<div class="field">
-
-<label>
-  SHORT BIO
-</label>
-
-<textarea
-  name="Short Bio"
-  placeholder="Tell us a little about you or your business..."
-></textarea>
-
-</div>
-
-
-<div class="field">
-
-<label>
-  TAGLINE
-</label>
-
-<input
-  type="text"
-  name="Tagline"
-  placeholder="Optional"
->
-
-</div>
-
-
-<div class="field">
-
-<label>
-  QUOTE / PERSONAL LINE
-</label>
-
-<textarea
-  name="Quote / Personal Line"
-  placeholder="Optional"
-></textarea>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- CONTACT OPTIONS -->
-
-<section class="form-section">
-
-<p class="section-label">
-  CONTACT OPTIONS
-</p>
-
-<div class="fields">
-
-
-<div class="options">
-
-
-<label class="option">
-
-<input
-  type="checkbox"
-  name="Contact Options"
-  value="Call Me"
->
-
-<span>
-  CALL ME
-</span>
-
-</label>
-
-
-
-<label class="option">
-
-<input
-  type="checkbox"
-  name="Contact Options"
-  value="Email Me"
->
-
-<span>
-  EMAIL ME
-</span>
-
-</label>
-
-
-
-<label class="option">
-
-<input
-  type="checkbox"
-  name="Contact Options"
-  value="Save Contact"
->
-
-<span>
-  SAVE CONTACT
-</span>
-
-</label>
-
-
-</div>
-
-
-
-<div class="field">
-
-<label>
-  NAME TO SAVE
-</label>
-
-<input
-  type="text"
-  name="Name to Save"
-  placeholder="Name shown when contact is saved"
->
-
-</div>
-
-
-
-<div class="row">
-
-
-<div class="field">
-
-<label>
-  PHONE TO SAVE
-</label>
-
-<input
-  type="tel"
-  name="Phone to Save"
-  placeholder="+63..."
->
-
-</div>
-
-
-<div class="field">
-
-<label>
-  EMAIL TO SAVE
-</label>
-
-<input
-  type="email"
-  name="Email to Save"
-  placeholder="you@email.com"
->
-
-</div>
-
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- STYLE -->
-
-<section class="form-section">
-
-<p class="section-label">
-  YOUR STYLE
-</p>
-
-<div class="fields">
-
-
-<div class="field">
-
-<label>
-  PREFERRED LOOK
-</label>
-
-<select
-  name="Preferred Look"
->
-
-<option value="TAP SHEINNEMA Signature">
-  TAP SHEINNEMA Signature
-</option>
-
-<option value="Minimal">
-  Minimal
-</option>
-
-<option value="Cinematic">
-  Cinematic
-</option>
-
-<option value="Corporate">
-  Corporate
-</option>
-
-<option value="Luxury">
-  Luxury
-</option>
-
-<option value="Creative">
-  Creative
-</option>
-
-<option value="Surprise me">
-  Surprise me
-</option>
-
-</select>
-
-</div>
-
-
-
-<div class="field">
-
-<label>
-  PREFERRED BACKGROUND
-</label>
-
-<select
-  name="Preferred Background"
->
-
-<option value="Black">
-  Black
-</option>
-
-<option value="White">
-  White
-</option>
-
-<option value="Dark Gray">
-  Dark Gray
-</option>
-
-<option value="Designer's choice">
-  Designer's choice
-</option>
-
-</select>
-
-</div>
-
-
-
-<div class="field">
-
-<label>
-  ADDITIONAL REQUESTS
-</label>
-
-<textarea
-  name="Additional Requests"
-  placeholder="Anything else you'd like us to know?"
-></textarea>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- PHOTO -->
-
-<section class="form-section">
-
-<p class="section-label">
-  HERO PHOTO / LOGO
-</p>
-
-<div class="fields">
-
-
-<div class="note">
-
-<strong>
-  PHOTO OR LOGO
-</strong>
-
-<br><br>
-
-After submitting your profile request,
-please send your hero photo and logo
-separately.
-
-This helps us keep your files at their
-original quality.
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<!-- SUBMIT -->
-
-<div class="submit-wrap">
-
-
-<button
-  class="submit"
-  id="submitButton"
-  type="submit"
->
-
-<span id="submitText">
-  SUBMIT PROFILE REQUEST
-</span>
-
-<span class="submit-arrow">
-  →
-</span>
-
-</button>
-
-
-<div
-  class="status"
-  id="formStatus"
-></div>
-
-
-</div>
-
-
-</form>
-
-
-
-<footer class="footer">
-
-
-<div class="footer-brand">
-  TAP SHEINNEMA.
-</div>
-
-
-<div class="footer-tagline">
-  One tap. Everything.
-</div>
-
-
-<div class="copyright">
-  © 2026 SHEINNEMA
-</div>
-
-
-</footer>
-
-
-</div>
-
-
-
-<!-- SUCCESS -->
-
-<section
-  class="success"
-  id="successScreen"
->
-
-
-<div class="success-symbol">
-  ✓
-</div>
-
-
-<p class="success-label">
-  REQUEST RECEIVED
+<p class="status-label">
+  CURRENT STATUS
 </p>
 
 
-<h2 class="success-title">
-  Welcome to<br>
-  TAP SHEINNEMA.
+<h2 class="status-title">
+  Temporarily unavailable.
 </h2>
 
 
-<p class="success-copy">
-  Your profile request has been received.
-  We'll review the information you submitted
-  and get in touch with you.
+<p class="status-copy">
+  New profile requests are currently paused.
+  TAP SHEINNEMA will be accepting new requests again soon.
 </p>
 
 
-<div class="success-brand">
+</section>
 
 
-<div class="success-brand-small">
-  POWERED BY
+
+<!-- =========================
+     MESSAGE
+========================= -->
+
+<section class="message-card">
+
+
+<div class="message-icon">
+  …
 </div>
 
 
-<div class="success-brand-name">
-  TAP SHEINNEMA.
-</div>
+<h3 class="message-title">
+  We're preparing something better.
+</h3>
 
 
-<div class="success-brand-tagline">
-  One tap. Everything.
-</div>
-
-
-</div>
+<p class="message-copy">
+  The GET YOURS experience is currently
+  being prepared for its next version.
+  Please check back again soon.
+</p>
 
 
 </section>
+
+
+
+<!-- =========================
+     BRAND
+========================= -->
+
+<section class="brand-block">
+
+
+<p class="brand-label">
+  POWERED BY
+</p>
+
+
+<p class="brand-name">
+  TAP SHEINNEMA.
+</p>
+
+
+<p class="brand-tagline">
+  One tap. Everything.
+</p>
+
+
+<p class="copyright">
+  © 2026 SHEINNEMA
+</p>
+
+
+</section>
+
 
 
 </main>
@@ -1442,9 +517,8 @@ original quality.
 
 <script>
 
-
 /* =========================
-   SMART BACK ARROW
+   SMART BACK
 ========================= */
 
 const backParams =
@@ -1479,187 +553,8 @@ const backButton =
 backButton.href =
   backPath;
 
-
-
-/* =========================
-   FORM SUBMISSION
-========================= */
-
-const form =
-  document.getElementById(
-    "profileForm"
-  );
-
-
-const submitButton =
-  document.getElementById(
-    "submitButton"
-  );
-
-
-const submitText =
-  document.getElementById(
-    "submitText"
-  );
-
-
-const formStatus =
-  document.getElementById(
-    "formStatus"
-  );
-
-
-const formContent =
-  document.getElementById(
-    "formContent"
-  );
-
-
-const successScreen =
-  document.getElementById(
-    "successScreen"
-  );
-
-
-form.addEventListener(
-  "submit",
-  async function(event){
-
-    event.preventDefault();
-
-
-    submitButton.disabled =
-      true;
-
-
-    submitText.textContent =
-      "SENDING...";
-
-
-    formStatus.className =
-      "status";
-
-
-    formStatus.textContent =
-      "";
-
-
-    const data =
-      new FormData(
-        form
-      );
-
-
-    try{
-
-
-      const response =
-        await fetch(
-          form.action,
-          {
-            method:"POST",
-
-            body:data,
-
-            headers:{
-              "Accept":
-              "application/json"
-            }
-          }
-        );
-
-
-      if(response.ok){
-
-
-        formContent.style.display =
-          "none";
-
-
-        backButton.style.display =
-          "none";
-
-
-        successScreen.classList.add(
-          "show"
-        );
-
-
-        window.scrollTo({
-          top:0,
-          behavior:"smooth"
-        });
-
-
-        form.reset();
-
-
-      }else{
-
-
-        const result =
-          await response.json();
-
-
-        let message =
-          "Something went wrong. Please try again.";
-
-
-        if(
-          result.errors &&
-          result.errors.length
-        ){
-
-          message =
-            result.errors
-              .map(
-                error =>
-                  error.message
-              )
-              .join(" ");
-
-        }
-
-
-        formStatus.textContent =
-          message;
-
-
-        formStatus.className =
-          "status error";
-
-
-      }
-
-
-    }catch(error){
-
-
-      formStatus.textContent =
-        "Unable to send your request right now. Please check your connection and try again.";
-
-
-      formStatus.className =
-        "status error";
-
-
-    }finally{
-
-
-      submitButton.disabled =
-        false;
-
-
-      submitText.textContent =
-        "SUBMIT PROFILE REQUEST";
-
-
-    }
-
-  }
-);
-
 </script>
+
 
 
 </body>
