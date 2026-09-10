@@ -1,562 +1,1398 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0"
->
-
-<meta name="theme-color" content="#080808">
-
-<title>Get Yours | TAP SHEINNEMA.</title>
-
-<meta
-  name="description"
-  content="TAP SHEINNEMA profile requests are temporarily unavailable."
->
-
-<style>
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  background:#080808;
-  color:#ffffff;
-
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Helvetica Neue",
-    Arial,
-    sans-serif;
-
-  overflow-x:hidden;
-}
-
-a{
-  color:inherit;
-}
-
-
-/* =========================
-   PAGE
-========================= */
-
-.page{
-  width:100%;
-
-  max-width:620px;
-
-  min-height:100svh;
-
-  margin:auto;
-
-  padding:
-    42px
-    24px
-    110px;
-
-  display:flex;
-
-  flex-direction:column;
-}
-
-
-/* =========================
-   BACK
-========================= */
-
-.back{
-  display:inline-flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  width:max-content;
-
-  color:#666;
-
-  text-decoration:none;
-
-  font-size:22px;
-
-  line-height:1;
-
-  transition:
-    color .2s ease,
-    transform .2s ease;
-}
-
-.back:hover{
-  color:#ffffff;
-
-  transform:translateX(-3px);
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.top{
-  margin-top:110px;
-}
-
-.eyebrow{
-  color:#555;
-
-  font-size:8px;
-
-  letter-spacing:5px;
-
-  margin-bottom:28px;
-}
-
-.title{
-  font-size:clamp(
-    44px,
-    12vw,
-    68px
-  );
-
-  font-weight:400;
-
-  line-height:1.02;
-
-  letter-spacing:-2px;
-}
-
-.subtitle{
-  max-width:440px;
-
-  margin-top:30px;
-
-  color:#777;
-
-  font-size:13px;
-
-  line-height:1.9;
-}
-
-
-/* =========================
-   STATUS
-========================= */
-
-.status-section{
-  margin-top:90px;
-
-  padding:
-    45px
-    0;
-
-  border-top:1px solid #181818;
-
-  border-bottom:1px solid #181818;
-}
-
-.status-label{
-  color:#444;
-
-  font-size:7px;
-
-  letter-spacing:4px;
-
-  margin-bottom:22px;
-}
-
-.status-title{
-  font-size:clamp(
-    28px,
-    7vw,
-    38px
-  );
-
-  font-weight:400;
-
-  line-height:1.25;
-
-  letter-spacing:-.5px;
-}
-
-.status-copy{
-  max-width:460px;
-
-  margin-top:25px;
-
-  color:#707070;
-
-  font-size:13px;
-
-  line-height:1.9;
-}
-
-
-/* =========================
-   MESSAGE CARD
-========================= */
-
-.message-card{
-  margin-top:60px;
-
-  padding:
-    34px
-    28px;
-
-  border:1px solid #222;
-
-  border-radius:22px;
-
-  background:
-    linear-gradient(
-      145deg,
-      #111111,
-      #0a0a0a
-    );
-}
-
-.message-icon{
-  width:40px;
-
-  height:40px;
-
-  border:1px solid #282828;
-
-  border-radius:50%;
-
-  display:flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  color:#777;
-
-  font-size:18px;
-}
-
-.message-title{
-  margin-top:30px;
-
-  font-size:17px;
-
-  font-weight:400;
-
-  letter-spacing:.2px;
-}
-
-.message-copy{
-  margin-top:17px;
-
-  color:#696969;
-
-  font-size:12px;
-
-  line-height:1.8;
-}
-
-
-/* =========================
-   BRAND
-========================= */
-
-.brand-block{
-  margin-top:auto;
-
-  padding-top:120px;
-
-  text-align:center;
-}
-
-.brand-label{
-  color:#393939;
-
-  font-size:7px;
-
-  letter-spacing:4px;
-}
-
-.brand-name{
-  margin-top:18px;
-
-  font-size:14px;
-
-  letter-spacing:5px;
-}
-
-.brand-tagline{
-  margin-top:11px;
-
-  color:#505050;
-
-  font-size:10px;
-}
-
-.copyright{
-  margin-top:45px;
-
-  color:#303030;
-
-  font-size:9px;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:480px){
-
-  .page{
-    padding-left:22px;
-    padding-right:22px;
-  }
-
-  .top{
-    margin-top:90px;
-  }
-
-  .status-section{
-    margin-top:75px;
-  }
-
-}
-
-
-@media(max-width:390px){
-
-  .page{
-    padding-left:20px;
-    padding-right:20px;
-  }
-
-  .title{
-    font-size:39px;
-  }
-
-  .message-card{
-    padding:
-      30px
-      24px;
-  }
-
-}
-
-
-/* =========================
-   REDUCED MOTION
-========================= */
-
-@media(prefers-reduced-motion:reduce){
-
-  html{
-    scroll-behavior:auto;
-  }
-
-}
-
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+
+  <title>Get Yours | TAP SHEINNEMA.</title>
+
+  <meta
+    name="description"
+    content="Create your own TAP SHEINNEMA digital identity profile."
+  >
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#080808;
+      color:#fff;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+      overflow-x:hidden;
+    }
+
+    .page{
+      width:100%;
+      max-width:620px;
+      margin:auto;
+      padding:42px 24px 110px;
+    }
+
+    /* BACK */
+
+    .back{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      color:#666;
+      text-decoration:none;
+      font-size:22px;
+      line-height:1;
+      transition:
+        color .2s ease,
+        transform .2s ease;
+    }
+
+    .back:hover{
+      color:#fff;
+      transform:translateX(-3px);
+    }
+
+    /* HERO */
+
+    .top{
+      margin-top:110px;
+      margin-bottom:110px;
+    }
+
+    .eyebrow{
+      color:#555;
+      font-size:8px;
+      letter-spacing:5px;
+      margin-bottom:28px;
+    }
+
+    .title{
+      font-size:clamp(44px,12vw,68px);
+      font-weight:400;
+      line-height:1.02;
+      letter-spacing:-2px;
+    }
+
+    .subtitle{
+      max-width:470px;
+      margin-top:30px;
+      color:#777;
+      font-size:13px;
+      line-height:1.9;
+    }
+
+    /* INTRO */
+
+    .form-intro{
+      margin-bottom:80px;
+      padding:26px 0;
+      border-top:1px solid #181818;
+      border-bottom:1px solid #181818;
+    }
+
+    .form-intro-label{
+      color:#444;
+      font-size:7px;
+      letter-spacing:4px;
+      margin-bottom:15px;
+    }
+
+    .form-intro-copy{
+      color:#777;
+      font-size:12px;
+      line-height:1.8;
+    }
+
+    /* SECTIONS */
+
+    .form-section{
+      margin-top:80px;
+    }
+
+    .form-section.first{
+      margin-top:0;
+    }
+
+    .section-label{
+      color:#555;
+      font-size:8px;
+      letter-spacing:4px;
+      margin-bottom:28px;
+    }
+
+    .section-copy{
+      margin-top:-10px;
+      margin-bottom:30px;
+      color:#666;
+      font-size:11px;
+      line-height:1.8;
+    }
+
+    .divider{
+      margin-top:80px;
+      border-top:1px solid #181818;
+    }
+
+    /* FIELDS */
+
+    .field{
+      margin-top:18px;
+    }
+
+    .field label{
+      display:block;
+      margin-bottom:9px;
+      color:#777;
+      font-size:9px;
+      letter-spacing:1.5px;
+    }
+
+    .required{
+      color:#aaa;
+    }
+
+    .optional{
+      color:#444;
+      font-size:8px;
+      letter-spacing:1px;
+    }
+
+    .field input,
+    .field textarea,
+    .field select{
+      width:100%;
+      padding:16px;
+      border:1px solid #222;
+      border-radius:14px;
+      outline:none;
+      background:#0d0d0d;
+      color:#fff;
+      font:inherit;
+      font-size:13px;
+      transition:
+        border-color .2s ease,
+        background .2s ease;
+    }
+
+    .field input:focus,
+    .field textarea:focus,
+    .field select:focus{
+      border-color:#555;
+      background:#101010;
+    }
+
+    .field input::placeholder,
+    .field textarea::placeholder{
+      color:#3f3f3f;
+    }
+
+    .field textarea{
+      min-height:120px;
+      resize:vertical;
+      line-height:1.7;
+    }
+
+    .field select{
+      appearance:none;
+      -webkit-appearance:none;
+      cursor:pointer;
+    }
+
+    .row{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+
+    /* CHECKBOXES */
+
+    .options{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+      width:100%;
+    }
+
+    .option{
+      width:100%;
+      min-width:0;
+      display:flex;
+      align-items:center;
+      gap:12px;
+      padding:15px 16px;
+      border:1px solid #222;
+      border-radius:14px;
+      background:#0d0d0d;
+      color:#888;
+      font-size:11px;
+      cursor:pointer;
+      overflow:hidden;
+      transition:border-color .2s ease;
+    }
+
+    .option:hover{
+      border-color:#333;
+    }
+
+    .option input{
+      appearance:auto;
+      -webkit-appearance:auto;
+      width:18px !important;
+      height:18px !important;
+      min-width:18px !important;
+      max-width:18px !important;
+      flex:0 0 18px;
+      margin:0;
+      padding:0;
+      accent-color:#fff;
+    }
+
+    .option span{
+      min-width:0;
+      overflow-wrap:anywhere;
+    }
+
+    /* PHOTO */
+
+    .photo-note{
+      padding:25px;
+      border:1px solid #222;
+      border-radius:18px;
+      background:#0d0d0d;
+    }
+
+    .photo-note-title{
+      font-size:12px;
+      font-weight:400;
+      letter-spacing:.5px;
+    }
+
+    .photo-note-copy{
+      margin-top:12px;
+      color:#666;
+      font-size:11px;
+      line-height:1.8;
+    }
+
+    /* SUBMIT */
+
+    .submit-area{
+      margin-top:90px;
+    }
+
+    .submit{
+      width:100%;
+      min-height:66px;
+      padding:20px 22px;
+      border:0;
+      border-radius:18px;
+      background:#fff;
+      color:#080808;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      cursor:pointer;
+      font-family:inherit;
+      font-size:10px;
+      letter-spacing:2.5px;
+      transition:
+        transform .25s ease,
+        opacity .25s ease;
+    }
+
+    .submit:hover{
+      transform:translateY(-2px);
+      opacity:.9;
+    }
+
+    .submit:disabled{
+      cursor:default;
+      opacity:.5;
+      transform:none;
+    }
+
+    .submit-arrow{
+      font-size:18px;
+      letter-spacing:0;
+    }
+
+    .status{
+      min-height:20px;
+      margin-top:18px;
+      color:#777;
+      font-size:11px;
+      line-height:1.7;
+    }
+
+    /* SUCCESS */
+
+    .success{
+      display:none;
+      min-height:75svh;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:80px 0;
+    }
+
+    .success.show{
+      display:flex;
+    }
+
+    .success-icon{
+      width:54px;
+      height:54px;
+      margin:auto;
+      border:1px solid #2b2b2b;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:20px;
+    }
+
+    .success-label{
+      margin-top:35px;
+      color:#555;
+      font-size:8px;
+      letter-spacing:4px;
+    }
+
+    .success-title{
+      margin-top:22px;
+      font-size:clamp(35px,9vw,48px);
+      font-weight:400;
+      line-height:1.1;
+      letter-spacing:-1px;
+    }
+
+    .success-copy{
+      max-width:430px;
+      margin:27px auto 0;
+      color:#777;
+      font-size:13px;
+      line-height:1.9;
+    }
+
+    .success-brand{
+      margin-top:60px;
+      font-size:13px;
+      letter-spacing:4px;
+    }
+
+    .success-tagline{
+      margin-top:11px;
+      color:#4d4d4d;
+      font-size:10px;
+    }
+
+    /* FOOTER */
+
+    .footer{
+      margin-top:120px;
+      padding-top:55px;
+      border-top:1px solid #161616;
+      text-align:center;
+    }
+
+    .footer-brand{
+      font-size:14px;
+      letter-spacing:5px;
+    }
+
+    .footer-tagline{
+      margin-top:11px;
+      color:#505050;
+      font-size:10px;
+    }
+
+    .copyright{
+      margin-top:48px;
+      color:#303030;
+      font-size:9px;
+    }
+
+    @media(max-width:480px){
+      .page{
+        padding-left:22px;
+        padding-right:22px;
+      }
+
+      .row{
+        grid-template-columns:1fr;
+      }
+
+      .options{
+        grid-template-columns:1fr;
+      }
+
+      .top{
+        margin-bottom:90px;
+      }
+
+      .option{
+        padding:16px;
+      }
+    }
+
+    @media(max-width:390px){
+      .page{
+        padding-left:20px;
+        padding-right:20px;
+      }
+
+      .title{
+        font-size:39px;
+      }
+    }
+  </style>
 </head>
-
-
 
 <body>
 
-
-
 <main class="page">
 
+  <!-- BACK -->
 
-<!-- =========================
-     SMART BACK
-========================= -->
-
-<a
-  class="back"
-  id="backButton"
-  href="/"
-  aria-label="Go back"
->
-  ←
-</a>
+  <a
+    class="back"
+    id="backButton"
+    href="/"
+    aria-label="Go back"
+  >
+    ←
+  </a>
 
 
+  <div id="formContent">
 
-<!-- =========================
-     HERO
-========================= -->
+    <!-- HERO -->
 
-<section class="top">
+    <section class="top">
 
+      <p class="eyebrow">
+        GET YOURS
+      </p>
 
-<p class="eyebrow">
-  GET YOURS
-</p>
+      <h1 class="title">
+        Your identity<br>
+        starts here.
+      </h1>
 
+      <p class="subtitle">
+        Tell us about yourself, your brand,
+        and what you want people to discover
+        when they tap your card.
+      </p>
 
-<h1 class="title">
-  Your identity<br>
-  starts here.
-</h1>
-
-
-<p class="subtitle">
-  TAP SHEINNEMA profile requests
-  are taking a short break while
-  we prepare what comes next.
-</p>
+    </section>
 
 
-</section>
+    <!-- INTRO -->
+
+    <section class="form-intro">
+
+      <p class="form-intro-label">
+        MAKE IT YOURS
+      </p>
+
+      <p class="form-intro-copy">
+        Only add what you want included in your
+        TAP SHEINNEMA profile. Leave anything
+        you don't need blank.
+      </p>
+
+    </section>
 
 
+    <!-- FORM -->
 
-<!-- =========================
-     STATUS
-========================= -->
-
-<section class="status-section">
-
-
-<p class="status-label">
-  CURRENT STATUS
-</p>
+    <form
+      id="profileForm"
+      action="https://formspree.io/f/xqpkyyre"
+      method="POST"
+    >
 
 
-<h2 class="status-title">
-  Temporarily unavailable.
-</h2>
+      <!-- ABOUT YOU -->
+
+      <section class="form-section first">
+
+        <p class="section-label">
+          ABOUT YOU
+        </p>
+
+        <p class="section-copy">
+          Your name and email are required so
+          we know who the request belongs to
+          and how to contact you.
+        </p>
 
 
-<p class="status-copy">
-  New profile requests are currently paused.
-  TAP SHEINNEMA will be accepting new requests again soon.
-</p>
+        <div class="field">
+
+          <label for="fullName">
+            FULL NAME
+            <span class="required">*</span>
+          </label>
+
+          <input
+            id="fullName"
+            type="text"
+            name="Full Name"
+            placeholder="Your full name"
+            required
+          >
+
+        </div>
 
 
-</section>
+        <div class="field">
+
+          <label for="brandName">
+            BRAND / BUSINESS NAME
+            <span class="optional">(OPTIONAL)</span>
+          </label>
+
+          <input
+            id="brandName"
+            type="text"
+            name="Brand or Business Name"
+            placeholder="Your brand or business"
+          >
+
+        </div>
 
 
+        <div class="field">
 
-<!-- =========================
-     MESSAGE
-========================= -->
+          <label for="role">
+            TITLE / ROLE
+            <span class="optional">(OPTIONAL)</span>
+          </label>
 
-<section class="message-card">
+          <input
+            id="role"
+            type="text"
+            name="Title or Role"
+            placeholder="Filmmaker, photographer, entrepreneur..."
+          >
 
-
-<div class="message-icon">
-  …
-</div>
-
-
-<h3 class="message-title">
-  We're preparing something better.
-</h3>
-
-
-<p class="message-copy">
-  The GET YOURS experience is currently
-  being prepared for its next version.
-  Please check back again soon.
-</p>
+        </div>
 
 
-</section>
+        <div class="row">
+
+          <div class="field">
+
+            <label for="email">
+              EMAIL
+              <span class="required">*</span>
+            </label>
+
+            <input
+              id="email"
+              type="email"
+              name="Email"
+              placeholder="you@example.com"
+              required
+            >
+
+          </div>
 
 
+          <div class="field">
 
-<!-- =========================
-     BRAND
-========================= -->
+            <label for="phone">
+              PHONE
+              <span class="optional">(OPTIONAL)</span>
+            </label>
 
-<section class="brand-block">
+            <input
+              id="phone"
+              type="tel"
+              name="Phone"
+              placeholder="+63..."
+            >
 
+          </div>
 
-<p class="brand-label">
-  POWERED BY
-</p>
+        </div>
 
-
-<p class="brand-name">
-  TAP SHEINNEMA.
-</p>
-
-
-<p class="brand-tagline">
-  One tap. Everything.
-</p>
+      </section>
 
 
-<p class="copyright">
-  © 2026 SHEINNEMA
-</p>
+      <div class="divider"></div>
 
 
-</section>
+      <!-- SOCIALS -->
+
+      <section class="form-section">
+
+        <p class="section-label">
+          SOCIALS
+        </p>
+
+        <p class="section-copy">
+          Only enter the platforms you want
+          displayed on your TAP SHEINNEMA profile.
+          Leave the rest blank.
+        </p>
 
 
+        <div class="field">
+
+          <label for="instagram">
+            INSTAGRAM
+            <span class="optional">(OPTIONAL)</span>
+          </label>
+
+          <input
+            id="instagram"
+            type="url"
+            name="Instagram"
+            placeholder="https://instagram.com/..."
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="facebook">
+            FACEBOOK
+            <span class="optional">(OPTIONAL)</span>
+          </label>
+
+          <input
+            id="facebook"
+            type="url"
+            name="Facebook"
+            placeholder="https://facebook.com/..."
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="facebookPage">
+            FACEBOOK PAGE
+            <span class="optional">(OPTIONAL)</span>
+          </label>
+
+          <input
+            id="facebookPage"
+            type="url"
+            name="Facebook Page"
+            placeholder="https://facebook.com/..."
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="tiktok">
+            TIKTOK
+            <span class="optional">(OPTIONAL)</span>
+          </label>
+
+          <input
+            id="tiktok"
+            type="url"
+            name="TikTok"
+            placeholder="https://tiktok.com/@..."
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="youtube">
+            YOUTUBE
+            <span class="optional">(OPTIONAL)</span>
+          </label>
+
+          <input
+            id="youtube"
+            type="url"
+            name="YouTube"
+            placeholder="https://youtube.com/..."
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="website">
+            WEBSITE / PORTFOLIO
+            <span class="optional">(OPTIONAL)</span>
+          </label>
+
+          <input
+            id="website"
+            type="url"
+            name="Website or Portfolio"
+            placeholder="https://..."
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="otherLink">
+            OTHER LINK
+            <span class="optional">(OPTIONAL)</span>
+          </label>
+
+          <input
+            id="otherLink"
+            type="url"
+            name="Other Link"
+            placeholder="https://..."
+          >
+
+        </div>
+
+      </section>
+
+
+      <div class="divider"></div>
+
+
+      <!-- PROFILE -->
+
+      <section class="form-section">
+
+        <p class="section-label">
+          YOUR PROFILE
+        </p>
+
+        <p class="section-copy">
+          Add only the details that fit
+          your identity or business.
+        </p>
+
+
+        <div class="field">
+
+          <label for="displayName">
+            MAIN DISPLAY NAME
+            <span class="optional">(OPTIONAL)</span>
+          </label>
+
+          <input
+            id="displayName"
+            type="text"
+            name="Main Display Name"
+            placeholder="How your name should appear"
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="headline">
+            MAIN HEADLINE
+            <span class="optional">(OPTIONAL)</span>
+          </label>
+
+          <input
+            id="headline"
+            type="text"
+            name="Main Headline"
+            placeholder="Creative Director · Filmmaker · Photographer"
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="bio">
+            SHORT BIO
+            <span class="optional">(OPTIONAL)</span>
+          </label>
+
+          <textarea
+            id="bio"
+            name="Short Bio"
+            placeholder="Tell us a little about yourself or your brand..."
+          ></textarea>
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="tagline">
+            TAGLINE
+            <span class="optional">(OPTIONAL)</span>
+          </label>
+
+          <input
+            id="tagline"
+            type="text"
+            name="Tagline"
+            placeholder="A short line that represents you"
+          >
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="quote">
+            QUOTE / PERSONAL LINE
+            <span class="optional">(OPTIONAL)</span>
+          </label>
+
+          <textarea
+            id="quote"
+            name="Quote or Personal Line"
+            placeholder="A quote, phrase, or personal line..."
+          ></textarea>
+
+        </div>
+
+      </section>
+
+
+      <div class="divider"></div>
+
+
+      <!-- CONTACT -->
+
+      <section class="form-section">
+
+        <p class="section-label">
+          CONTACT OPTIONS
+        </p>
+
+        <p class="section-copy">
+          Optional. Choose only the contact
+          actions you want visitors to see.
+        </p>
+
+
+        <div class="options">
+
+          <label class="option">
+
+            <input
+              type="checkbox"
+              name="Contact Options"
+              value="Call Me"
+            >
+
+            <span>CALL ME</span>
+
+          </label>
+
+
+          <label class="option">
+
+            <input
+              type="checkbox"
+              name="Contact Options"
+              value="Email Me"
+            >
+
+            <span>EMAIL ME</span>
+
+          </label>
+
+
+          <label class="option">
+
+            <input
+              type="checkbox"
+              name="Contact Options"
+              value="Save Contact"
+            >
+
+            <span>SAVE CONTACT</span>
+
+          </label>
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="saveName">
+            NAME TO SAVE
+            <span class="optional">(OPTIONAL)</span>
+          </label>
+
+          <input
+            id="saveName"
+            type="text"
+            name="Contact Save Name"
+            placeholder="Name shown when contact is saved"
+          >
+
+        </div>
+
+
+        <div class="row">
+
+          <div class="field">
+
+            <label for="savePhone">
+              PHONE TO SAVE
+              <span class="optional">(OPTIONAL)</span>
+            </label>
+
+            <input
+              id="savePhone"
+              type="tel"
+              name="Contact Save Phone"
+              placeholder="+63..."
+            >
+
+          </div>
+
+
+          <div class="field">
+
+            <label for="saveEmail">
+              EMAIL TO SAVE
+              <span class="optional">(OPTIONAL)</span>
+            </label>
+
+            <input
+              id="saveEmail"
+              type="email"
+              name="Contact Save Email"
+              placeholder="you@example.com"
+            >
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <div class="divider"></div>
+
+
+      <!-- STYLE -->
+
+      <section class="form-section">
+
+        <p class="section-label">
+          YOUR STYLE
+        </p>
+
+        <p class="section-copy">
+          Give us a direction for your profile,
+          or leave the creative decisions
+          to TAP SHEINNEMA.
+        </p>
+
+
+        <div class="field">
+
+          <label for="style">
+            PREFERRED LOOK
+            <span class="optional">(OPTIONAL)</span>
+          </label>
+
+          <select
+            id="style"
+            name="Preferred Look"
+          >
+
+            <option value="" selected>
+              Select a style
+            </option>
+
+            <option value="TAP SHEINNEMA Signature">
+              TAP SHEINNEMA Signature
+            </option>
+
+            <option value="Minimal">
+              Minimal
+            </option>
+
+            <option value="Cinematic">
+              Cinematic
+            </option>
+
+            <option value="Corporate">
+              Corporate
+            </option>
+
+            <option value="Luxury">
+              Luxury
+            </option>
+
+            <option value="Creative">
+              Creative
+            </option>
+
+            <option value="Surprise me">
+              Surprise me
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="background">
+            PREFERRED BACKGROUND
+            <span class="optional">(OPTIONAL)</span>
+          </label>
+
+          <select
+            id="background"
+            name="Preferred Background"
+          >
+
+            <option value="" selected>
+              Select a background
+            </option>
+
+            <option value="Black">
+              Black
+            </option>
+
+            <option value="White">
+              White
+            </option>
+
+            <option value="Dark Gray">
+              Dark Gray
+            </option>
+
+            <option value="Designer's Choice">
+              Designer's choice
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="requests">
+            ADDITIONAL REQUESTS
+            <span class="optional">(OPTIONAL)</span>
+          </label>
+
+          <textarea
+            id="requests"
+            name="Additional Requests"
+            placeholder="Anything else you'd like us to know..."
+          ></textarea>
+
+        </div>
+
+      </section>
+
+
+      <div class="divider"></div>
+
+
+      <!-- PHOTO / LOGO -->
+
+      <section class="form-section">
+
+        <p class="section-label">
+          HERO PHOTO / LOGO
+        </p>
+
+        <p class="section-copy">
+          Optional. Your profile can be created
+          with or without a hero photo or logo.
+        </p>
+
+        <div class="photo-note">
+
+          <h3 class="photo-note-title">
+            Want to use your own photo or logo?
+          </h3>
+
+          <p class="photo-note-copy">
+            After submitting your request,
+            you can send your preferred hero photo,
+            business logo, or branding assets separately.
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- FORMSPREE -->
+
+      <input
+        type="hidden"
+        name="_subject"
+        value="New TAP SHEINNEMA Profile Request"
+      >
+
+      <input
+        type="text"
+        name="_gotcha"
+        style="display:none"
+        tabindex="-1"
+        autocomplete="off"
+      >
+
+
+      <!-- SUBMIT -->
+
+      <section class="submit-area">
+
+        <button
+          class="submit"
+          id="submitButton"
+          type="submit"
+        >
+
+          <span id="submitText">
+            SUBMIT PROFILE REQUEST
+          </span>
+
+          <span class="submit-arrow">
+            →
+          </span>
+
+        </button>
+
+        <p
+          class="status"
+          id="formStatus"
+        ></p>
+
+      </section>
+
+    </form>
+
+  </div>
+
+
+  <!-- SUCCESS -->
+
+  <section
+    class="success"
+    id="successScreen"
+  >
+
+    <div>
+
+      <div class="success-icon">
+        ✓
+      </div>
+
+      <p class="success-label">
+        REQUEST RECEIVED
+      </p>
+
+      <h2 class="success-title">
+        Welcome to<br>
+        TAP SHEINNEMA.
+      </h2>
+
+      <p class="success-copy">
+        Your profile request has been received.
+        We'll review the information you submitted
+        and get in touch with you for the next steps.
+      </p>
+
+      <p class="success-brand">
+        TAP SHEINNEMA.
+      </p>
+
+      <p class="success-tagline">
+        One tap. Everything.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer class="footer">
+
+    <div class="footer-brand">
+      TAP SHEINNEMA.
+    </div>
+
+    <div class="footer-tagline">
+      One tap. Everything.
+    </div>
+
+    <p class="copyright">
+      © 2026 SHEINNEMA
+    </p>
+
+  </footer>
 
 </main>
 
 
-
 <script>
 
-/* =========================
-   SMART BACK
-========================= */
+  /* SMART BACK */
 
-const backParams =
-  new URLSearchParams(
-    window.location.search
-  );
+  const backParams =
+    new URLSearchParams(
+      window.location.search
+    );
 
+  let backPath =
+    backParams.get("from");
 
-let backPath =
-  backParams.get(
-    "from"
-  );
+  if(
+    !backPath ||
+    !backPath.startsWith("/") ||
+    backPath.startsWith("//")
+  ){
+    backPath = "/";
+  }
 
-
-if(
-  !backPath ||
-  !backPath.startsWith("/") ||
-  backPath.startsWith("//")
-){
-
-  backPath = "/";
-
-}
-
-
-const backButton =
   document.getElementById(
     "backButton"
+  ).href = backPath;
+
+
+  /* FORM */
+
+  const form =
+    document.getElementById(
+      "profileForm"
+    );
+
+  const submitButton =
+    document.getElementById(
+      "submitButton"
+    );
+
+  const submitText =
+    document.getElementById(
+      "submitText"
+    );
+
+  const formStatus =
+    document.getElementById(
+      "formStatus"
+    );
+
+  const formContent =
+    document.getElementById(
+      "formContent"
+    );
+
+  const successScreen =
+    document.getElementById(
+      "successScreen"
+    );
+
+  const backButton =
+    document.getElementById(
+      "backButton"
+    );
+
+
+  form.addEventListener(
+    "submit",
+    async function(event){
+
+      event.preventDefault();
+
+      submitButton.disabled = true;
+      submitText.textContent = "SENDING...";
+      formStatus.textContent = "";
+
+      const data =
+        new FormData(form);
+
+      try{
+
+        const response =
+          await fetch(
+            form.action,
+            {
+              method:"POST",
+              body:data,
+              headers:{
+                Accept:"application/json"
+              }
+            }
+          );
+
+        if(response.ok){
+
+          formContent.style.display =
+            "none";
+
+          backButton.style.display =
+            "none";
+
+          successScreen.classList.add(
+            "show"
+          );
+
+          window.scrollTo({
+            top:0,
+            behavior:"smooth"
+          });
+
+          form.reset();
+
+        }else{
+
+          formStatus.textContent =
+            "Something went wrong. Please try again.";
+
+          submitButton.disabled = false;
+
+          submitText.textContent =
+            "SUBMIT PROFILE REQUEST";
+
+        }
+
+      }catch(error){
+
+        formStatus.textContent =
+          "Unable to send your request. Please check your connection and try again.";
+
+        submitButton.disabled = false;
+
+        submitText.textContent =
+          "SUBMIT PROFILE REQUEST";
+
+      }
+
+    }
   );
-
-
-backButton.href =
-  backPath;
 
 </script>
 
-
-
 </body>
-
 </html>
